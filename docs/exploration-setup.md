@@ -1,72 +1,123 @@
-## Exploration setup
+# Exploration setup
 
-### Variables and settings
-The exploration workspace has 2 setup columns on the left:
-- Variables – where you name your exploration, set your date range, and load all the variables you plan to use, but don't explicitly use them (like setting out the ingredients for a recipe)
-- Settings – where you piece together your exploration by selecting from your loaded variables, and choosing layout and display options (like creating a recipe from your ingredients)
+## Variables and tab settings
 
-Once you've loaded the variables you intend to use, you simply drag and drop them into the Settings column, placing them where you want them. Drag and dropping can sometimes be a bit temperamental - you may have to try once or twice. Alternatively, double-clicking on a dimension or metric will add it to the relevant setting (usually 'rows' and 'values' respectively). More on dimensions and metrics in the next section.
+The exploration workspace has two configuration columns on the left:
 
-To the right of the Variables and Settings columns, your exploration output will be displayed. You can have up to 10 tabs of output, each with unique settings created from your chosen variables (which persist across all tabs).
+- **Variables** – where you name your exploration, set your date range, and define the components available to your exploration, including:
+  - segments  
+  - dimensions  
+  - metrics  
 
-Be sure to give your exploration a logical name.
+- **Tab settings** – where you configure the current tab by selecting from the loaded variables and defining layout and display options.
 
-### Dimensions and metrics
-Dimensions are attributes of data. They describe what it is that you want metrics for. Some common dimensions you'll use are:
+You must first add dimensions, metrics or segments to the **Variables** column before they can be used in the tab settings.
 
-- Page path and screen class – the path of a webpage on your site (everything after the domain name; the homepage will be simply '/'), or the 'screen class' equivalent for apps (less relevant in our context)
-- Page referrer – the full referring URL, the user's previous page either on your site or from elsewhere (including 'https://' and the domain name, unlike the shorter 'page path')
-- Device category – the type of device used (desktop, tablet, mobile)
-- Link URL – the destination of a hyperlink
-- Event name – tracked user interaction 'events' such as 'click', 'file_download', or 'scroll'
+To use a variable:
 
-Metrics are your numerical measurements. Some common metrics you'll use are:
+- drag it into the appropriate field in **Tab settings**, or  
+- double-click it to add it automatically to a compatible field (for example, dimensions are typically added to Rows, metrics to Values).
 
-- Views – the total number of page views
-- Total users – the estimated total number of unique users
-- New users – the estimated total number of first-time users
-- Event count – the number of times a tracked interaction (such as a click, file download or scroll) was triggered
+To the right of these columns, the exploration output is displayed.
 
-A useful rule: dimensions describe your data, metrics quantify it (you can multiply a metric, but not a dimension).
+Each exploration can contain up to 10 tabs. Variables are shared across all tabs within the same exploration, but tab settings are configured independently.
 
-#### Consistent use of 'Total users'
-This guide is written to support design insight and decision-making, not management reporting. As a result, absolute figures matter less than relative differences and consistent comparison across reports.
+Give each exploration a clear, descriptive name.
 
-Throughout this guide, 'Total users' is recommended as the default metric. Google defines this as "the number of unique users who triggered any event in the specified date range". While this does not produce perfectly precise counts in all contexts, it is stable and comparable, making it well suited to understanding proportions, trade-offs and patterns in user behaviour.
+## Dimensions and metrics
 
-While different metrics answer different questions, using the same metric consistently is essential if you want relative differences between designs, pages or journeys to remain meaningful.
+**Dimensions** describe attributes of your data. They define how data is grouped.
 
-### Filters and segments
-By default, an exploration will show you data for the entire property. To see a subset of the data, you can use filters or segments.
+Common dimensions include:
 
-- Filters – set in the Settings column, filters quickly include or exclude data based on specific criteria (for example, only include a specific page, or only include users referred from a specific domain). Filters can't be saved to reuse in multiple explorations.
-- Segments – created in the Variables column, segments require a few more steps to set up, and are best for seeing side-by-side comparisons (for example, mobile vs desktop users, or new vs returning users). Segments can be saved for reuse in multiple explorations.
+- **Page path and screen class** – the path of a webpage after the domain name (for example '/apply/start'), or the equivalent screen identifier for apps  
+- **Page referrer** – the full referring URL from which the user arrived  
+- **Device category** – desktop, mobile or tablet  
+- **Link URL** – the destination of a tracked link click  
+- **Event name** – the name of a recorded event (for example 'click', 'file_download', 'scroll')
 
-To create a segment (figure 3):
-1. In the 'Variables' column, select '+' next to 'SEGMENTS'.
-2. In the 'Add a new segment' overlay, select 'Create a new segment' (top right).
-3. Select 'User segment'.
-4. Enter a name for your segment (for example, 'Users referred from [domain name]').
-5. Enter your segment conditions (details are provided in the 'Variables' tables for each exploration described later in this guide).
+**Metrics** are numerical measurements.
 
+Common metrics include:
 
-### Date ranges
-When selecting a date range for your exploration, consider:
-1. Data capture start date. Data is only available from the date the property was set up on GA4. For free tier accounts, data stopped being collected in UA (Universal Analytics) in July 2023, with most properties automatically migrated.
-2. Data retention period. Free tier accounts only retain data for 2 months by default. This can be extended by the property admin to 14 months (highly recommended). To verify the property's current setting, go to Admin > Data collection and modification > Data retention.
-3. Data processing speeds. Longer date ranges of a year or more will take much longer for GA4 to process.
-4. Data sampling. Longer date ranges are more likely to contain sampled data. The data sampling icon, top right in an exploration, will turn from green to red if sampling has been applied. Select this icon to see what percentage of available data is being used. If you're viewing an exploration on a paid enterprise '360' account, you can reduce the impact of sampling by selecting 'More detailed results'.
+- **Views** – the total number of page or screen views  
+- **Total users** – the number of unique users who triggered any event during the selected date range  
+- **New users** – the number of users who interacted for the first time during the selected date range  
+- **Event count** – the number of times a tracked event was triggered  
 
+A practical distinction: dimensions group data, metrics measure it.
 
-### Exporting data
-To export the data from any exploration tab, select the top right download icon and choose 'CSV'. You can then import this CSV into a spreadsheet.
+## Consistent use of “Total users”
 
-### Sharing explorations
-Explorations are private by default, but you can share them, in read-only mode, with everyone else who has access to the same property. To do so, select the 'share exploration' icon, top right.
+This guide is written to support design insight and decision-making. As a result, absolute figures matter less than relative differences and consistent comparison across reports.
 
+For that reason, **Total users** is used as the default metric throughout most examples.
 
-### Reducing data sampling
-As an additional benefit of the paid enterprise tier, you're able to reduce the impact of any data sampling (estimating total numbers from a subset of the data), by selecting 'More detailed results':
+Google defines Total users as "the number of unique users who triggered any event in the specified date range". While this does not produce perfectly precise counts in all contexts, it is stable and comparable, making it well suited to understanding proportions and patterns in user behaviour.
 
-1. At the top right of your exploration output, next to the download and share icons, look for the data sampling icon.
-2. If the data sampling icon is a red exclamation mark, open the dropdown and select 'More detailed results'.
+Different metrics answer different questions. However, using a consistent metric across similar explorations supports meaningful comparison.
+
+## Filters and segments
+
+By default, an exploration shows data for the entire property within the selected date range.
+
+To analyse a subset of data, use filters or segments.
+
+- **Filters** – applied within the Tab settings column. Filters include or exclude data based on specific criteria (for example, include only a specific page or exclude internal traffic). Filters apply only to the current tab.
+
+- **Segments** – created in the Variables column. Segments define a subset of users, sessions or events and can be applied to one or more tabs within the exploration. Segments can also be reused within the same exploration.
+
+Segments are particularly useful for side-by-side comparisons (for example, mobile vs desktop users, or new vs returning users).
+
+To create a segment:
+
+1. In the Variables column, select the **+** next to **Segments**.
+2. Choose **Create a new segment**.
+3. Select the segment type (for example, 'User segment').
+4. Enter a name.
+5. Define the segment conditions.
+
+## Date ranges
+
+When selecting a date range, consider:
+
+1. **Property start date** – data is only available from when GA4 tracking began for the property.
+2. **Data retention settings** – in free-tier GA4 properties, event-level data retention is 2 months by default and can be extended to 14 months. Check under:
+   Admin > Data collection and modification > Data retention
+3. **Processing time** – longer date ranges may take more time to process.
+4. **Sampling** – large date ranges increase the likelihood of sampled results in the free tier.
+
+If sampling is applied, an indicator appears in the top-right of the exploration panel. Selecting the indicator shows the percentage of data used in the results.
+
+In GA4 360 (enterprise tier), a detailed results option may be available to reduce the impact of sampling.
+
+## Exporting data
+
+To export data from an exploration tab:
+
+1. Select the download icon in the top-right corner.
+2. Choose a format (for example, CSV).
+
+Exported files can be opened in spreadsheet software for further analysis.
+
+## Sharing explorations
+
+Explorations are private by default.
+
+To share an exploration in read-only mode with other users who have access to the same property:
+
+1. Select the share icon in the top-right corner.
+2. Confirm sharing.
+
+Shared explorations cannot be edited by other users unless they duplicate them.
+
+## Reducing data sampling (GA4 360)
+
+In GA4 360 properties, sampling thresholds are higher and a detailed results option may be available.
+
+If sampling is indicated in an exploration:
+
+1. Select the sampling indicator in the top-right of the results panel.
+2. If available, choose the detailed results option.
+
+This may increase processing time.
