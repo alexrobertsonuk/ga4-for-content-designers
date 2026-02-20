@@ -47,7 +47,7 @@ Common metrics include:
 
 A practical distinction: dimensions group data, metrics measure it.
 
-## Consistent use of “Total users”
+## Consistent use of "Total users"
 
 This guide is written to support design insight and decision-making. As a result, absolute figures matter less than relative differences and consistent comparison across reports.
 
