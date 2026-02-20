@@ -162,35 +162,44 @@ You may see landing pages grouped as "(not set)". This indicates that GA4 was un
 
 
 
-### What are the most common user paths through a site or multi-step journey?
+## What are the most common user paths through a site or multi-step journey?
 
-#### Potential insights
-These explorations could help you to:
-- identify the top paths through a branching transactional service, to help prioritise effort
-- measure whether content changes influence top paths
-- identify drop-off points or looping behaviour
-- identify users' 'top tasks' on a site
+### Potential insights
+
+These explorations can help you to:
+
+- identify common paths through a site or transactional service, to help prioritise effort
+- assess whether content changes influence the paths users take
+- identify drop-off points, loops, or repeated steps
+- identify users' most common tasks on a site
+
+### Understand the data
+
+A path exploration creates an interactive Sankey diagram showing the most common next steps users take from a selected page (or the most common previous steps if you build the path backwards from an ending point).
+
+Paths are shown up to a fixed number of steps in the interface (typically up to 10). For large or branching journeys, use path exploration to examine a specific section, decision point, or step that you are currently investigating.
+
+Path explorations are designed for a single path view at a time. You can apply a segment, but you cannot view multiple segments side-by-side in the same Sankey chart (for example, mobile vs desktop).
+
+When you first create a path exploration, GA4 may default to an "Event name" starting point. To build a page-based path exploration:
+
+1. Select "Start again" (top right of the exploration output)
+2. Choose whether you want a "Starting point" or an "Ending point"
+3. Select "Page path and screen class" and choose a page
+4. In the Sankey chart, select nodes to expand the path step by step
+
+If you see event names rather than page paths in the nodes, reselect the starting/ending point dimension and choose "Page path and screen class".
 
 
-#### Understand the data
-A 'path exploration' creates an interactive Sankey diagram that allows you to click on a specific page (represented as a 'node') to reveal the most common pages that followed (or those that came before, if you're tracking backwards from an end point). It's limited to 10 steps, so not sufficient to map out full user journeys in a large transactional service. Instead, focus on important sections, such as critical branches or steps currently being iterated.
-Due to the higher visual complexity of a path exploration, you cannot add more than one segment at a time, so side-by-side segment comparisons (for example mobile vs desktop paths) are not possible.
-When you first create a path exploration, you'll be presented with a not particularly useful 'Event name' view. You'll need to select 'Start again' to customise it.
-To customise your path exploration (figure 8):
-1. Select 'Start again', to the top right of the exploration output.
-2. Select either 'STARTING POINT' or 'ENDING POINT', depending on whether you want to view user journeys from or up to a specific page path
-3. Whichever you've chosen, select 'Page path and screen class' and choose a page
-4. In the resulting Sankey chart, click on each page path to expand the chart to the next step, up to 10 total steps.
-
-
-#### Variables
+### Variables
 
 | Field | Value |
 |---|---|
+| Dimensions | Page path and screen class |
 | Metrics | Total users |
 
 
-#### Settings
+### Settings
 
 | Field | Value |
 |---|---|
