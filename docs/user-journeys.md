@@ -272,32 +272,58 @@ Pages with both high views per user and high exit rates may warrant further inve
 
 
 
-### How long are users spending on each page?
+## How long are users spending on each page?
 
-#### Potential insights
-These explorations could help you to:
-- identify pages that are taking users longer to understand or interact with than expected
-- measure whether content formatting or language changes reduce the average time spent on a page, demonstrating content design reducing the so-called 'time tax' on users
-- compare time spent on each page with exit rates, to spot pages that may be confusing dead ends where users eventually give up
-- identify pages where much less time is spent on average than is likely to be necessary (for instance where content is lengthy or complex), indicating the content may be better broken up or reformatted
+### Potential insights
+
+These explorations can help you to:
+
+- identify pages where users spend longer than average
+- assess whether content changes influence average time spent
+- compare time spent with exit behaviour
+- identify pages where users spend unusually little time relative to content length
+
+### Understand the data
+
+GA4 does not include a direct "time spent on page" metric.
+
+Instead, use the "User engagement" metric, which measures the cumulative time (in seconds) that a page was actively in focus in the user's browser.
+
+To estimate average time spent per page view:
+
+1. Create an exploration using the variables and settings below
+2. Export the data as CSV
+3. Open the file in a spreadsheet tool
+4. Insert a new column titled "Average time per view (seconds)"
+5. Divide the "User engagement" value by the "Views" value
+
+This produces an estimate of average engaged time per page view.
+
+Interpret this metric in context. Longer time spent may indicate:
+
+- careful reading
+- task completion
+- difficulty progressing
+- repeated revisiting
+
+Shorter time spent may indicate:
+
+- quick completion
+- skimming
+- immediate exits
+
+To compare time spent with exit behaviour, in your spreadsheet:
+
+1. Insert another column titled "Exit rate"
+2. Divide the "Exits" value by the "Views" value
+3. Format as a percentage
+4. Sort by either metric to identify outliers
+
+Pages with both high average time per view and high exit rates may warrant further investigation.
 
 
-#### Understand the data
-Unlike Universal Analytics (UA), GA4 does not have a simple 'Time spent on page' metric. The accuracy of time spent data has been improved, but you now need to take a few extra manual steps to calculate it. To do this, you'll need to divide the 'User engagement' metric - which displays the total cumulative time spent on a page - by the 'Views' metric. This will give you the average time spent per page view.
-1. Create an exploration using the variables and settings below.
-2. Export the data to CSV (see Exporting data ) .
-3. Import the CSV into an Excel spreadsheet, selecting 'comma' as the delimiter.
-4. The 'User engagement' values will automatically be converted from long-form days and hours format (such as '35d 03h') to total seconds.
-5. Remove the top 6 rows (the exploration information which precedes the column headers).
-6. Add a new column and title it 'Average time spent (secs)'.
-7. In this 'Average time spent (secs)' column, divide 'User engagement' by 'Views'.
-8. Sort the table by your new 'Average time spent (secs)' column, largest to smallest.
-9. To see if pages with above-average time spent also have higher exit rates, add another new column and title it 'Exit rate'.
-10. In this 'Exit rate' column, divide 'Exits' values by 'Views', and format as percentage.
-11. Compare high exit rates with the average time spent on the page, looking for outliers to investigate.
 
-
-#### Variables
+### Variables
 
 | Field | Value |
 |---|---|
@@ -305,7 +331,7 @@ Unlike Universal Analytics (UA), GA4 does not have a simple 'Time spent on page'
 | Metrics | User engagement<br>Views<br>Exits |
 
 
-#### Settings
+### Settings
 
 | Field | Value |
 |---|---|
@@ -315,8 +341,8 @@ Unlike Universal Analytics (UA), GA4 does not have a simple 'Time spent on page'
 | Show rows | 100 |
 | Nested rows | No |
 | Values | User engagement<br>Views<br>Exits |
-| Cell type | Bar chart OR Plain text (it's a minor visual difference) |
-| Filters | To see an individual page rather than a whole site or service, add the following:<br>Page path and screen class<br>- Conditions: exactly matches<br>- Expression: enter the page path, which is everything after your domain, minus any query strings (for example, the page path for https://helpwithcourtfees.service.gov.uk/questions/fee?locale=en is /questions/fee) |
+| Cell type | Bar chart or Plain text |
+| Filters | To analyse a specific page:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /questions/fee) |
 
 
 ### What percentage of users are completing a multi-step journey, and how long is it taking them?
