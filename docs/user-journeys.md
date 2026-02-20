@@ -25,7 +25,7 @@ These explorations can help you to:
 - identify the needs of users being referred from external sources, by tracing and evaluating the call to action that they respond to
 - identify internal pages that are a disproportionate source of referrals to technical support or contact us pages
 
-## Understand the data
+### Understand the data
 
 The "Page referrer" dimension shows the previous URL recorded for a page view.
 
