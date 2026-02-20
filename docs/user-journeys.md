@@ -87,8 +87,7 @@ Nested rows are limited to 10 rows per parent item. For example, only the top 10
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Bar chart or Plain text |
-| Filters | Page referrer<br>* Conditions: does not contain<br>- Expression: enter your site or service domain (for example, example.com)<br><br>Page referrer<br>- Conditions: matches regex<br>- Expression: ^.+$ (matches any non-empty referrer value)<br><br>To see external referrals for an individual page, also add:<br><br>Landing page + query string<br>- Conditions: exactly matches<br>- Expression: enter the full landing page URL including https:// and any query string |
-
+| Filters | Page referrer<br>Conditions: does not contain<br>Expression: enter your site or service domain (for example, example.com)<br><br>Page referrer<br>- Conditions: matches regex<br>- Expression: ^.+$ (matches any non-empty referrer value)<br><br>To see external referrals for an individual page, also add:<br><br>Landing page + query string<br>- Conditions: exactly matches<br>- Expression: enter the full landing page URL including https:// and any query string |
 ### Settings: to see detailed internal referrers for a specific page
 
 | Field | Value |
