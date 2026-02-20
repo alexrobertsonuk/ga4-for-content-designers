@@ -208,31 +208,48 @@ If you see event names rather than page paths in the nodes, reselect the startin
 | Values | Total users |
 
 
-### Are users repeatedly returning to the same page?
+## Are users repeatedly returning to the same page?
 
-#### Potential insights
-These explorations could help you to:
-- identify navigation issues, circular or 'ping-pong' journeys, where users may be forced to return to the same page repeatedly
-- identify where users in a linear or branching service are struggling to progress, taking repeated backwards steps
-- build a case to break up guidance or reference material that users are forced to return to repeatedly, instead displaying it at the point it's most needed
-- find pages where users may be abandoning a service in frustration, having repeatedly returned to the same page before exiting
+### Potential insights
+
+These explorations can help you to:
+
+- identify circular or repeated navigation patterns
+- detect backwards steps within a multi-step service
+- identify guidance pages that users revisit frequently (for example, to evaluate whether the information should be integrated at the point of need instead)
+- highlight potential drop-off points where users exit after repeated views
+
+### Understand the data
+
+The "Views per active user" metric divides the total number of views for a page by the number of active users who viewed it.
+
+For example, if a page received 100 views from 70 active users, the result would be 1.43 views per active user.
+
+Higher values may indicate that users are revisiting the page multiple times within a session or across sessions. This can reflect:
+
+- difficulty progressing
+- repeated backwards steps
+- users returning to reference material
+- refreshes or repeated interactions
+
+Interpret this metric in context. Compare pages against others within the same site or service rather than relying on a fixed threshold.
+
+Adding "Exits" allows you to identify pages that are both frequently revisited and common exit points.
+
+The absolute number of exits is less informative than the proportion of views that result in an exit (exit rate). GA4 Explorations may not display exit rate directly, but you can calculate it by exporting the data:
+
+1. Create the exploration using the variables and settings below.
+2. Export the data as CSV.
+3. Open the file in a spreadsheet tool.
+4. Insert a new column titled "Exit rate".
+5. Divide the "Exits" value by the "Views" value.
+6. Format the result as a percentage.
+7. Sort by Exit rate to identify pages with relatively high proportions of exits.
+
+Pages with both high views per user and high exit rates may warrant further investigation.
 
 
-#### Understand the data
-The 'Views per active user' metric divides the total number of views a whole property or individual page received by the total number of active users. If a page received 100 views from 70 users, each user viewed that page on average 1.43 times. Research suggests that anything over 1.4 views per active user indicates a potential navigation problem worth exploring.
-By adding 'Exits' data, you can identify pages with high views per user that are also common exit points from the site or service. If these pages aren't where you'd expect the user to exit, it could suggest users giving up on searching for information after going round in circles.
-Sort the exploration table by maximum 'Views per active user' or 'Exits' to identify possible problem pages. Note though that the absolute number of exits alone isn't always that useful. What's more important is the exit rate (the percentage of page views that were exits). You can find this by exporting the data and adding a simple calculation in a new column:
-1. Create an exploration using the variables and settings below.
-2. Export the data to CSV (see Exporting data ).
-3. Import the CSV into an Excel spreadsheet, selecting 'comma' as the delimiter.
-4. Remove the top 6 rows (the exploration information which precedes the column headers).
-5. Insert a new column to the right of 'Exits', and title it 'Exit rate'.
-6. In this 'Exit rate' column, divide the values in 'Exits' by 'Views', and format as percentage.
-7. Sort the table by 'Exit rate', largest to smallest.
-8. Identify pages with the highest exit rates that also have above-average 'Views per active user' values. These pages may be frustrating dead-ends.
-
-
-#### Variables
+### Variables
 
 | Field | Value |
 |---|---|
@@ -240,7 +257,7 @@ Sort the exploration table by maximum 'Views per active user' or 'Exits' to iden
 | Metrics | Active users<br>Views<br>Views per active user<br>Exits |
 
 
-#### Settings
+### Settings
 
 | Field | Value |
 |---|---|
@@ -250,8 +267,9 @@ Sort the exploration table by maximum 'Views per active user' or 'Exits' to iden
 | Show rows | 100 |
 | Nested rows | No |
 | Values | Active users<br>Views<br>Views per active user<br>Exits |
-| Cell type | Bar chart OR Plain text (it's a minor visual difference) |
-| Filters | To see an individual page rather than a whole site or service, add the following:<br>Page path and screen class<br>- Conditions: exactly matches<br>- Expression: enter the path of the individual page (such as /questions/fee), omitting the domain and any query string at the end |
+| Cell type | Bar chart or Plain text |
+| Filters | To analyse a specific page:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /questions/fee) |
+
 
 
 ### How long are users spending on each page?
