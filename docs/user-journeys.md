@@ -103,35 +103,43 @@ Nested rows are limited to 10 rows per parent item. For example, only the top 10
 | Filters | Dimension: Page referrer<br>Condition: contains<br>Expression: enter your site domain (for example, example.com)<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path of the target page (for example, /ask-for-help/new) |
 
 
-### What referrals are coming from LLMs (large language models)?
+## What referrals are coming from LLMs (large language models)?
 
-#### Potential insights
-This exploration could help you to:
-- identify content that users are discovering through interactions with LLMs
-- assess whether content being referred by LLMs is clear, up-to-date and well signposted for first time users
-- compare how LLM-referred users differ from users arriving via other external referral sources
+### Potential insights
+
+This exploration can help you to:
+
+- identify content that users are discovering via LLM interfaces
+- assess whether LLM-referred landing pages are clear and well signposted for first-time visitors
+- compare behaviour of LLM-referred users with other external referral sources
 
 
-#### Understand the data
-This exploration uses the same referrer-based approach as Where are users coming from? , but limits it specifically to the following LLMs:
-- ChatGPT (OpenAI)
-- Claude (Anthropic)
-- Copilot (Microsoft)
-- Deepseek
-- Ernie (Baidu)
-- Gemini (Google)
-- Grok (xAi)
-- Kimi (Moonshot AI)
-- Mistral
-- Perplexity
-- Poe
-- Qwen (Alibaba)
+### Understand the data
 
-Referrals from LLMs differ from most other external referrals in a few important ways. Some LLMs operate through mobile apps or embedded interfaces that do not reliably pass referrer information to the browser. As a result, this exploration will under-represent the true volume of LLM-influenced visits. It captures only cases where a referral can be confidently identified.
-This exploration also only shows content that users click through to from an LLM. It does not tell you which content may be summarised or paraphrased within an LLM response without generating a visit to your site.
-You may see landing pages grouped as '(not set)'. This typically indicates that GA4 was unable to detect the user's first page view for the session, which is common when users arrive from apps, experience redirects, or where consent or tagging loads after the initial page request. This is expected behaviour and does not necessarily indicate a tracking issue.
+This exploration builds on the same referrer-based approach described in "Where are users coming from?", but limits results to known LLM domains.
 
-#### Variables
+Common LLM referral domains include:
+
+- openai.com and chat.openai.com (ChatGPT)
+- claude.ai (Anthropic)
+- copilot.microsoft.com (Microsoft Copilot)
+- gemini.google.com (Google Gemini)
+- perplexity.ai
+- poe.com
+- mistral.ai
+- qwen.ai
+- kimi.com
+- ernie.baidu.com
+- deepseek.com
+- grok.com and x.ai
+
+Referrals from LLMs differ from many other external sources. Some LLM interfaces operate through mobile apps or embedded environments that do not reliably pass referrer information to the browser. As a result, this exploration will under-represent the true volume of LLM-influenced visits. It captures only visits where a referral can be identified.
+
+This exploration also only measures visits where a user clicked through to your site. It does not capture content that may have been summarised or paraphrased within an LLM response without generating a visit.
+
+You may see landing pages grouped as "(not set)". This indicates that GA4 was unable to record a landing page for the session. This commonly occurs when traffic originates from apps, redirects, or where consent or tagging loads after the initial page request. It does not necessarily indicate a tracking error.
+
+### Variables
 
 | Field | Value |
 |---|---|
@@ -139,7 +147,7 @@ You may see landing pages grouped as '(not set)'. This typically indicates that 
 | Metrics | Total users |
 
 
-#### Settings: to see referrals from major LLMs to a whole site or specific page
+### Settings: to see referrals from major LLMs to a whole site or specific page
 
 | Field | Value |
 |---|---|
@@ -149,8 +157,9 @@ You may see landing pages grouped as '(not set)'. This typically indicates that 
 | Show rows | 100 |
 | Nested rows | Yes |
 | Values | Total users |
-| Cell type | Bar chart OR Plain text (it's a minor visual difference) |
-| Filters | Page referrer<br>- Conditions: matches regex<br>- Expression: ^https?://([^/]+\.)?(chat\.openai\.com\|chatgpt\.com\|claude\.ai\|gemini\.google\.com\|copilot\.microsoft\.com\|perplexity\.ai\|poe\.com\|you\.com\|grok\.com\|x\.ai\|mistral\.ai\|qwen\.ai\|kimi\.com\|ernie\.baidu\.com\|deepseek\.com)(/\|$)<br>To see the external referrals for an individual page rather than a whole site or service, add the following:<br>Landing page + query string<br>- Conditions: exactly matches<br>- Expression: enter the full URL of the individual page, including https:// and any query string at the end (such as https://helpwithcourtfees.service.gov.uk/questions/fee?locale=en) |
+| Cell type | Bar chart or Plain text |
+| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: ^https?://([^/]+\.)?(openai\.com\|chatgpt\.com\|claude\.ai\|copilot\.microsoft\.com\|gemini\.google\.com\|perplexity\.ai\|poe\.com\|mistral\.ai\|qwen\.ai\|kimi\.com\|ernie\.baidu\.com\|deepseek\.com\|grok\.com\|x\.ai)(/|$)<br><br>To see referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the full landing page URL including https:// and any query string |
+
 
 
 ### What are the most common user paths through a site or multi-step journey?
