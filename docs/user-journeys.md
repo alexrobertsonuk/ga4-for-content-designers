@@ -100,7 +100,7 @@ Nested rows are limited to 10 rows per parent item. For example, only the top 10
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Bar chart or Plain text |
-| Filters | Page referrer<br>- Conditions: contains<br>- Expression: enter your site domain (for example, example.com)<br><br>Page path and screen class<br>- Conditions: exactly matches<br>- Expression: enter the page path of the target page (for example, /ask-for-help/new) |
+| Filters | Dimension: Page referrer<br>Condition: contains<br>Expression: enter your site domain (for example, example.com)<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path of the target page (for example, /ask-for-help/new) |
 
 
 ### What referrals are coming from LLMs (large language models)?
