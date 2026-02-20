@@ -158,7 +158,7 @@ You may see landing pages grouped as "(not set)". This indicates that GA4 was un
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Bar chart or Plain text |
-| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: ^https?://([^/]+\.)?(openai\.com\|chatgpt\.com\|claude\.ai\|copilot\.microsoft\.com\|gemini\.google\.com\|perplexity\.ai\|poe\.com\|mistral\.ai\|qwen\.ai\|kimi\.com\|ernie\.baidu\.com\|deepseek\.com\|grok\.com\|x\.ai)(/|$)<br><br>To see referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the full landing page URL including https:// and any query string |
+| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: ^https?://([^/]+\.)?(chat\.openai\.com|chatgpt\.com|claude\.ai|gemini\.google\.com|copilot\.microsoft\.com|perplexity\.ai|poe\.com|you\.com|grok\.com|x\.ai|mistral\.ai|qwen\.ai|kimi\.com|ernie\.baidu\.com|deepseek\.com)(/|$)<br><br>To see referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the full landing page URL including https:// and any query string |
 
 
 
