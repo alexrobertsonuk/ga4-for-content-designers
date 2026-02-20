@@ -1,5 +1,4 @@
 # GA4 for content designers
-*A practical guide to exploring user behaviour and informing content decisions*
 
 ## About this guide
 This guide explains how content designers can use GA4 (Google Analytics 4) to explore user behaviour and inform content decisions.
