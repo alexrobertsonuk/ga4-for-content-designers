@@ -1,44 +1,70 @@
-## User journeys and pain points
+# User journeys and pain points
 
-> The following sections offer recommendations for how to build explorations that answer common content questions. Think of these as recipes to follow or adapt as you need.
+> The following sections describe how to build explorations that answer common content questions.
 > 
-> Unless otherwise stated, leave all options at their default setting. Be careful to enter dimensions and metrics into the Settings column in the order in which they're specified.
+> Unless otherwise stated, leave all other settings at their default values. Enter dimensions and metrics into the Tab settings column in the order specified.
 
-Through combinations of explorations, you can piece together a good understanding of where users are coming from, how they move through a site or service, and where they click to next. You can also examine the usability of a multi-step journey by identifying common drop-off points or backwards steps, end-to-end completion times, and how many sessions are needed on average to reach completion.
+By combining these explorations, you can build an understanding of:
 
-### Where are users coming from?
+- where users arrive from
+- how they move through a site or service
+- which pages they visit next
+- where users drop off in multi-step journeys
+- how long journeys take to complete
+- how many sessions are typically required to reach completion
 
-#### Potential insights
-These explorations could help you to:
-- quantify improvements in findability after connecting or improving user journeys
-- prioritise external referral sources, where it's most important for information to be consistent and up-to-date
-- identify under-performing referral sources, where signposting or navigation may need to be improved
-- identify the needs of users being referred from external sources, by finding and evaluating the call to action that they respond to
+## Where are users coming from?
+
+### Potential insights
+
+These explorations can help you to:
+
+- assess whether improvements to navigation or cross-linking have increased findability
+- identify which external sources send the most users to your site, and prioritise ensuring their information is consistent and up-to-date
+- detect underperforming referral sources where navigation or signposting may need improvement
+- identify the needs of users being referred from external sources, by tracing and evaluating the call to action that they respond to
 - identify internal pages that are a disproportionate source of referrals to technical support or contact us pages
 
+## Understand the data
 
-#### Understand the data
-The 'page referrer' dimension is simply the user's previous URL, and can be external or within your own property.
+The "Page referrer" dimension shows the previous URL recorded for a page view.
 
-If the referrer is within your own property, the full URL including the domain and any query string is displayed (such as https://helpwithcourtfees.service.gov.uk/questions/fee?locale=en), unlike 'page path and screen class' which omits the domain and any query string, leaving just the directory path and page name (such as /questions/fee).
+This may be:
 
-If the referrer is external, you'll often only see the top level domain, such as https://www.gov.uk, rather than the specific referring page. This is usually due to the privacy policies of the referring site or user's browser, which may restrict referrer data.
+- an external website
+- another page within your own site
+- empty (no referrer recorded)
 
-The absence of any page referrer at all commonly indicates the user arrived directly (such as typing the URL or using a bookmark), or that referrer information was blocked or unavailable (for example, if the user keeps the page open in an inactive tab, and later reopens that tab, the referrer is unknown).
+For internal referrals, the full URL is shown, including the domain and any query string (for example, https://example.com/questions/fee?locale=en).
 
-If you're looking at external referrals, the 'Page referrer' dimension should be paired with 'Landing page + query string' rather than 'Page path and screen class'. Landing page will show you just the first page visited on referral. If a user then passes through multiple pages, the 'page path' for each will be associated with the same external page referrer, which will inflate the numbers of apparent direct referrals to each page.
+For external referrals, you may only see the top-level domain (for example, https://www.gov.uk). Many sites and browsers limit the referrer information passed, so the specific referring page is often unavailable.
 
-The 'Nested rows' option will group together all the pages which share the same referrer, giving you a more readable overview. Note though that nested rows are limited to 10 rows per item (in this case, the top 10 landing pages per referrer).
+An empty "Page referrer" value may indicate:
 
-#### Variables
+- direct traffic (for example, typing the URL or using a bookmark)
+- referrer information blocked by browser or site policy
+- a previously opened page being revisited without a recorded referrer (for example, if the user keeps the page open in an inactive tab, and later reopens that tab, the referrer is unknown)
+
+Because "Page referrer" reflects the previous page for each page view, it does not always represent the original source of the visit. If a user arrives from an external site and then navigates through multiple pages, each page will record the previous internal page as its referrer.
+
+The "Page path and screen class" dimension shows only the path portion of a URL (for example, /questions/fee).
+
+When analysing external referrals, pair "Page referrer" with "Landing page + query string" rather than "Page path and screen class".
+
+"Landing page + query string" identifies the first page visited in the session. If you instead use "Page path and screen class", later page views in the same visit may appear associated with the original external referrer, inflating counts for non-landing pages.
+
+The "Nested rows" option groups secondary rows beneath their primary row, making it easier to see how landing pages relate to each referrer.
+
+Nested rows are limited to 10 rows per parent item. For example, only the top 10 landing pages will be shown under each referrer.
+
+### Variables
 
 | Field | Value |
 |---|---|
-| Dimensions | Landing page + query string<br>Page path and screen class<br>Page referrer<br>Session source |
+| Dimensions | Page referrer<br>Landing page + query string<br>Page path and screen class<br>Session source |
 | Metrics | Total users |
 
-
-#### Settings: to see categorised external referrers for a whole site
+### Settings: to see categorised external referrers for a whole site
 
 | Field | Value |
 |---|---|
@@ -48,10 +74,9 @@ The 'Nested rows' option will group together all the pages which share the same 
 | Show rows | 100 |
 | Nested rows | No |
 | Values | Total users |
-| Cell type | Bar chart OR Plain text (it's a minor visual difference) |
+| Cell type | Bar chart or Plain text |
 
-
-#### Settings: to see detailed external referrers for a whole site or specific page
+### Settings: to see detailed external referrers for a whole site or specific page
 
 | Field | Value |
 |---|---|
@@ -61,11 +86,10 @@ The 'Nested rows' option will group together all the pages which share the same 
 | Show rows | 100 |
 | Nested rows | Yes |
 | Values | Total users |
-| Cell type | Bar chart OR Plain text (it's a minor visual difference) |
-| Filters | Page referrer<br>- Conditions: does not contain<br>- Expression: enter your site or service domain (for example, helpwithcourtfees.service.gov.uk)<br>Page referrer<br>- Conditions: matches regex<br>- Expression: ^.+$ (this matches any text that contains at least one character, filtering out empty page referrer values that represent unknown referral sources)<br>To see the external referrals for an individual page rather than a whole site or service, add the following:<br>Landing page + query string<br>- Conditions: exactly matches<br>- Expression: enter the full URL of the individual page, including https:// and any query string at the end (such as https://helpwithcourtfees.service.gov.uk/questions/fee?locale=en) |
+| Cell type | Bar chart or Plain text |
+| Filters | Page referrer<br>- Conditions: does not contain<br>- Expression: enter your site or service domain (for example, example.com)<br>Page referrer<br>- Conditions: matches regex<br>- Expression: ^.+$ (matches any non-empty referrer value)<br>To see external referrals for an individual page, also add:<br>Landing page + query string<br>- Conditions: exactly matches<br>- Expression: enter the full landing page URL including https:// and any query string |
 
-
-#### Settings: to see detailed internal referrers for a specific page
+### Settings: to see detailed internal referrers for a specific page
 
 | Field | Value |
 |---|---|
@@ -75,8 +99,8 @@ The 'Nested rows' option will group together all the pages which share the same 
 | Show rows | 100 |
 | Nested rows | Yes |
 | Values | Total users |
-| Cell type | Bar chart OR Plain text (it's a minor visual difference) |
-| Filters | Page referrer<br>- Conditions: contains<br>- Expression: enter your full site domain (such as helpwithcourtfees.service.gov.uk)<br>Page path and screen class<br>- Conditions: exactly matches<br>- Expression: enter the page path (such as /ask-for-help/new) of the specific page for which you want to see page referrers |
+| Cell type | Bar chart or Plain text |
+| Filters | Page referrer<br>- Conditions: contains<br>- Expression: enter your site domain (for example, example.com)<br>Page path and screen class<br>- Conditions: exactly matches<br>- Expression: enter the page path of the target page (for example, /ask-for-help/new) |
 
 
 ### What referrals are coming from LLMs (large language models)?
