@@ -4,7 +4,7 @@
 > 
 > Unless otherwise stated, leave all options at their default setting. Be careful to enter dimensions and metrics into the Settings column in the order in which they're specified.
 
-Through combinations of explorations, we're able to piece together a good understanding of where users are coming from, how they move through a site or service, and where they click to next. We can also examine the usability of a multi-step journey by identifying common drop-off points or backwards steps, end-to-end completion times, and how many sessions are needed on average to reach completion.
+Through combinations of explorations, you can piece together a good understanding of where users are coming from, how they move through a site or service, and where they click to next. You can also examine the usability of a multi-step journey by identifying common drop-off points or backwards steps, end-to-end completion times, and how many sessions are needed on average to reach completion.
 
 ### Where are users coming from?
 
@@ -19,10 +19,15 @@ These explorations could help you to:
 
 #### Understand the data
 The 'page referrer' dimension is simply the user's previous URL, and can be external or within your own property.
+
 If the referrer is within your own property, the full URL including the domain and any query string is displayed (such as https://helpwithcourtfees.service.gov.uk/questions/fee?locale=en), unlike 'page path and screen class' which omits the domain and any query string, leaving just the directory path and page name (such as /questions/fee).
+
 If the referrer is external, you'll often only see the top level domain, such as https://www.gov.uk, rather than the specific referring page. This is usually due to the privacy policies of the referring site or user's browser, which may restrict referrer data.
+
 The absence of any page referrer at all commonly indicates the user arrived directly (such as typing the URL or using a bookmark), or that referrer information was blocked or unavailable (for example, if the user keeps the page open in an inactive tab, and later reopens that tab, the referrer is unknown).
+
 If you're looking at external referrals, the 'Page referrer' dimension should be paired with 'Landing page + query string' rather than 'Page path and screen class'. Landing page will show you just the first page visited on referral. If a user then passes through multiple pages, the 'page path' for each will be associated with the same external page referrer, which will inflate the numbers of apparent direct referrals to each page.
+
 The 'Nested rows' option will group together all the pages which share the same referrer, giving you a more readable overview. Note though that nested rows are limited to 10 rows per item (in this case, the top 10 landing pages per referrer).
 
 #### Variables
