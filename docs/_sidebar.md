@@ -1,0 +1,6 @@
+- [Home](/)
+- [Navigating the GA4 interface](navigating-ga4.md)
+- [Exploration setup](exploration-setup.md)
+- [User journeys and pain points](user-journeys.md)
+- [Search behaviour](search-behaviour.md)
+- [Content engagement](content-engagement.md)
