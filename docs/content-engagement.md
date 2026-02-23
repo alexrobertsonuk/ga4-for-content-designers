@@ -1,4 +1,4 @@
-## Content engagement
+# Content engagement
 
 > The following sections describe how to build explorations that answer common content questions.
 > 
