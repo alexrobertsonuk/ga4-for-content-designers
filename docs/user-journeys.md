@@ -345,38 +345,58 @@ Pages with both high average time per view and high exit rates may warrant furth
 | Filters | To analyse a specific page:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /questions/fee) |
 
 
-### What percentage of users are completing a multi-step journey, and how long is it taking them?
+## What percentage of users are completing a multi-step journey, and how long is it taking them?
 
-#### Potential insights
+### Potential insights
 These explorations could help you to:
-- benchmark current completion rates and durations, and then identify if content design changes improve these values
-- identify specific page-to-page transitions where drop-off rates are higher than normal
-- understand which circumstances are leading to the highest or speediest completion rates – for example, if users referred from GOV.UK or an internal guidance page are more likely to complete, or if completion is more common on desktop than mobile
+
+- benchmark current completion rates and average completion time, and later compare these after content changes
+- identify page-to-page transitions where drop-off rates are higher than normal
+- compare completion rates and completion time across different user groups, such as mobile vs desktop, or new vs returning users
+
+### Understand the data
+A funnel exploration can be used to measure how many users complete a defined multi-step journey, and how long it takes them.
+
+Unlike a path exploration, which expands dynamically in a non-linear way, a funnel requires you to define each step in advance. You can add up to 10 steps. This makes it suitable for:
+
+- measuring completion between a defined start and end page
+- examining a small number of critical steps within a longer journey
+
+It is not designed to map complex branching services in full.
+
+The funnel will calculate:
+
+- the proportion of users who move from the first defined step to the final step
+- the average "Elapsed time" between those steps (when enabled)
+
+When only a start and completion page are defined, "Elapsed time" represents the average time between first reaching the start page and reaching the completion page.
+
+This value can be heavily influenced by users who leave and return over multiple days before completing. To better understand typical in-session behaviour, compare:
+
+- new users
+- returning users
+
+Completion time for returning users may include long gaps between visits. This does not necessarily indicate slow interaction on individual pages.
 
 
-#### Understand the data
-While user 'funnels' are usually associated with e-commerce, a 'funnel exploration' can be used to explore average completions and durations for any multi-step journey. Unlike the more fluid and non-linear 'path exploration' view, which expands as you click on a page, a funnel exploration requires you to define in advance each page in a multi-step journey.
-A maximum of 10 steps (individual URLs in a multi-step journey) can be added. This means a funnel exploration is not sufficient for fully mapping out long or branching services. Instead, create steps for just your start and end pages (figure 9), or a small number of specific steps in between.
-User 'segments' are particularly useful in a funnel exploration – they enable you to identify whether different user groups have different completion rates and durations. For instance, you can compare users referred from GOV.UK with users who were not, getting a broad indication of whether mainstream content might be improving or speeding up completion rates. Alternatively, you can see whether completion is more likely on mobile or desktop. You can then revisit these completion rates after relevant design changes.
-The 'Elapsed time' value in a funnel exploration shows you the average time elapsed between your funnel steps. With the exploration settings below, it will show you the average time to complete the entire transaction. This will be heavily distorted by users who return over many days to gradually work their way through a long transaction. To better estimate how long the transaction typically takes in a single session, you can segment the exploration by new and returning users. The 'Elapsed time' for new users who complete an entire transaction at once will usually be measured in minutes, while for returning users can be days.
-
-#### Variables
+### Variables
 
 | Field | Value |
 |---|---|
-| Segments | 'All Users' (readymade segment)<br>'Mobile traffic' (readymade segment)<br>'Web traffic' (readymade segment)<br>'Users referred from GOV.UK' (new segment):<br>- I nclude users when: Page referrer contains https://www.gov.uk/ at any point in time<br>'Users NOT referred from GOV.UK' (new segment):<br>- Exclude users when: Page referrer contains https://www.gov.uk/ at any point in time<br>'New users' (new segment):<br>- Include users when: New/returning exactly matches (=) new NOT at any point in time<br>'Returning users' (new segment):<br>- Include users when: New/returning exactly matches (=) returning NOT at any point in time |
+| Segments | 'All Users' (readymade segment)<br>'Mobile traffic' (readymade segment)<br>'Web traffic' (readymade segment)<br><br>'Users referred from GOV.UK' (new segment):<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.gov.uk/<br><br>'Users NOT referred from GOV.UK' (new segment):<br>Dimension: Page referrer<br>Condition: does not contain<br>Expression: https://www.gov.uk/<br><br>'New users' (new segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: new<br><br>'Returning users' (new segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: returning |
 
 
-#### Settings
+### Settings
 
 | Field | Value |
 |---|---|
 | Technique | Funnel exploration |
 | Visualisation | Standard funnel |
 | Make open funnel | Off |
-| Segment comparisons | All Users<br>To compare users referred from GOV.UK or not, add the segments you created:<br>- Users referred from GOV.UK<br>- Users NOT referred from GOV.UK<br>To compare users on mobile vs desktop, instead add the pre-built segments:<br>- Mobile traffic<br>- Web traffic<br>To compare new vs returning users, instead add the segments you created:<br>- New users<br>- Returning users |
-| Steps | Step 1:<br>- Rename the step 'Start page'<br>- Condition: Page path and screen class<br>- Filter: exactly matches (=)<br>- Enter the path of the first step in a transaction (note: not the GOV.UK 'start' button page, but the first page on your own service domain or subdomain)<br>…'is indirectly followed by'…<br>Step 2:<br>- Rename the step 'Completion page'<br>- Condition: Page path and screen class<br>- Filter: exactly matches (=)<br>- Enter the path of the final step in a transaction, like a completion or summary page |
+| Segment comparisons | Add only one comparison group at a time for clarity.<br><br>To compare referral source:<br>- Users referred from GOV.UK<br>- Users NOT referred from GOV.UK<br><br>To compare device type:<br>- Mobile traffic<br>- Web traffic<br><br>To compare user type:<br>- New users<br>- Returning users |
+| Steps | Step 1:<br>Rename: Start page<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the path of the first page on your own service domain or subdomain<br><br>…is indirectly followed by…<br><br>Step 2:<br>Rename: Completion page<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the path of the final confirmation, summary, or completion page |
 | Show elapsed time | On |
+
 
 
 ### How many sessions on average do users need to complete a multi-step journey?
