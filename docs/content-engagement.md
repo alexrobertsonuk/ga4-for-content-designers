@@ -403,3 +403,8 @@ If file download tracking is not enabled, contact the property administrator.
 | Values | Total users |
 | Cell type | Plain text |
 | Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: file_download<br><br>Optional:<br><br>Dimension: Page path and screen class<br>Condition: contains OR exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
+
+---
+
+<small>GA4 for content designers by Alex Robertson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small>
+
