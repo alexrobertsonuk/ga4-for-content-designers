@@ -532,7 +532,7 @@ High exit rates do not automatically indicate a problem. Interpretation should c
 
 | Field | Value |
 |---|---|
-| Segments | 'Users who have NOT completed' (new segment):<br>Dimension: Page path and screen class<br>Condition: does not contain<br>Expression: enter the page path of the completion page, such as /confirmation<br><br>'Users referred from https://www.example.com/ who have NOT completed' (new segment):<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/<br>AND<br>Dimension: Page path and screen class<br>Condition: does not contain<br>Expression: enter the page path of the completion page, such as /confirmation<br><br>'Mobile users who have NOT completed' (new segment):<br>Dimension: Device category<br>Condition: exactly matches (=)<br>Expression: mobile<br>AND<br>Dimension: Page path and screen class<br>Condition: does not contain<br>Expression: enter the page path of the completion page, such as /confirmation |
+| Segments | 'Users who have NOT completed' (new segment):<br>Exclude users when:<br>Dimension: Page path and screen class<br>Condition: contains<br>Expression: enter the page path of the completion page, such as /confirmation<br><br>'Users referred from https://www.example.com/ who have NOT completed' (new segment):<br>Include users when:<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/<br>AND<br>Exclude users when:<br>Dimension: Page path and screen class<br>Condition: contains<br>Expression: enter the page path of the completion page, such as /confirmation<br><br>'Mobile users who have NOT completed' (new segment):<br>Include users when:<br>Dimension: Device category<br>Condition: exactly matches (=)<br>Expression: mobile<br>AND<br>Exclude users when:<br>Dimension: Page path and screen class<br>Condition: contains<br>Expression: enter the page path of the completion page, such as /confirmation |
 
 ### Settings
 
@@ -552,31 +552,44 @@ High exit rates do not automatically indicate a problem. Interpretation should c
 ## Which pages in a multi-step journey are users commonly moving backwards to?
 
 ### Potential insights
+
 This exploration could help you to:
-- identify pages in a multi-step journey that are causing confusion or uncertainty for users, feel like dead-ends, or present new information that prompts reconsideration of previous answers
+
+- identify steps in a journey where users frequently navigate back to an earlier page
+- highlight parts of the journey where users may be reviewing or reconsidering previous answers
+- compare backward navigation patterns between new and returning users
 
 
 ### Understand the data
-This exploration is similar to Are users repeatedly returning to the same page? , but will help you to hone in on backwards navigation in a multi-step journey.
-The exploration output will present you with 4 columns, from left to right:
-- Page path and screen class - the page users arrived at
-- Page referrer - the page users came from
-- Total users - the number of users who navigated from the 'Page referrer' to the 'Page path and screen class'
-- Views per active user - the average number of times the 'Page path and screen class' was viewed by each user during your date range. A high value (typically over 1.4) suggests that users are returning to the page more than normal. To avoid this being skewed higher by users who returned during your date range to work through the service in multiple sessions, this exploration filters to new users only.
 
-You'll need to do a little sifting through the data to spot problem areas:
-1. Sort the table by 'Views per active user', high to low.
-2. Start to work your way down the rows, comparing the 'Page path and screen class' with the 'Page referrer'. You're looking for instances where the 'Page path and screen class' is the step immediately prior to the 'Page referrer'.
-3. You'll notice that these are often the same page, which can be caused by users refreshing the page. Ignore these instances.
-4. If you spot a 'Page path and screen class' that's a backwards step from the 'Page referrer', look at: 'Views per active user' to gauge how often this is happening compared with other backwards steps 'Total users' to see how many users were affected in your date range
+This method identifies backward navigation by comparing:
+
+- Page referrer (the page users came from)
+- Page path and screen class (the page users arrived at)
+
+Backward movement occurs when the destination page represents an earlier step in the journey than the referrer page.
+
+The table will include:
+
+- Page path and screen class: the destination page
+- Page referrer: the previous page
+- Total users: the number of users who moved between those two pages
+- Views per active user: the average number of times the destination page was viewed by each active user during the selected date range
+
+Rows where the referrer and destination are the same usually indicate page refreshes and can typically be ignored.
+
+Views per active user provides context about how often users return to a page within the selected date range. Interpretation should be relative across journey steps rather than based on fixed thresholds.
+
+To reduce the influence of users returning over multiple sessions, begin by analysing new users only. You can then compare with returning users to understand whether backward navigation differs between first-time and repeat visits.
 
 
 ### Variables
 
 | Field | Value |
 |---|---|
-| Dimensions | New/Established<br>Page path and screen class<br>Page referrer |
+| Dimensions | Page path and screen class<br>Page referrer |
 | Metrics | Total users<br>Views per active user |
+| Segments | 'New users' (readymade or new segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: new<br><br>'Returning users' (optional segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: returning |
 
 
 ### Settings
@@ -585,28 +598,45 @@ You'll need to do a little sifting through the data to spot problem areas:
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
+| Segment comparisons | Start with:<br>New users<br><br>Optionally add:<br>Returning users |
 | Rows | Page path and screen class<br>Page referrer |
 | Show rows | 100 |
 | Nested rows | No |
 | Values | Total users<br>Views per active user |
 | Cell type | Plain text |
-| Filters | New/Established<br>- Conditions: exactly matches<br>- Expression: new<br>Page referrer<br>- Conditions: contains<br>- Expression: enter your site domain, such as helpwithcourtfees.service.gov.uk, to filter to only internal page navigation<br>If your 'Page referrer' data is noisy with lots of little-used customised URLs (for example, containing query strings with tracking codes), try adding:<br>Total users<br>- Conditions: ><br>- Expression: 10 |
+| Filters | Dimension: Page referrer<br>Condition: contains<br>Expression: enter your service domain, such as https://www.example.com/, to restrict results to internal navigation |
 
 
-### Do users change devices mid-journey to complete tasks?
-
-#### Potential insights
-These explorations could help you to:
-- identify if returning users have switched device type (desktop, mobile, tablet), indicating this may be necessary to overcome usability barriers or more easily complete a task
-- quantify whether design changes have successfully lowered usability barriers for specific device types
 
 
-#### Understand the data
-To understand if users are switching device once they've seen your site or service, you can compare the device breakdown for 'new users' vs 'returning users'. Often users are initially referred from mobile-first GOV.UK, then realise that a larger screen is required to complete a service, and return on desktop.
-Your date range will capture all new users, but only those who returned within the same date range. This will cause the true number of returning users to be slightly under-represented. For a more accurate picture, always select the longest possible date range for this exploration.
-Mouse over the chart segments to see the underlying data.
+## Do users change devices mid-journey to complete tasks?
 
-#### Variables
+### Potential insights
+
+This exploration could help you to:
+
+- compare the device distribution of new and returning users
+- identify whether returning users are more likely to use a different device category than new users
+- monitor whether design changes reduce differences between device categories over time
+
+
+### Understand the data
+
+This method compares device category for:
+
+- new users
+- returning users
+
+A difference in device distribution between these groups may suggest that users begin a journey on one device type and later return using another.
+
+However, this method does not directly confirm that individual users switched devices. It shows aggregate differences between first-time and returning sessions.
+
+Returning users are only counted if they returned within the selected date range. Users who return outside the date range will not be included as returning users. Using a longer date range can reduce this under-representation, particularly for services that take longer to complete.
+
+When reviewing the chart, compare the proportion of each device category between new and returning users.
+
+
+### Variables
 
 | Field | Value |
 |---|---|
@@ -614,36 +644,63 @@ Mouse over the chart segments to see the underlying data.
 | Metrics | New users<br>Returning users |
 
 
-#### Settings
+### Settings
 
 | Field | Value |
 |---|---|
 | Technique | Free-form |
 | Visualisation | Doughnut chart |
 | Breakdowns | Device category |
-| Values | New users<br>OR<br>Returning users |
+| Values | Select one metric at a time:<br>New users<br>OR<br>Returning users |
 
 
-### What external links are most clicked?
+## What external links are most clicked?
 
-#### Potential insights
-These explorations could help you to:
-- identify which external resources appear most valuable to users
-- identify underperforming links which may need to be removed or signposted more effectively
-- measure whether external links are clicked more than primary calls to action, which may indicate that external information needs more effective integration
+### Potential insights
 
+This exploration could help you to:
 
-#### Understand the data
-Enabling 'nested rows' is particularly useful for this exploration, as it will group all clicked external links by the page where they're found.
-If no external link data appears to be available, even for a broad date range:
-1. Within the property, visit Admin > Data collection and modification > Data streams
-2. Select 'Web'
-3. In the 'Web stream details' overlay, check that 'Enhanced measurement' is enabled
-4. If 'Enhanced measurement' is enabled, look at the 'Measuring' list to see if 'Outbound clicks' is enabled
-5. If either of the above is not enabled, contact the property admin
+- identify which external links are most frequently clicked
+- review whether some links receive little interaction
+- compare whether external links are clicked more often than primary calls to action
+- assess whether users are leaving the service to seek additional information
 
 
-#### Variables
+### Understand the data
+
+This method analyses external link clicks recorded by GA4.
+
+External link clicks are only recorded if automatic click tracking is enabled in your property's settings. If this tracking is enabled, GA4 records:
+
+- the page where the click occurred
+- the destination URL of the external link
+
+Enabling nested rows groups external links under the page where they were clicked. This helps you see which pages are prompting users to leave the site.
+
+The metric "Total users" represents the number of users who clicked a given external link at least once during the selected date range. It does not represent the total number of clicks.
+
+Interpretation should consider:
+
+- whether the external link is intended as a primary pathway
+- whether the link appears before or instead of a key task step
+- whether users may be seeking clarification before continuing
+
+
+If no external link data appears:
+
+1. Go to Admin.
+2. Select Data collection and modification.
+3. Select Data streams.
+4. Select your website stream.
+5. Check that automatic click tracking is enabled.
+
+If this setting is not enabled, contact the property administrator.
+
+Some external link clicks may not be recorded due to browser privacy controls, consent configuration, or ad blockers.
+
+
+
+### Variables
 
 | Field | Value |
 |---|---|
@@ -651,7 +708,7 @@ If no external link data appears to be available, even for a broad date range:
 | Metrics | Total users |
 
 
-#### Settings
+### Settings
 
 | Field | Value |
 |---|---|
@@ -661,3 +718,4 @@ If no external link data appears to be available, even for a broad date range:
 | Show rows | 100 |
 | Nested rows | Yes |
 | Values | Total users |
+| Cell type | Plain text |
