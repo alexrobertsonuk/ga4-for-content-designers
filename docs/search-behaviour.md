@@ -209,3 +209,127 @@ Interpret results cautiously. If a search referrer appears unrelated to the dest
 | Values | Total users |
 | Cell type | Plain text |
 | Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: .*\?(q=\|s=\|search=\|query=\|keyword=).*<br><br>To filter results by an individual page, also add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
+
+
+
+## What search terms return no results?
+
+### Potential insights
+
+These explorations could help you to:
+
+- identify search terms that produce no results
+- detect vocabulary mismatches between users and your content
+- identify potential content gaps
+- monitor whether content changes reduce zero-result searches over time
+
+
+### Understand the data
+
+When a user performs an internal search, GA4 records a "view_search_results" event.
+
+This event includes a parameter indicating the number of results returned. When this value is 0, the search produced no results.
+
+By filtering to searches where the number of results equals 0, you can isolate search terms that did not return any matching content.
+
+Interpret zero-result searches in context. They may indicate:
+
+- missing content
+- differences between user language and site terminology
+- misspellings or typos
+- overly strict search configuration
+
+High frequency zero-result terms may warrant further review, but smaller volumes can still be meaningful if they reflect important user needs.
+
+
+### Variables
+
+| Field | Value |
+|---|---|
+| Dimensions | Event name<br>Search term |
+| Metrics | Event count<br>Total users |
+
+
+### Settings
+
+| Field | Value |
+|---|---|
+| Technique | Free-form |
+| Visualisation | Table |
+| Rows | Search term |
+| Show rows | 500 |
+| Nested rows | No |
+| Values | Event count<br>Total users |
+| Cell type | Plain text |
+| Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: view_search_results<br><br>Dimension: Search results<br>Condition: exactly matches (=)<br>Expression: 0 |
+
+
+## What search terms lead to immediate exits?
+
+### Potential insights
+
+These explorations could help you to:
+
+- identify search terms after which users frequently leave the site
+- assess whether search results appear to guide users to relevant content
+- compare whether certain search topics are associated with higher exit rates
+- monitor whether search improvements reduce exits following specific terms
+
+
+### Understand the data
+
+When a user performs a search, GA4 records a "view_search_results" event.
+
+If the user leaves the site without viewing another page, the search results page will record an exit.
+
+By analysing exits from search results pages grouped by search term, you can estimate the proportion of searches that did not lead to further navigation.
+
+GA4 does not provide an exit rate metric directly in Explorations. You can calculate it by dividing:
+
+Exits ÷ Views
+
+In this case:
+
+- "Views" represents views of the search results page
+- "Exits" represents sessions that ended on the search results page
+
+To calculate exit rate by search term:
+
+1. Create the exploration using the variables and settings below.
+2. Export the data as CSV.
+3. Open the file in a spreadsheet tool.
+4. Insert a new column titled "Exit rate".
+5. Divide the "Exits" value by the "Views" value.
+6. Format the result as a percentage.
+7. Compare proportions across search terms rather than relying on absolute counts.
+
+Interpret higher exit rates in context. An exit after search may indicate:
+
+- the search returned no relevant results
+- the user found the needed information directly in the search results summary
+- the user decided not to continue
+- the search intent was informational rather than task-based
+
+
+### Variables
+
+| Field | Value |
+|---|---|
+| Dimensions | Event name<br>Search term |
+| Metrics | Views<br>Exits |
+
+
+### Settings
+
+| Field | Value |
+|---|---|
+| Technique | Free-form |
+| Visualisation | Table |
+| Rows | Search term |
+| Show rows | 500 |
+| Nested rows | No |
+| Values | Views<br>Exits |
+| Cell type | Plain text |
+| Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: view_search_results |
+
+
