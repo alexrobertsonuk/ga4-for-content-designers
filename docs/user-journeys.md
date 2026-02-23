@@ -401,6 +401,63 @@ Completion time for returning users may include long gaps between visits. This d
 
 
 
+## Do users drop off at the first step of a journey?
+
+### Potential insights
+
+This exploration could help you to:
+
+- identify whether a large proportion of users leave before progressing beyond the first step
+- assess whether changes to introductory content or calls to action influence progression
+- compare first-step progression across device categories or referral sources
+
+
+### Understand the data
+
+This method isolates users who viewed the first page of a defined journey.
+
+You then compare:
+
+- users who progressed to the second step
+- users who did not progress beyond the first step within the selected date range
+
+This differs from overall abandonment analysis. It focuses specifically on whether users move past the entry point into the transactional flow.
+
+A user is considered to have progressed if they viewed the next defined step at any point within the selected date range.
+
+Users who return after the date range to continue will still be counted as non-progressing. Extending the date range can reduce this effect but does not remove it entirely.
+
+To estimate first-step drop-off:
+
+1. Create a funnel exploration using only the first two steps of your journey.
+2. Define Step 1 as the first page of the journey.
+3. Define Step 2 as the immediate next step.
+4. Review the proportion of users who move from Step 1 to Step 2.
+
+The percentage who do not progress represents first-step drop-off within the selected date range.
+
+Interpret this in context. Some users may intentionally leave after reviewing eligibility information or deciding not to proceed.
+
+
+### Variables
+
+| Field | Value |
+|---|---|
+| Segments | 'All Users' (readymade segment)<br>'Mobile traffic' (readymade segment)<br>'Web traffic' (readymade segment)<br><br>'Users referred from https://www.example.com/' (new segment):<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/<br><br>'Users NOT referred from https://www.example.com/' (new segment):<br>Dimension: Page referrer<br>Condition: does not contain<br>Expression: https://www.example.com/ |
+
+### Settings
+
+| Field | Value |
+|---|---|
+| Technique | Funnel exploration |
+| Visualisation | Standard funnel |
+| Make open funnel | Off |
+| Segment comparisons | Add only one comparison group at a time for clarity.<br><br>To compare referral source:<br>- Users referred from https://www.example.com/<br>- Users NOT referred from https://www.example.com/<br><br>To compare device type:<br>- Mobile traffic<br>- Web traffic |
+| Steps | Step 1:<br>Rename: First step<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the path of the first page of the journey<br><br>…is indirectly followed by…<br><br>Step 2:<br>Rename: Second step<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the path of the immediate next step in the journey |
+| Show elapsed time | Off |
+
+
+
 
 ## How many sessions do users need to complete a multi-step journey?
 
@@ -448,7 +505,7 @@ To calculate the values:
 1. Create an exploration using the variables and settings below.
 2. Export the data to CSV.
 3. Open the CSV in a spreadsheet tool using comma as the delimiter.
-4. Remove the top rows containing exploration metadata so that the first visible row contains the column headers.
+4. Remove any rows above the column headers so that the first visible row contains the column headers.
 5. Add a new column titled 'Average sessions per user'.
 6. Divide the 'Sessions' column by the 'Total users' column.
 7. To calculate the proportion completing in a single session, divide:
