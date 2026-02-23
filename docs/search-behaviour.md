@@ -4,7 +4,9 @@
 > 
 > Unless otherwise stated, leave all other settings at their default values. Enter dimensions and metrics into the Tab settings column in the order specified.
 
-This section focuses on internal site search behaviour: searches performed within your own site or service. It does not cover external search engines such as Google.
+This section focuses on internal site search behaviour: searches performed within your own site or service.
+
+GA4 does not show the search terms users typed into external search engines such as Google. External search queries are not passed to GA4. To analyse search engine queries, you will need access to Google Search Console or an equivalent search analytics tool.
 
 If your site includes an internal search function, GA4 can automatically record search activity.
 
