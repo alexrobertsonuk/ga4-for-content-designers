@@ -334,4 +334,6 @@ Interpret higher exit rates in context. An exit after search may indicate:
 | Cell type | Plain text |
 | Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: view_search_results |
 
+---
 
+<small>GA4 for content designers by Alex Robertson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small>
