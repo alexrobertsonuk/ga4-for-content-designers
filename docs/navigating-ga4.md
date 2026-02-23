@@ -48,3 +48,7 @@ To create a new exploration:
 3. Under **Start a new exploration**, choose **Blank**.
 
 A blank exploration workspace will open.
+
+---
+
+<small>GA4 for content designers by Alex Robertson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small>
