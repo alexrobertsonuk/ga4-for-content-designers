@@ -1,4 +1,4 @@
-## Search behaviour
+# Search behaviour
 
 > The following sections describe how to build explorations that answer common content questions.
 > 
