@@ -352,7 +352,10 @@ These explorations could help you to:
 
 - benchmark current completion rates and average completion time, and later compare these after content changes
 - identify page-to-page transitions where drop-off rates are higher than normal
-- compare completion rates and completion time across different user groups, such as mobile vs desktop, or new vs returning users
+- compare completion rates and completion time across different user groups, such as:
+  - mobile vs desktop
+  - new vs returning users
+  - users referred from a specific page
 
 ### Understand the data
 A funnel exploration can be used to measure how many users complete a defined multi-step journey, and how long it takes them.
@@ -383,7 +386,7 @@ Completion time for returning users may include long gaps between visits. This d
 
 | Field | Value |
 |---|---|
-| Segments | 'All Users' (readymade segment)<br>'Mobile traffic' (readymade segment)<br>'Web traffic' (readymade segment)<br><br>'Users referred from GOV.UK' (new segment):<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.gov.uk/<br><br>'Users NOT referred from GOV.UK' (new segment):<br>Dimension: Page referrer<br>Condition: does not contain<br>Expression: https://www.gov.uk/<br><br>'New users' (new segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: new<br><br>'Returning users' (new segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: returning |
+| Segments | 'All Users' (readymade segment)<br>'Mobile traffic' (readymade segment)<br>'Web traffic' (readymade segment)<br><br>'Users referred from www.example.com/page' (new segment):<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/page<br><br>'Users NOT referred from www.example.com/page' (new segment):<br>Dimension: Page referrer<br>Condition: does not contain<br>Expression: https://www.example.com/page<br><br>'New users' (new segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: new<br><br>'Returning users' (new segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: returning |
 
 
 ### Settings
@@ -393,7 +396,7 @@ Completion time for returning users may include long gaps between visits. This d
 | Technique | Funnel exploration |
 | Visualisation | Standard funnel |
 | Make open funnel | Off |
-| Segment comparisons | Add only one comparison group at a time for clarity.<br><br>To compare referral source:<br>- Users referred from GOV.UK<br>- Users NOT referred from GOV.UK<br><br>To compare device type:<br>- Mobile traffic<br>- Web traffic<br><br>To compare user type:<br>- New users<br>- Returning users |
+| Segment comparisons | Add only one comparison group at a time for clarity.<br><br>To compare referral source:<br>- Users referred from www.example.com/page<br>- Users NOT referred from www.example.com/page<br><br>To compare device type:<br>- Mobile traffic<br>- Web traffic<br><br>To compare user type:<br>- New users<br>- Returning users |
 | Steps | Step 1:<br>Rename: Start page<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the path of the first page on your own service domain or subdomain<br><br>…is indirectly followed by…<br><br>Step 2:<br>Rename: Completion page<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the path of the final confirmation, summary, or completion page |
 | Show elapsed time | On |
 
