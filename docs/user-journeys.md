@@ -402,47 +402,69 @@ Completion time for returning users may include long gaps between visits. This d
 
 
 
-### How many sessions on average do users need to complete a multi-step journey?
+## How many sessions on average do users need to complete a multi-step journey?
 
-#### Potential insights
+### Potential insights
+
 This exploration could help you to:
-- measure what proportion of users are able to complete a transaction in a single session, and if this is improved after a significant content design change
-- identify if any circumstances (such as referral from GOV.UK) or devices (mobile vs desktop) make it more likely that users will complete in fewer sessions
 
+- estimate how many sessions, on average, it takes users who complete a journey to reach the final page
+- measure whether more users are completing within a single session after content changes
+- compare whether completion typically requires more sessions depending on:
+  - referring domain
+  - device category
 
-#### Understand the data
-You can learn more about users who completed a transaction by creating a segment that only includes users who viewed the final page. For this segment, you can then compare the number of total sessions with the number of total users. You can use this to calculate how many sessions, on average, it takes users to complete the transaction. A session "initiates when a user… views a page" and "ends (times out) after 30 minutes of user inactivity" (source: [GA4] Session ).
-GA4 does not have an 'Average sessions per user' metric, but this is easy to calculate by dividing the number of sessions by the number of total users:
+### Understand the data
+
+This method focuses only on users who completed the journey.
+
+You create a segment that includes users who viewed the completion page. Within that segment, you compare:
+
+- Sessions
+- Total users
+
+GA4 does not provide a built-in "average sessions per user" metric. However, you can calculate it by dividing:
+
+Sessions ÷ Total users
+
+This produces the average number of sessions required for users in the completion segment.
+
+A session begins when a user starts interacting with your site and ends after a period of inactivity. If a user leaves and later returns, this creates a new session. As a result, users who take breaks before finishing will increase the average.
+
+This calculation does not show how many sessions are required for all users who start the journey. It only reflects those who reached the completion page.
+
+To calculate the value:
+
 1. Create an exploration using the variables and settings below.
-2. Export the data to CSV (see Exporting data ).
-3. Import the CSV into an Excel spreadsheet, selecting 'comma' as the delimiter.
-4. Remove the top 6 rows (the exploration information which precedes the column headers).
+2. Export the data to CSV.
+3. Open the CSV in a spreadsheet tool using comma as the delimiter.
+4. Remove the top rows containing exploration metadata so that the first visible row contains the column headers.
 5. Add a new column titled 'Average sessions per user'.
-6. In this 'Average views per user' column, divide 'Sessions' column by 'Total users'.
-7. Sort the table by 'Average sessions per user', largest to smallest.
+6. Divide the 'Sessions' column by the 'Total users' column.
 
 
-#### Variables
+### Variables
 
 | Field | Value |
 |---|---|
-| Dimensions | Page path and screen class<br>Device category |
+| Dimensions | Device category |
 | Metrics | Sessions<br>Total users |
-| Segments | 'Completion page (all)' (new segment):<br>- Include users when: Page path and screen class exactly matches (=) enter your completion page path, such as /confirmation NOT at any point in time<br>'Completion page (via GOV.UK)' (new segment):<br>- Include users when: Page path and screen class exactly matches (=) enter your completion page path, such as /confirmation NOT at any point in time AND Page referrer contains https://www.gov.uk at any point in time<br>'Completion page (NOT via GOV.UK)' (new segment):<br>- Include users when: Page path and screen class exactly matches (=) enter your completion page path, such as /confirmation NOT at any point in time AND Page referrer does not contain https://www.gov.uk at any point in time |
+| Segments | 'Completion page (all)' (new segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br><br>'Completion page (via https://www.example.com/)' (new segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br>AND<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/<br><br>'Completion page (NOT via https://www.example.com/)' (new segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br>AND<br>Dimension: Page referrer<br>Condition: does not contain<br>Expression: https://www.example.com/ |
 
 
-#### Settings
+### Settings
 
 | Field | Value |
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Segment comparisons | Completion page (all)<br>Completion page (via GOV.UK)<br>Completion page (NOT via GOV.UK) |
+| Segment comparisons | Completion page (all)<br>Completion page (via https://www.example.com/)<br>Completion page (NOT via https://www.example.com/) |
 | Rows | Device category |
 | Show rows | 10 |
 | Nested rows | No |
 | Values | Sessions<br>Total users |
-| Cell type | Bar chart OR Plain text (it's a minor visual difference) |
+| Cell type | Plain text |
+
 
 
 ### Where are non-completing users abandoning a multi-step journey?
