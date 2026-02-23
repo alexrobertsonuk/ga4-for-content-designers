@@ -776,3 +776,7 @@ Some external link clicks may not be recorded due to browser privacy controls, c
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Plain text |
+
+---
+
+<small>GA4 for content designers by Alex Robertson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small>
