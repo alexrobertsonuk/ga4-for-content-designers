@@ -402,21 +402,23 @@ Completion time for returning users may include long gaps between visits. This d
 
 
 
-## How many sessions on average do users need to complete a multi-step journey?
+## How many sessions do users need to complete a multi-step journey?
 
 ### Potential insights
 
 This exploration could help you to:
 
 - estimate how many sessions, on average, it takes users who complete a journey to reach the final page
-- measure whether more users are completing within a single session after content changes
-- compare whether completion typically requires more sessions depending on:
+- measure the proportion of completing users who finish within a single session
+- assess whether content or structural changes reduce the need for users to return later
+- compare whether session requirements differ depending on:
   - referring domain
   - device category
 
+
 ### Understand the data
 
-This method focuses only on users who completed the journey.
+This method focuses only on users who reached the completion page.
 
 You create a segment that includes users who viewed the completion page. Within that segment, you compare:
 
@@ -429,11 +431,19 @@ Sessions ÷ Total users
 
 This produces the average number of sessions required for users in the completion segment.
 
-A session begins when a user starts interacting with your site and ends after a period of inactivity. If a user leaves and later returns, this creates a new session. As a result, users who take breaks before finishing will increase the average.
+To understand how many users completed in a single session, you create an additional segment that includes:
 
-This calculation does not show how many sessions are required for all users who start the journey. It only reflects those who reached the completion page.
+- users who viewed the completion page
+- and whose Session count equals 1
 
-To calculate the value:
+By comparing Total users across the two segments, you can calculate the proportion who completed in a single session.
+
+A session begins when a user starts interacting with your site and ends after a period of inactivity (30 minutes by default, unless your GA4 property settings have been changed). If a user leaves and later returns, this creates a new session. As a result, users who take breaks before finishing will increase the average number of sessions.
+
+These calculations reflect behaviour only among users who completed the journey. They do not show how many users who started the journey failed to complete.
+
+
+To calculate the values:
 
 1. Create an exploration using the variables and settings below.
 2. Export the data to CSV.
@@ -441,6 +451,11 @@ To calculate the value:
 4. Remove the top rows containing exploration metadata so that the first visible row contains the column headers.
 5. Add a new column titled 'Average sessions per user'.
 6. Divide the 'Sessions' column by the 'Total users' column.
+7. To calculate the proportion completing in a single session, divide:
+
+   Total users (completion page AND session count = 1)  
+   ÷  
+   Total users (completion page, all)
 
 
 ### Variables
@@ -449,8 +464,7 @@ To calculate the value:
 |---|---|
 | Dimensions | Device category |
 | Metrics | Sessions<br>Total users |
-| Segments | 'Completion page (all)' (new segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br><br>'Completion page (via https://www.example.com/)' (new segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br>AND<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/<br><br>'Completion page (NOT via https://www.example.com/)' (new segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br>AND<br>Dimension: Page referrer<br>Condition: does not contain<br>Expression: https://www.example.com/ |
-
+| Segments | 'Completion page (all)' (new segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br><br>'Completion page (1 session only)' (new segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br>AND<br>Dimension: Session count<br>Condition: exactly matches (=)<br>Expression: 1<br><br>'Completion page (via https://www.example.com/)' (optional segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br>AND<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/ |
 
 ### Settings
 
@@ -458,7 +472,7 @@ To calculate the value:
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Segment comparisons | Completion page (all)<br>Completion page (via https://www.example.com/)<br>Completion page (NOT via https://www.example.com/) |
+| Segment comparisons | Completion page (all)<br>Completion page (1 session only)<br>Completion page (via https://www.example.com/) (optional) |
 | Rows | Device category |
 | Show rows | 10 |
 | Nested rows | No |
@@ -467,44 +481,66 @@ To calculate the value:
 
 
 
-### Where are non-completing users abandoning a multi-step journey?
 
-#### Potential insights
+## Where are non-completing users abandoning a multi-step journey?
+
+### Potential insights
+
 This exploration could help you to:
-- identify points in a multi-step journey where new users are dropping off and not completing (before the end of your specified date range)
-- monitor the influence of content changes on abandonment rates at specific points in a multi-step journey
-- understand if factors like device type or referral from GOV.UK influence abandonment rates, to inform further investigation
+
+- identify pages within a journey where users who did not complete are most frequently exiting
+- monitor whether content changes influence exit behaviour at specific steps
+- compare abandonment patterns by device category or referring domain
 
 
-#### Understand the data
-While funnel and path explorations can be useful to spot drop-off points through a user journey, they're limited to 10 steps and so insufficient for large journeys. This free-form exploration will instead provide a breakdown of abandonment across every page.
-With large transactional services, it's common for users to complete the transaction over multiple sessions. These users are not 'abandoning' the service, but simply pausing until later, yet the last page in each session will still be recorded by GA4 as an 'exit'. To avoid skewing the figures as much as possible, this exploration focuses solely on the segment of users who did not complete the transaction within the specified date range. This isn't perfect, since some of these users will return in the future to complete, but the impact is reduced the longer you make the date range.
-There is no 'exit rate' metric in GA4, but this is straightforward to estimate by dividing 'Exits' by 'Views':
+### Understand the data
+
+Funnel and path explorations are limited to 10 defined steps. For longer or more complex services, a free-form exploration provides a more complete view across all pages.
+
+This method focuses only on users who did not reach the completion page within the selected date range.
+
+Users who return after the date range to complete will still be counted here as non-completing. Extending the date range can reduce this effect, but it does not remove it entirely.
+
+An "Exit" is recorded when a session ends on a page. This does not necessarily mean the user has permanently abandoned the journey. Users who pause and return later will still generate exits in earlier sessions.
+
+GA4 does not provide a built-in "exit rate" metric. You can estimate it by dividing:
+
+Exits ÷ Views
+
+This produces the proportion of views that were the final interaction in a session.
+
+To calculate exit rate:
+
 1. Create an exploration using the variables and settings below.
-2. Export the data to CSV (see Exporting data )
-3. Import the CSV into an Excel spreadsheet, selecting 'comma' as the delimiter.
-4. Remove the top 6 rows (the exploration information which precedes the column headers).
-5. Remove the far right 3 columns each titled 'Totals'.
-6. Insert a new column to the right of 'Exits', and title it 'Exit rate'.
-7. In this 'Exit rate' column, divide the 'Exits' by 'Views', and format as percentage.
-8. Sort the table by 'Exit rate', largest to smallest.
-9. Work your way down the list of URLs, identifying those that form part of the transaction and have the highest 'Exit rate' percentages.
+2. Export the data to CSV.
+3. Open the CSV in a spreadsheet tool using comma as the delimiter.
+4. Remove any rows above the column headers so that the first visible row contains the data labels.
+5. Insert a new column titled 'Exit rate'.
+6. Divide the 'Exits' column by the 'Views' column.
+7. Format the result as a percentage.
+8. Review pages that are part of the transaction journey and compare their relative exit rates.
 
 
-#### Variables
+High exit rates do not automatically indicate a problem. Interpretation should consider:
+
+- whether the page represents a natural stopping point
+- whether users may be pausing intentionally
+- how the exit rate compares with adjacent steps in the journey
+
+
+### Variables
 
 | Field | Value |
 |---|---|
-| Segments | 'All users who have NOT completed' (new segment):<br>- Exclude from segment permanently<br>- Exclude users when: Page path and screen class contains enter the page path of the completion page for your service, such as /confirmation at any point in time<br>'GOV.UK-referred users who have NOT completed' (new segment):<br>- Include users when: Page referrer contains https://www.gov.uk/ at any point in time<br>- Exclude from segment permanently<br>- Exclude users when: Page path and screen class contains enter the page path of the completion page for your service, such as /confirmation at any point in time<br>'Mobile users who have NOT completed' (new segment):<br>- Include users when: Device category exactly matches mobile NOT at any point in time<br>- Exclude from segment permanently<br>- Exclude users when: Page path and screen class contains enter the page path of the completion page for your service, such as /confirmation at any point in time |
+| Segments | 'Users who have NOT completed' (new segment):<br>Dimension: Page path and screen class<br>Condition: does not contain<br>Expression: enter the page path of the completion page, such as /confirmation<br><br>'Users referred from https://www.example.com/ who have NOT completed' (new segment):<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/<br>AND<br>Dimension: Page path and screen class<br>Condition: does not contain<br>Expression: enter the page path of the completion page, such as /confirmation<br><br>'Mobile users who have NOT completed' (new segment):<br>Dimension: Device category<br>Condition: exactly matches (=)<br>Expression: mobile<br>AND<br>Dimension: Page path and screen class<br>Condition: does not contain<br>Expression: enter the page path of the completion page, such as /confirmation |
 
-
-#### Settings
+### Settings
 
 | Field | Value |
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Segment comparisons | All users who have NOT completed<br>OR<br>GOV.UK-referred users who have NOT completed<br>OR<br>Mobile users who have NOT completed |
+| Segment comparisons | Add only one comparison group at a time for clarity.<br><br>Users who have NOT completed<br><br>OR<br><br>Users referred from https://www.example.com/ who have NOT completed<br><br>OR<br><br>Mobile users who have NOT completed |
 | Rows | Page path and screen class |
 | Show rows | 100 |
 | Nested rows | No |
@@ -512,14 +548,15 @@ There is no 'exit rate' metric in GA4, but this is straightforward to estimate b
 | Cell type | Plain text |
 
 
-### Which pages in a multi-step journey are users commonly moving backwards to?
 
-#### Potential insights
+## Which pages in a multi-step journey are users commonly moving backwards to?
+
+### Potential insights
 This exploration could help you to:
 - identify pages in a multi-step journey that are causing confusion or uncertainty for users, feel like dead-ends, or present new information that prompts reconsideration of previous answers
 
 
-#### Understand the data
+### Understand the data
 This exploration is similar to Are users repeatedly returning to the same page? , but will help you to hone in on backwards navigation in a multi-step journey.
 The exploration output will present you with 4 columns, from left to right:
 - Page path and screen class - the page users arrived at
@@ -534,7 +571,7 @@ You'll need to do a little sifting through the data to spot problem areas:
 4. If you spot a 'Page path and screen class' that's a backwards step from the 'Page referrer', look at: 'Views per active user' to gauge how often this is happening compared with other backwards steps 'Total users' to see how many users were affected in your date range
 
 
-#### Variables
+### Variables
 
 | Field | Value |
 |---|---|
@@ -542,7 +579,7 @@ You'll need to do a little sifting through the data to spot problem areas:
 | Metrics | Total users<br>Views per active user |
 
 
-#### Settings
+### Settings
 
 | Field | Value |
 |---|---|
