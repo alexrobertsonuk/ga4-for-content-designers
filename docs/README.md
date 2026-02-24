@@ -9,7 +9,7 @@ It focuses on:
 - building explorations
 - answering common content questions
 
-The examples assume a standard (free-tier) GA4 setup without additional custom tracking. Additional features available in enhanced configurations are noted where relevant.
+The examples assume a standard (free tier) GA4 setup without additional custom tracking. Additional features available in enhanced configurations are noted where relevant.
 
 Always follow your organisation's data protection and analytics policies.
 
