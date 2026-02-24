@@ -41,7 +41,7 @@ The Explore landing page displays:
 - existing explorations you have created
 - explorations shared with you by other users
 
-Explorations are private by default unless you choose to share them. Creating or editing an exploration does not affect standard reports or underlying data.
+Explorations are private by default unless you choose to share them. You cannot break anything by creating or editing an exploration. Creating or editing one does not change your GA4 data, and it does not affect the standard reports used by others.
 
 ### Creating a new exploration
 
