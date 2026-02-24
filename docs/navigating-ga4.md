@@ -22,11 +22,15 @@ After selecting a property, the left-hand menu displays the main sections of GA4
 - **Advertising** – advertising and campaign reports (if enabled)
 - **Admin** – account and property configuration settings
 
-This guide focuses on the **Explore** section, where you can create custom analyses tailored to content questions.
+This guide focuses on the **Explore** section, where you can build custom reports.
 
-The Explore section uses event-level data and allows you to combine dimensions, metrics and filters in ways that are not available in standard reports.
+Unlike the standard Reports section, Explore gives you much more control over how the data is organised. You can:
 
-If you do not see Explore, check that you have at least Analyst-level access to the property.
+- focus on a specific page or group of pages
+- apply more detailed filters
+- see pages or user groups side by side
+
+If you cannot see Explore in the left-hand menu, you may not have sufficient access permissions. You'll need at least 'Analyst' access to the property. Ask your GA4 administrator to update your access if needed.
 
 ## Using Explore
 
