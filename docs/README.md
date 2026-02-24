@@ -17,19 +17,19 @@ No prior GA4 experience is required.
 
 ## Author
 
-Written by Alex Robertson, Lead Content Designer.
+Written by [Alex Robertson](https://www.linkedin.com/in/alexrobertsonuk).
 
-LinkedIn: https://www.linkedin.com/in/alexrobertsonuk
+This guide is written in a personal capacity and does not represent the views of any employer.
 
 ## Reuse and licensing
 
-This guide is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence.
+This guide is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-You are free to share and adapt this material for any purpose, including commercial use, provided appropriate credit is given.
+You may share and adapt this material for any purpose, including commercial use, provided appropriate credit is given.
 
 If you reuse or reference this guide, please credit:
 
-"GA4 for Content Designers by Alex Robertson"
+"GA4 for content designers by Alex Robertson"
 
 Licence details: https://creativecommons.org/licenses/by/4.0/
 
