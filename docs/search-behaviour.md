@@ -1,8 +1,8 @@
 # Search behaviour
 
-> The following sections describe how to build explorations that answer common content questions.
+> Each section below outlines how to build an exploration that answers a specific content question.
 > 
-> Unless otherwise stated, leave all other settings at their default values. Enter dimensions and metrics into the Tab settings column in the order specified.
+> Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
 
 This section focuses on internal site search behaviour: searches performed within your own site or service.
 
