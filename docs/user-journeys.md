@@ -4,7 +4,7 @@
 > 
 > Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
 
-By combining these explorations, you can build an understanding of:
+By combining the explorations in this section, you can build an understanding of:
 
 - where users arrive from
 - how they move through a site or service
