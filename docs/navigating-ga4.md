@@ -39,11 +39,12 @@ After selecting a property, the left-hand menu displays the main sections of GA4
 
 This guide focuses on the **Explore** section, where you can build custom reports.
 
-Unlike the standard Reports section, Explore gives you much more control over how the data is organised. You can:
+Unlike the standard Reports section, Explore gives you much more control over how the data is selected and displayed. You can:
 
+- choose exactly which metrics to include
 - focus on a specific page or group of pages
 - apply more detailed filters
-- see pages or user groups side by side
+- choose how the data is visualised (for example as tables, line or bar charts)
 
 ## Using Explore
 
