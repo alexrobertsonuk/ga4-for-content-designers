@@ -75,9 +75,9 @@ By default, an exploration shows data for the entire property within the selecte
 
 To analyse a subset of data, use filters or segments.
 
-- **Filters** – applied within the Tab settings column. Filters include or exclude data based on specific criteria (for example, include only a specific page or exclude internal traffic). Filters apply only to the current tab.
+- **Filters** – created and applied within the Settings column. Filters include or exclude data based on specific criteria (for example, include only a specific page or exclude internal traffic). Filters apply only to the current tab.
 
-- **Segments** – created in the Variables column. Segments define a subset of users, sessions or events and can be applied to one or more tabs within the exploration. Segments can also be reused within the same exploration.
+- **Segments** – created in the Variables column. Segments define a subset of users, sessions or events and can be applied to one or more tabs within the exploration.
 
 Segments are particularly useful for side-by-side comparisons (for example, mobile vs desktop users, or new vs returning users).
 
@@ -94,10 +94,10 @@ To create a segment:
 When selecting a date range, consider:
 
 1. **Property start date** – data is only available from when GA4 tracking began for the property.
-2. **Data retention settings** – in free-tier GA4 properties, event-level data retention is 2 months by default and can be extended to 14 months. Check under:
+2. **Data retention settings** – in free tier GA4 properties, data retention is 2 months by default and can be extended to 14 months. Check under:
    Admin > Data collection and modification > Data retention
 3. **Processing time** – longer date ranges may take more time to process.
-4. **Sampling** – large date ranges increase the likelihood of sampled results in the free tier.
+4. **Sampling** – longer date ranges increase the likelihood of sampled results in the free tier.
 
 If sampling is applied, an indicator appears in the top-right of the exploration panel. Selecting the indicator shows the percentage of data used in the results.
 
