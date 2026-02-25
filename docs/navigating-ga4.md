@@ -4,10 +4,7 @@ To use GA4, you need access to your organisation's analytics.
 
 You should request **'Analyst'** level access to the relevant **property** (the individual website or app you want to analyse). Analyst access allows you to create and save explorations, which are used throughout this guide.
 
-Access is usually granted by:
-- a digital analytics team  
-- a product team  
-- or whoever manages Google Analytics 
+Access is usually granted by a digital analytics or product team.
 
 Once you have access, go to:
 https://analytics.google.com/analytics/web/
