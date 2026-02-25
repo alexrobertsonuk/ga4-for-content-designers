@@ -59,13 +59,15 @@ Common metrics include:
 
 ## Consistent use of 'Total users'
 
-This guide is written to support design insight and decision-making. For this purpose, absolute figures matter less than relative differences and consistent comparison across reports.
+This guide focuses on identifying patterns and differences in behaviour, rather than reporting exact audience sizes.
 
-For that reason, **Total users** is used as the default metric throughout most examples.
+For that reason, **Total users** is used as the default metric in most examples.
 
-Google defines Total users as "the number of unique users who triggered any event in the specified date range". While this does not produce perfectly precise counts in all contexts, it is stable and comparable, making it well suited to understanding proportions and patterns in user behaviour.
+Google defines Total users as the number of unique users who triggered any event during the selected date range.
 
-Different metrics answer different questions. However, using a consistent metric across similar explorations supports meaningful comparison.
+It is not a perfectly precise measure in every context, but it is consistent and comparable. This makes it useful for understanding relative differences between pages, journeys or user groups.
+
+Different metrics answer different questions. However, using a consistent metric across similar explorations makes comparisons clearer and easier to interpret.
 
 ## Filters and segments
 
