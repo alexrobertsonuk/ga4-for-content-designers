@@ -57,7 +57,7 @@ Common metrics include:
 - **New users** – number of users who interacted for the first time  
 - **Event count** – number of times a tracked event occurred
 
-### Consistent use of 'Total users'
+## Consistent use of 'Total users'
 
 This guide focuses on identifying patterns and differences in behaviour, rather than reporting exact audience sizes.
 
