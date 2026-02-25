@@ -59,7 +59,7 @@ Common metrics include:
 
 ## Consistent use of 'Total users'
 
-This guide is written to support design insight and decision-making. As a result, absolute figures matter less than relative differences and consistent comparison across reports.
+This guide is written to support design insight and decision-making. For this purpose, absolute figures matter less than relative differences and consistent comparison across reports.
 
 For that reason, **Total users** is used as the default metric throughout most examples.
 
