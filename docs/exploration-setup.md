@@ -1,51 +1,61 @@
 # Exploration setup
 
-## Variables and tab settings
+## Variables and Settings
 
 The exploration workspace has two configuration columns on the left:
 
-- **Variables** – where you name your exploration, set your date range, and define the components available to your exploration, including:
-  - segments  
-  - dimensions  
-  - metrics  
+- **Variables** – where you:
+  - name your exploration
+  - set your date range
+  - load the segments, dimensions and metrics you want to use
 
-- **Tab settings** – where you configure the current tab by selecting from the loaded variables and defining layout and display options.
+- **Settings** – where you choose how the data is displayed in the current tab (on the right), using the segments, dimensions and metrics you have loaded
 
-You must first add dimensions, metrics or segments to the **Variables** column before they can be used in the tab settings.
+You must first add dimensions, metrics or segments to the **Variables** column before they can be used in **Settings**.
 
 To use a variable:
 
-- drag it into the appropriate field in **Tab settings**, or  
-- double-click it to add it automatically to a compatible field (for example, dimensions are typically added to Rows, metrics to Values).
+- drag it into the appropriate field in **Settings**, or  
+- double-click it to add it automatically to a compatible field
 
 To the right of these columns, the exploration output is displayed.
 
-Each exploration can contain up to 10 tabs. Variables are shared across all tabs within the same exploration, but tab settings are configured independently.
+Each exploration can contain up to 10 tabs.
+
+Variables are shared across all tabs within the same exploration, but **Settings** are configured independently for each tab.
 
 Give each exploration a clear, descriptive name.
 
 ## Dimensions and metrics
 
-**Dimensions** describe attributes of your data. They define how data is grouped.
+Explorations are built using **dimensions** and **metrics**.
+
+A practical distinction:
+
+- **Dimensions** group data and describe it.
+- **Metrics** measure data and are numerical.
+
+### Dimensions
+
+Dimensions describe attributes of your data — for example, which page was viewed or which device was used.
 
 Common dimensions include:
 
-- **Page path and screen class** – the path of a webpage after the domain name (for example '/apply/start'), or the equivalent screen identifier for apps  
-- **Page referrer** – the full referring URL from which the user arrived  
+- **Page path and screen class** – the path of a webpage after the domain name (for example '/apply/start')  
+- **Page referrer** – the URL of the previous page from which the user arrived
 - **Device category** – desktop, mobile or tablet  
-- **Link URL** – the destination of a tracked link click  
 - **Event name** – the name of a recorded event (for example 'click', 'file_download', 'scroll')
 
-**Metrics** are numerical measurements.
+### Metrics
+
+Metrics are numerical measurements.
 
 Common metrics include:
 
-- **Views** – the total number of page or screen views  
-- **Total users** – the number of unique users who triggered any event during the selected date range  
-- **New users** – the number of users who interacted for the first time during the selected date range  
-- **Event count** – the number of times a tracked event was triggered  
-
-A practical distinction: dimensions group data, metrics measure it.
+- **Views** – total number of page or screen views  
+- **Total users** – number of unique users during the selected date range  
+- **New users** – number of users who interacted for the first time  
+- **Event count** – number of times a tracked event occurred
 
 ## Consistent use of "Total users"
 
