@@ -1,17 +1,38 @@
 # Navigating the GA4 interface
 
-Once you have access to one or more GA4 accounts, go to https://analytics.google.com/analytics/web/ and sign in.
+To use GA4, you need access to your organisation's analytics.
+
+Access is usually granted by:
+
+- a digital analytics team  
+- a product team  
+- or whoever manages Google Analytics  
+
+Once you have access, go to:
+https://analytics.google.com/analytics/web/
+and sign in.
 
 ## Selecting a property
-Use the property selector in the top navigation (to the left of the search bar).
 
-Depending on your organisation’s setup, you may see a hierarchy such as:
+After signing in, you may see more than one item listed.
+
+In GA4, a single website or app is called a **property**.
+
+Use the property selector in the top navigation (to the left of the search bar) to choose the correct property before starting any analysis.
+
+Depending on your organisation's setup, you may see a hierarchy such as:
 
 **Organisation > Account > Property**
 
-Some users may only see **Account > Property**.
+Some users may only see:
 
-Select the relevant property before beginning any analysis. All reports and explorations are specific to the selected property.
+**Account > Property**
+
+- An **organisation** (if used) groups multiple accounts.
+- An **account** usually represents an organisation or business unit.
+- A **property** contains the data for one website or app.
+
+All reports and explorations use data from the currently selected property.
 
 ## Understanding the main navigation
 After selecting a property, the left-hand menu displays the main sections of GA4:
