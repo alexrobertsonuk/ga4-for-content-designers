@@ -57,7 +57,7 @@ Common metrics include:
 - **New users** – number of users who interacted for the first time  
 - **Event count** – number of times a tracked event occurred
 
-## Consistent use of "Total users"
+## Consistent use of 'Total users'
 
 This guide is written to support design insight and decision-making. As a result, absolute figures matter less than relative differences and consistent comparison across reports.
 
