@@ -23,13 +23,11 @@ This guide is written in a personal capacity and does not represent the views of
 
 ## Reuse and licensing
 
-This guide is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
+This guide is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 You may share and adapt this material for any purpose, including commercial use, provided appropriate credit is given.
 
 If you reuse or reference this guide, please credit:
 
 "GA4 for content designers by Alex Robertson"
-
-Licence details: https://creativecommons.org/licenses/by/4.0/
 
