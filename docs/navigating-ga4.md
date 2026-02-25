@@ -31,7 +31,7 @@ Some users may only see:
 **Account > Property**
 
 - An **organisation** (if used) groups multiple accounts.
-- An **account** usually represents an organisation or business unit.
+- An **account** groups one or more properties.
 - A **property** contains the data for one website or app.
 
 All reports and explorations use data from the currently selected property.
