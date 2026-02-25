@@ -2,7 +2,7 @@
 
 To use GA4, you need access to your organisation's analytics.
 
-You should request **Analyst-level access** to the relevant property. This allows you to create and save explorations, which are used throughout this guide.
+You should request **'Analyst'** level access to the relevant property. This allows you to create and save explorations, which are used throughout this guide.
 
 Access is usually granted by:
 - a digital analytics team  
