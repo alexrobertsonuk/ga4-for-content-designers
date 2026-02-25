@@ -45,8 +45,6 @@ Unlike the standard Reports section, Explore gives you much more control over ho
 - apply more detailed filters
 - see pages or user groups side by side
 
-If you cannot see Explore in the left-hand menu, you may not have sufficient access permissions. You'll need at least 'Analyst' access to the property. Ask your GA4 administrator to update your access if needed.
-
 ## Using Explore
 
 Select **Explore** from the left-hand menu.
