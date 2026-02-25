@@ -6,9 +6,7 @@ You should request **'Analyst'** level access to the relevant **property** (the 
 
 Access is usually granted by a digital analytics or product team.
 
-Once you have access, go to:
-https://analytics.google.com/analytics/web/
-and sign in.
+Once you have access, go to https://analytics.google.com/analytics/web/ and sign in.
 
 ## Selecting a property
 
