@@ -1,6 +1,6 @@
 # Exploration setup
 
-## Variables and Settings
+## Variables and settings
 
 The exploration workspace has two configuration columns on the left:
 
