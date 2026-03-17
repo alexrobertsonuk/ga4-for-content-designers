@@ -45,13 +45,13 @@ An empty "Page referrer" value may indicate:
 - referrer information blocked by browser or site policy
 - a previously opened page being revisited without a recorded referrer (for example, if the user keeps the page open in an inactive tab, and later reopens that tab, the referrer is unknown)
 
-Because "Page referrer" reflects the previous page for each page view, it does not always represent the original source of the visit. If a user arrives from an external site and then navigates through multiple pages, each page will record the previous internal page as its referrer.
+Because "Page referrer" reflects the previous page for each page view, it does not always represent the original source of the visit. But in practice, external referrer information may persist across multiple page views within a session.
 
 The "Page path and screen class" dimension shows only the path portion of a URL (for example, /questions/fee).
 
 When analysing external referrals, pair "Page referrer" with "Landing page + query string" rather than "Page path and screen class".
 
-"Landing page + query string" identifies the first page visited in the session. If you instead use "Page path and screen class", later page views in the same visit may appear associated with the original external referrer, inflating counts for non-landing pages.
+"Landing page + query string" identifies the first page visited in the session. If you instead use "Page path and screen class", later page views in the same visit may still appear associated with the original external referrer. This can inflate counts for non-landing pages.
 
 The "Nested rows" option groups secondary rows beneath their primary row, making it easier to see how landing pages relate to each referrer.
 
