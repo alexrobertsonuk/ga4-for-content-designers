@@ -383,7 +383,7 @@ This value can be heavily influenced by users who leave and return over multiple
 - new users
 - returning users
 
-Completion time for returning users may include long gaps between visits. This does not necessarily indicate slow interaction on individual pages.
+Completion time for returning users may include long gaps between visits, while for new users it is more likely to reflect completion within a single visit.
 
 
 ### Variables
