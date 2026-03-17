@@ -20,7 +20,7 @@ To use a variable:
 
 To the right of these columns, the exploration output is displayed.
 
-Each exploration can contain up to 10 tabs.
+Each exploration can contain up to 10 tabs of output.
 
 Variables are shared across all tabs within the same exploration, but **Settings** are configured independently for each tab.
 
