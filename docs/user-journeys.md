@@ -225,6 +225,8 @@ These explorations can help you to:
 
 The "Views per active user" metric divides the total number of views for a page by the number of active users who viewed it.
 
+This exploration uses "Active users" instead of "Total users" because the "Views per active user" metric is calculated using active users.
+
 For example, if a page received 100 views from 70 active users, the result would be 1.43 views per active user.
 
 Higher values may indicate that users are revisiting the page multiple times within a session or across sessions. This can reflect:
@@ -248,7 +250,7 @@ The absolute number of exits is less informative than the proportion of views th
 6. Format the result as a percentage.
 7. Sort by Exit rate to identify pages with relatively high proportions of exits.
 
-Pages with both high views per user and high exit rates may warrant further investigation.
+Pages with both high views per active user and high exit rates may warrant further investigation.
 
 
 ### Variables
