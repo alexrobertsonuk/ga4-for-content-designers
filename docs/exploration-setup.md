@@ -42,7 +42,7 @@ Dimensions describe attributes of your data — for example, which page was view
 Common dimensions include:
 
 - **Page path and screen class** – the path of a webpage after the domain name (for example '/apply/start')  
-- **Page referrer** – the URL of the previous page from which the user arrived
+- **Page referrer** – the full URL of the previous page from which the user arrived
 - **Device category** – desktop, mobile or tablet  
 - **Event name** – the name of a recorded event (for example 'click', 'file_download', 'scroll')
 
@@ -54,12 +54,12 @@ Common metrics include:
 
 - **Views** – total number of page or screen views  
 - **Total users** – number of unique users during the selected date range  
-- **New users** – number of users who interacted for the first time  
+- **New users** – number of unique users who interacted for the first time  
 - **Event count** – number of times a tracked event occurred
 
 ## Consistent use of 'Total users'
 
-This guide focuses on identifying patterns and differences in behaviour, rather than reporting exact audience sizes.
+This guide focuses on identifying patterns and differences in behaviour, rather than reporting exact audience numbers.
 
 For that reason, **Total users** is used as the default metric in most examples.
 
@@ -81,13 +81,23 @@ To analyse a subset of data, use filters or segments.
 
 Segments are particularly useful for side-by-side comparisons (for example, mobile vs desktop users, or new vs returning users).
 
-To create a segment:
+### Creating a filter
+
+1. In the Settings column, scroll to **Filters**.
+2. Select **+ Add filter**.
+3. Choose a dimension or metric.
+4. Select a condition (for example, "exactly matches", "contains" or ">").
+5. Enter a value.
+
+### Creating a segment
 
 1. In the Variables column, select the **+** next to **Segments**.
 2. Choose **Create a new segment**.
-3. Select the segment type (for example, 'User segment').
+3. Select the segment type (for example, "User segment").
 4. Enter a name.
-5. Define the segment conditions.
+5. Add one or more conditions.
+
+The exploration sections in this guide provide the exact dimensions, conditions and values to use for each exploration.
 
 ## Date ranges
 
@@ -97,7 +107,7 @@ When selecting a date range, consider:
 2. **Data retention settings** – in free tier GA4 properties, data retention is 2 months by default and can be extended to 14 months. Check under:
    Admin > Data collection and modification > Data retention
 3. **Processing time** – longer date ranges may take more time to process.
-4. **Sampling** – longer date ranges increase the likelihood of sampled results in the free tier.
+4. **Sampling** – longer date ranges increase the likelihood of sampled results in the free tier. Sampling means GA4 may use a subset of data rather than the full dataset, so results are estimates rather than exact figures.
 
 If sampling is applied, an indicator appears in the top-right of the exploration panel. Selecting the indicator shows the percentage of data used in the results.
 
