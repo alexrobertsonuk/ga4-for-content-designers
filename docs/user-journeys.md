@@ -245,10 +245,11 @@ The absolute number of exits is less informative than the proportion of views th
 1. Create the exploration using the variables and settings below.
 2. Export the data as CSV.
 3. Open the CSV in a spreadsheet tool using comma as the delimiter.
-4. Insert a new column titled "Exit rate".
-5. Divide the "Exits" value by the "Views" value.
-6. Format the result as a percentage.
-7. Sort by Exit rate to identify pages with relatively high proportions of exits.
+4. Remove any rows above the column headers so that the first visible row contains the column headers.
+5. Insert a new column titled "Exit rate".
+6. Divide the "Exits" value by the "Views" value.
+7. Format the result as a percentage.
+8. Sort by Exit rate to identify pages with relatively high proportions of exits.
 
 Pages with both high views per active user and high exit rates may warrant further investigation.
 
@@ -298,8 +299,9 @@ To estimate average time spent per page view:
 1. Create an exploration using the variables and settings below.
 2. Export the data as CSV.
 3. Open the CSV in a spreadsheet tool using comma as the delimiter.
-4. Insert a new column titled "Average time per view (seconds)".
-5. Divide the "User engagement" value by the "Views" value.
+4. Remove any rows above the column headers so that the first visible row contains the column headers.
+5. Insert a new column titled "Average time per view (seconds)".
+6. Divide the "User engagement" value by the "Views" value.
 
 This produces an estimate of average engaged time per page view.
 
@@ -454,9 +456,9 @@ To calculate the values:
 2. Export the data to CSV.
 3. Open the CSV in a spreadsheet tool using comma as the delimiter.
 4. Remove any rows above the column headers so that the first visible row contains the column headers.
-5. Add a new column titled 'Average sessions per user'.
-6. Divide the 'Sessions' column by the 'Total users' column.
-7. To calculate the proportion completing in a single session, divide:
+6. Add a new column titled 'Average sessions per user'.
+7. Divide the 'Sessions' column by the 'Total users' column.
+8. To calculate the proportion completing in a single session, divide:
 
    Total users (completion page AND session count = 1)  
    ÷  
