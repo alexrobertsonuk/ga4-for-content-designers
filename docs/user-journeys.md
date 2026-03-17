@@ -244,7 +244,7 @@ The absolute number of exits is less informative than the proportion of views th
 
 1. Create the exploration using the variables and settings below.
 2. Export the data as CSV.
-3. Open the file in a spreadsheet tool.
+3. Open the CSV in a spreadsheet tool using comma as the delimiter.
 4. Insert a new column titled "Exit rate".
 5. Divide the "Exits" value by the "Views" value.
 6. Format the result as a percentage.
@@ -295,11 +295,11 @@ Instead, use the "User engagement" metric, which measures the cumulative time (i
 
 To estimate average time spent per page view:
 
-1. Create an exploration using the variables and settings below
-2. Export the data as CSV
-3. Open the file in a spreadsheet tool
-4. Insert a new column titled "Average time per view (seconds)"
-5. Divide the "User engagement" value by the "Views" value
+1. Create an exploration using the variables and settings below.
+2. Export the data as CSV.
+3. Open the CSV in a spreadsheet tool using comma as the delimiter.
+4. Insert a new column titled "Average time per view (seconds)".
+5. Divide the "User engagement" value by the "Views" value.
 
 This produces an estimate of average engaged time per page view.
 
