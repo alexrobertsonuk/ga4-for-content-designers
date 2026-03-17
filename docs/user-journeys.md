@@ -321,7 +321,7 @@ To compare time spent with exit behaviour, in your spreadsheet:
 1. Insert another column titled "Exit rate"
 2. Divide the "Exits" value by the "Views" value
 3. Format as a percentage
-4. Sort by either metric to identify outliers
+4. Compare your "Exit rate" and "Average time per view (seconds)" values to identify outliers
 
 Pages with both high average time per view and high exit rates may warrant further investigation.
 
