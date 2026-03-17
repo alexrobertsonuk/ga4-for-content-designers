@@ -27,7 +27,7 @@ These explorations can help you to:
 
 ### Understand the data
 
-The "Page referrer" dimension shows the previous URL recorded for a page view.
+The **Page referrer** dimension shows the previous URL recorded for a page view.
 
 This may be:
 
