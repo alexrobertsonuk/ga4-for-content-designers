@@ -385,10 +385,10 @@ This value can be heavily influenced by users who leave and return over multiple
 
 Completion time for returning users may include long gaps between visits, while for new users it is more likely to reflect completion within a single visit.
 
-The segments in the Variables section below support different types of comparison. You do not need to create all of them. Create only the segments needed for the comparison you want to make.
-
 
 ### Variables
+
+The segments below support different types of comparison. You do not need to create all of them. Create only the segments needed for the comparison you want to make.
 
 | Field | Value |
 |---|---|
