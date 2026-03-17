@@ -392,7 +392,7 @@ The segments below support different types of comparison. You do not need to cre
 
 | Field | Value |
 |---|---|
-| Segments | 'All Users' (readymade segment)<br>'Mobile traffic' (readymade segment)<br>'Web traffic' (readymade segment)<br><br>'Users referred from https://www.example.com/' (new segment):<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/<br><br>'Users NOT referred from https://www.example.com/' (new segment):<br>Dimension: Page referrer<br>Condition: does not contain<br>Expression: https://www.example.com/<br><br>'New users' (new segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: new<br><br>'Returning users' (new segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: returning |
+| Segments | 'All Users' (readymade segment)<br>'Mobile traffic' (readymade segment)<br>'Web traffic' (readymade segment)<br><br>'Users referred from https://www.example.com/' (new segment):<br>Condition: Page referrer<br>Filter: contains<br>Expression: https://www.example.com/<br><br>'Users NOT referred from https://www.example.com/' (new segment):<br>Condition: Page referrer<br>Filter: does not contain<br>Expression: https://www.example.com/<br><br>'New users' (new segment):<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Expression: new<br><br>'Returning users' (new segment):<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Expression: returning |
 
 ### Settings
 
