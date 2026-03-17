@@ -1,6 +1,6 @@
 # Navigating the GA4 interface
 
-To use GA4, you need access to your organisation's account.
+To use GA4, you need access to your organisation's GA4 account.
 
 You should request **'Analyst'** level access to the relevant **property** (the individual website or app you want to analyse). Analyst access allows you to create and save explorations, which are used throughout this guide.
 
