@@ -111,8 +111,6 @@ When selecting a date range, consider:
 
 If sampling is applied, an indicator appears in the top-right of the exploration panel. Selecting the indicator shows the percentage of data used in the results.
 
-In GA4 360 (enterprise tier), a detailed results option may be available to reduce the impact of sampling.
-
 ## Exporting data
 
 To export data from an exploration tab:
@@ -133,14 +131,16 @@ To share an exploration in read-only mode with other users who have access to th
 
 Shared explorations cannot be edited by other users unless they duplicate them.
 
-## Reducing data sampling (GA4 360)
+## Handling sampled results (GA4 360)
+
+If sampling is indicated in an exploration (see Date ranges), results are based on a subset of data rather than the full dataset.
 
 In GA4 360 properties, sampling thresholds are higher and a detailed results option may be available.
 
-If sampling is indicated in an exploration:
+To view more complete results (if available):
 
 1. Select the sampling indicator in the top-right of the results panel.
-2. If available, choose the detailed results option.
+2. Choose the detailed results option.
 
 This may increase processing time.
 
