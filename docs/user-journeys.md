@@ -394,7 +394,8 @@ The segments below support different types of comparison. You do not need to cre
 
 | Field | Value |
 |---|---|
-| Segments | 'All Users' (readymade segment)<br>'Mobile traffic' (readymade segment)<br>'Web traffic' (readymade segment)<br><br>'Users referred from https://www.example.com/' (new segment):<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/<br><br>'Users NOT referred from https://www.example.com/' (new segment):<br>Condition: Page referrer<br>Filter: does not contain<br>Value: https://www.example.com/<br><br>'New users' (new segment):<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: new<br><br>'Returning users' (new segment):<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: returning |
+| Segments | 'All Users'<br>'Mobile traffic'<br>'Web traffic'
+| Custom segments | Type: User segment<br>Title: Users referred from https://www.example.com/<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from https://www.example.com/<br>Condition: Page referrer<br>Filter: does not contain<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: New users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: new<br><br>Type: User segment<br>Title: Returning users (new segment):<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: returning |
 
 ### Settings
 
@@ -471,7 +472,7 @@ To calculate the values:
 |---|---|
 | Dimensions | Device category |
 | Metrics | Sessions<br>Total users |
-| Custom segments | Type: User segment<br>Title: Completion page viewed (all users)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br><br>Type: User segment<br>Title: Completion page viewed (single session users)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br><br>- And -<br><br>Condition: Session number<br>Filter: exactly matches (=)<br>Value: 1<br><br>Type: User segment<br>Title: Completion page viewed (users referred from https://www.example.com/)<br><br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>AND<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/ |
+| Custom segments | Type: User segment<br>Title: Completion page viewed (all users)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br><br>Type: User segment<br>Title: Completion page viewed (single session users)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>- And -<br>Condition: Session number<br>Filter: exactly matches (=)<br>Value: 1<br><br>Type: User segment<br>Title: Completion page viewed (users referred from https://www.example.com/)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>- And -<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/ |
 
 ### Settings
 
