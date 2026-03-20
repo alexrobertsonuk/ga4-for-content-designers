@@ -471,7 +471,7 @@ To calculate the values:
 |---|---|
 | Dimensions | Device category |
 | Metrics | Sessions<br>Total users |
-| Segments | 'Completion page (all)' (new segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br><br>'Completion page (1 session only)' (new segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br>AND<br>Dimension: Session count<br>Condition: exactly matches (=)<br>Expression: 1<br><br>'Completion page (via https://www.example.com/)' (optional segment):<br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter your completion page path, such as /confirmation<br>AND<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/ |
+| Segments | 'Completion page (all)' (create a new "User segment"):<br><br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br><br>'Completion page (1 session only)' (create a new "User segment"):<br><br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>AND<br>Condition: Session number<br>Filter: exactly matches (=)<br>Value: 1<br><br>'Completion page (referred from https://www.example.com/)' (optional, create a new "User segment"):<br><br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>AND<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/ |
 
 ### Settings
 
