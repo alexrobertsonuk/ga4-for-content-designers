@@ -395,7 +395,7 @@ The custom segments below support different types of comparison. You do not need
 | Field | Value |
 |---|---|
 | Segments | All Users<br>Mobile traffic<br>Web traffic
-| Custom segments | Type: User segment<br>Title: Users referred from https://www.example.com/<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from https://www.example.com/<br>Condition: Page referrer<br>Filter: does not contain<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: New users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: new<br><br>Type: User segment<br>Title: Returning users (new segment):<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: returning |
+| Custom segments | Type: User segment<br>Title: Users referred from https://www.example.com/<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from https://www.example.com/<br>Condition: Page referrer<br>Filter: does not contain<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: New users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: new<br><br>Type: User segment<br>Title: Returning users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: returning |
 
 ### Settings
 
@@ -405,7 +405,7 @@ The custom segments below support different types of comparison. You do not need
 | Visualisation | Standard funnel |
 | Make open funnel | Off |
 | Segment comparisons | Add only one comparison group at a time for clarity.<br><br>To compare referral source:<br>- Users referred from https://www.example.com/<br>- Users NOT referred from https://www.example.com/<br><br>To compare device type:<br>- Mobile traffic<br>- Web traffic<br><br>To compare user type:<br>- New users<br>- Returning users |
-| Steps | Step 1:<br>Rename: Start page<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter the path of the first page on your own service domain or subdomain<br><br>…is indirectly followed by…<br><br>Step 2:<br>Rename: Completion page<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter the path of the final confirmation, summary, or completion page |
+| Steps | Step 1<br>Rename: Start page<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter the path of the first page on your own service domain or subdomain<br><br>…is indirectly followed by…<br><br>Step 2<br>Rename: Completion page<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter the path of the final confirmation, summary, or completion page |
 | Show elapsed time | On |
 
 
