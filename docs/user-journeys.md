@@ -394,7 +394,7 @@ The segments below support different types of comparison. You do not need to cre
 
 | Field | Value |
 |---|---|
-| Segments | 'All Users'<br>'Mobile traffic'<br>'Web traffic'
+| Segments | All Users<br>Mobile traffic<br>Web traffic
 | Custom segments | Type: User segment<br>Title: Users referred from https://www.example.com/<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from https://www.example.com/<br>Condition: Page referrer<br>Filter: does not contain<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: New users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: new<br><br>Type: User segment<br>Title: Returning users (new segment):<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: returning |
 
 ### Settings
