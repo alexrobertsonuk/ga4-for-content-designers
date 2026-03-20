@@ -395,7 +395,7 @@ The custom segments below support different types of comparison. You do not need
 | Field | Value |
 |---|---|
 | Segments | All Users<br>Mobile traffic<br>Web traffic
-| Custom segments | Type: User segment<br>Title: Users referred from https://www.example.com/<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from https://www.example.com/<br>Condition: Page referrer<br>Filter: does not contain<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: New users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: new<br><br>Type: User segment<br>Title: Returning users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: returning |
+| Custom segments | Type: User segment<br>Title: Users referred from https://www.example.com/<br>Include users when...<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from https://www.example.com/<br>Include users when...<br>Condition: Page referrer<br>Filter: does not contain<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: New users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: new<br><br>Type: User segment<br>Title: Returning users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: returning |
 
 ### Settings
 
@@ -417,7 +417,6 @@ The custom segments below support different types of comparison. You do not need
 This exploration could help you to:
 
 - estimate how many sessions, on average, it takes users who complete a journey to reach the final page
-- measure the proportion of completing users who finish within a single session
 - assess whether content or structural changes reduce the need for users to return later
 - compare whether session requirements differ depending on:
   - referring domain
@@ -439,13 +438,6 @@ Sessions ÷ Total users
 
 This produces the average number of sessions required for users in the completion segment.
 
-To understand how many users completed in a single session, you create an additional segment that includes:
-
-- users who viewed the completion page
-- and whose Session count equals 1
-
-By comparing Total users across the two segments, you can calculate the proportion who completed in a single session.
-
 A session begins when a user starts interacting with your site and ends after a period of inactivity (30 minutes by default, unless your GA4 property settings have been changed). If a user leaves and later returns, this creates a new session. As a result, users who take breaks before finishing will increase the average number of sessions.
 
 These calculations reflect behaviour only among users who completed the journey. They do not show how many users who started the journey failed to complete.
@@ -459,11 +451,6 @@ To calculate the values:
 4. Remove any rows above the column headers so that the first visible row contains the column headers.
 6. Add a new column titled 'Average sessions per user'.
 7. Divide the 'Sessions' column by the 'Total users' column.
-8. To calculate the proportion completing in a single session, divide:
-
-   Total users (completion page AND session count = 1)  
-   ÷  
-   Total users (completion page, all)
 
 
 ### Variables
@@ -472,7 +459,7 @@ To calculate the values:
 |---|---|
 | Dimensions | Device category |
 | Metrics | Sessions<br>Total users |
-| Custom segments | Type: User segment<br>Title: Completion page viewed (all users)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br><br>Type: User segment<br>Title: Completion page viewed (single session users)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>- And -<br>Condition: Session number<br>Filter: exactly matches (=)<br>Value: 1<br><br>Type: User segment<br>Title: Completion page viewed (users referred from https://www.example.com/)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>- And -<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/ |
+| Custom segments | Type: User segment<br>Title: Completion page viewed (all users)<br>Include users when...<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br><br>Type: User segment<br>Title: Completion page viewed (single session users)<br>Include users when...<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>- And -<br>Condition: Session number<br>Filter: exactly matches (=)<br>Value: 1<br><br>Type: User segment<br>Title: Completion page viewed (users referred from https://www.example.com/)<br>Include users when...<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>- And -<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/ |
 
 ### Settings
 
