@@ -471,7 +471,7 @@ To calculate the values:
 |---|---|
 | Dimensions | Device category |
 | Metrics | Sessions<br>Total users |
-| Segments | Type: User segment<br>Title: Completion page (all)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br><br>Type: User segment<br>Title: Completion page (1 session only)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>AND<br>Condition: Session number<br>Filter: exactly matches (=)<br>Value: 1<br><br>Optional:<br><br>Type: User segment<br>Title: Completion page (referred from https://www.example.com/)<br><br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>AND<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/ |
+| Custom segments | Type: User segment<br>Title: Completion page viewed (all users)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br><br>Type: User segment<br>Title: Completion page viewed (single session users)<br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br><br>- And -<br><br>Condition: Session number<br>Filter: exactly matches (=)<br>Value: 1<br><br>Type: User segment<br>Title: Completion page viewed (users referred from https://www.example.com/)<br><br>Condition: Page path and screen class<br>Filter: exactly matches (=)<br>Value: enter your completion page path, such as /confirmation<br>AND<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/ |
 
 ### Settings
 
@@ -479,7 +479,7 @@ To calculate the values:
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Segment comparisons | Completion page (all)<br>Completion page (1 session only)<br>Completion page (via https://www.example.com/) (optional) |
+| Segment comparisons | Completion page viewed (all users)<br>Completion page viewed (Single session users)<br>Completion page viewed (users referred from https://www.example.com/) (optional) |
 | Rows | Device category |
 | Show rows | 10 |
 | Nested rows | No |
