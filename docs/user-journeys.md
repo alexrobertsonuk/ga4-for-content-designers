@@ -467,7 +467,7 @@ To calculate the values:
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Segment comparisons | Completion page viewed (all users)<br>Completion page viewed (users referred from example.com) (optional) |
+| Segment comparisons | Completion page viewed (all users)<br>Completion page viewed (users referred from example.com) |
 | Rows | Device category |
 | Show rows | 10 |
 | Nested rows | No |
