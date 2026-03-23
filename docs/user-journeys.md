@@ -584,7 +584,7 @@ To reduce the influence of users returning over multiple sessions, begin by anal
 |---|---|
 | Dimensions | Page path and screen class<br>Page referrer |
 | Metrics | Total users<br>Views per active user |
-| Segments | 'New users' (readymade or new segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: new<br><br>'Returning users' (optional segment):<br>Dimension: New/returning<br>Condition: exactly matches (=)<br>Expression: returning |
+| Custom segments | Type: User segment<br>Title: New users<br>- New/returning<br>- exactly matches (=)<br>- new<br><br>Type: User segment<br>Title: Returning users<br>- New/returning<br>- exactly matches (=)<br>- returning |
 
 
 ### Settings
@@ -593,7 +593,7 @@ To reduce the influence of users returning over multiple sessions, begin by anal
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Segment comparisons | Start with:<br>New users<br><br>Optionally add:<br>Returning users |
+| Segment comparisons | New users<br>Returning users (optional) |
 | Rows | Page path and screen class<br>Page referrer |
 | Show rows | 100 |
 | Nested rows | No |
