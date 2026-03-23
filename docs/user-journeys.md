@@ -687,7 +687,7 @@ If no external link data appears:
 2. Select Data collection and modification.
 3. Select Data streams.
 4. Select your website stream.
-5. Check that automatic click tracking is enabled.
+5. Check that 'Enhanced measurement' contains 'Outbound clicks'.
 
 If this setting is not enabled, contact the property administrator.
 
