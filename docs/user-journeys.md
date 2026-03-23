@@ -390,7 +390,7 @@ Completion time for returning users may include long gaps between visits, while 
 
 ### Variables
 
-The custom segments below enable different types of comparison. You do not need to create all of them. Create only the segments needed for the comparison you want to make.
+The segments below enable different types of comparison. You do not need to use all of them. Use only the segments needed for the comparison you want to make.
 
 | Field | Value |
 |---|---|
