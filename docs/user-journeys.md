@@ -527,7 +527,7 @@ High exit rates do not automatically indicate a problem. Interpretation should c
 
 | Field | Value |
 |---|---|
-| Segments | 'Users who have NOT completed' (new segment):<br>Exclude users when:<br>Dimension: Page path and screen class<br>Condition: contains<br>Expression: enter the page path of the completion page, such as /confirmation<br><br>'Users referred from https://www.example.com/ who have NOT completed' (new segment):<br>Include users when:<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/<br>AND<br>Exclude users when:<br>Dimension: Page path and screen class<br>Condition: contains<br>Expression: enter the page path of the completion page, such as /confirmation<br><br>'Mobile users who have NOT completed' (new segment):<br>Include users when:<br>Dimension: Device category<br>Condition: exactly matches (=)<br>Expression: mobile<br>AND<br>Exclude users when:<br>Dimension: Page path and screen class<br>Condition: contains<br>Expression: enter the page path of the completion page, such as /confirmation |
+| Custom segments | Type: User segment<br>Title: Users who have NOT completed<br>Exclude users when:<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation<br><br>Type: User segment<br>Title: Users referred from example.com who have NOT completed<br>Include users when:<br>- Page referrer<br>- contains<br>- https://www.example.com/<br>AND<br>Exclude users when:<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation<br><br>Type: User segment<br>Title: Mobile users who have NOT completed<br>Include users when:<br>- Device category<br>- exactly matches (=)<br>- mobile<br>AND<br>Exclude users when:<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation |
 
 ### Settings
 
@@ -535,7 +535,7 @@ High exit rates do not automatically indicate a problem. Interpretation should c
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Segment comparisons | Add only one comparison group at a time for clarity.<br><br>Users who have NOT completed<br><br>OR<br><br>Users referred from https://www.example.com/ who have NOT completed<br><br>OR<br><br>Mobile users who have NOT completed |
+| Segment comparisons | Add only one comparison group at a time for clarity.<br><br>Users who have NOT completed<br><br>OR<br><br>Users referred from example.com who have NOT completed<br><br>OR<br><br>Mobile users who have NOT completed |
 | Rows | Page path and screen class |
 | Show rows | 100 |
 | Nested rows | No |
