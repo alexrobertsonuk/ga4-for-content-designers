@@ -247,7 +247,7 @@ The absolute number of exits is less informative than the proportion of views th
 3. Open the CSV in a spreadsheet tool using comma as the delimiter.
 4. Remove any rows above the column headers so that the first visible row contains the column headers.
 5. Insert a new column titled "Exit rate".
-6. Divide the "Exits" value by the "Views" value.
+6. In the "Exit rate" column, divide the "Exits" value by the "Views" value.
 7. Format the result as a percentage.
 8. Sort by Exit rate to identify pages with relatively high proportions of exits.
 
@@ -301,7 +301,7 @@ To estimate average time spent per page view:
 3. Open the CSV in a spreadsheet tool using comma as the delimiter.
 4. Remove any rows above the column headers so that the first visible row contains the column headers.
 5. Insert a new column titled "Average time per view (seconds)".
-6. Divide the "User engagement" value by the "Views" value.
+6. In the "Average time per view (seconds)" column, divide the "User engagement" value by the "Views" value.
 
 This produces an estimate of average engaged time per page view.
 
@@ -320,10 +320,10 @@ Shorter time spent may indicate:
 
 To compare time spent with exit behaviour, in your spreadsheet:
 
-1. Insert another column titled "Exit rate"
-2. Divide the "Exits" value by the "Views" value
-3. Format as a percentage
-4. Compare your "Exit rate" and "Average time per view (seconds)" values to identify outliers
+1. Insert another column titled "Exit rate".
+2. In the "Exit rate" column, divide the "Exits" value by the "Views" value.
+3. Format as a percentage.
+4. Compare your "Exit rate" and "Average time per view (seconds)" values to identify outliers.
 
 Pages with both high average time per view and high exit rates may warrant further investigation.
 
@@ -432,7 +432,7 @@ You create a segment that includes users who viewed the completion page. Within 
 - Sessions
 - Total users
 
-GA4 does not provide a built-in "average sessions per user" metric. However, you can calculate it by dividing:
+GA4 does not provide a built-in "average sessions per user" metric. However, you can calculate it with:
 
 Sessions ÷ Total users
 
@@ -449,8 +449,8 @@ To calculate the values:
 2. Export the data to CSV.
 3. Open the CSV in a spreadsheet tool using comma as the delimiter.
 4. Remove any rows above the column headers so that the first visible row contains the column headers.
-6. Add a new column titled 'Average sessions per user'.
-7. Divide the 'Sessions' column by the 'Total users' column.
+6. Add a new column titled "Average sessions per user".
+7. In the "Average sessions per user" column, divide the "Sessions" column by the "Total users" column.
 
 
 ### Variables
@@ -498,7 +498,7 @@ Users who return after the date range to complete will still be counted here as 
 
 An "Exit" is recorded when a session ends on a page. This does not necessarily mean the user has permanently abandoned the journey. Users who pause and return later will still generate exits in earlier sessions.
 
-GA4 does not provide a built-in "exit rate" metric. You can estimate it by dividing:
+GA4 does not provide a built-in "exit rate" metric. You can estimate it with:
 
 Exits ÷ Views
 
@@ -510,8 +510,8 @@ To calculate exit rate:
 2. Export the data to CSV.
 3. Open the CSV in a spreadsheet tool using comma as the delimiter.
 4. Remove any rows above the column headers so that the first visible row contains the data labels.
-5. Insert a new column titled 'Exit rate'.
-6. Divide the 'Exits' column by the 'Views' column.
+5. Insert a new column titled "Exit rate".
+6. In the "Exit rate" column, divide the "Exits" column by the "Views" column.
 7. Format the result as a percentage.
 8. Review pages that are part of the transaction journey and compare their relative exit rates.
 
