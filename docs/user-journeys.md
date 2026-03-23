@@ -584,7 +584,7 @@ To reduce the influence of users returning over multiple sessions, begin by anal
 |---|---|
 | Dimensions | Page path and screen class<br>Page referrer |
 | Metrics | Total users<br>Views per active user |
-| Custom segments | Type: User segment<br>Title: New users<br>- New/returning<br>- exactly matches (=)<br>- new<br><br>Type: User segment<br>Title: Returning users<br>- New/returning<br>- exactly matches (=)<br>- returning |
+| Custom segments | Type: User segment<br>Title: New users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- new<br><br>Type: User segment<br>Title: Returning users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- returning |
 
 
 ### Settings
