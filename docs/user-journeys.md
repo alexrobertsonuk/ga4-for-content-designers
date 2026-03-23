@@ -395,7 +395,7 @@ The segments below enable different types of comparison. You do not need to use 
 | Field | Value |
 |---|---|
 | Segments | All Users<br>Mobile traffic<br>Web traffic
-| Custom segments | Type: User segment<br>Title: Users referred from https://www.example.com/<br>Include users when...<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from https://www.example.com/<br>Include users when...<br>Condition: Page referrer<br>Filter: does not contain<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: New users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: new<br><br>Type: User segment<br>Title: Returning users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: returning |
+| Custom segments | Type: User segment<br>Title: Users referred from example.com<br>Include users when...<br>Condition: Page referrer<br>Filter: contains<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Include users when...<br>Condition: Page referrer<br>Filter: does not contain<br>Value: https://www.example.com/<br><br>Type: User segment<br>Title: New users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: new<br><br>Type: User segment<br>Title: Returning users<br>Condition: New/returning<br>Filter: exactly matches (=)<br>Value: returning |
 
 ### Settings
 
