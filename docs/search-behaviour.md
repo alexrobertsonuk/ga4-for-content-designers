@@ -92,7 +92,7 @@ Interpret higher proportions in context. Search usage may reflect:
 | Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: view_search_results |
 
 
-## What terms are users searching for internally, from a specific page or site?
+## What terms are users searching for internally, site-wide or from a specific page?
 
 ### Potential insights
 
