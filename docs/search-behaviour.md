@@ -202,7 +202,7 @@ Interpret results cautiously. If a search referrer appears unrelated to the dest
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Plain text |
-| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: .*\?(q=\|s=\|search=\|query=\|keyword=).*<br><br>To filter results by an individual page, also add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
+| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: `.*\?(q=\|s=\|search=\|query=\|keyword=).*`<br><br>To filter results by an individual page, also add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
 
 
 
