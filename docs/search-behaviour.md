@@ -117,7 +117,6 @@ If Event count is substantially higher than Total users for a term, this indicat
 
 Repeated searches may reflect:
 
-- users refining their search terms
 - users not finding relevant results immediately
 - users returning to search across sessions
 
