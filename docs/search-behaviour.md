@@ -113,7 +113,7 @@ When filtered to the "view_search_results" event:
 - "Event count" represents the total number of searches performed for a given term
 - "Total users" represents the number of unique users who searched for that term
 
-If Event count is substantially higher than Total users for a term, this indicates that some users searched for the same term more than once during the selected date range. If you sort the table by descending Total users and use the Bar chart cell type, you can see at a glance if certain terms were repeatedly entered by the same users.
+If Event count is substantially higher than Total users for a term, this indicates that some users searched for the same term more than once during the selected date range. Sort the table by descending Total users and use the Bar chart cell type to see at a glance if certain terms were repeatedly entered by the same users.
 
 Repeated searches may reflect:
 
