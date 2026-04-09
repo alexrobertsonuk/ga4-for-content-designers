@@ -98,7 +98,7 @@ Interpret higher proportions in context. Search usage may reflect:
 
 These explorations could help you to:
 
-- understand the language users use when searching
+- understand the natural language of users
 - identify information or tasks users expect to find but cannot locate easily
 - assess whether certain topics are unclear or insufficiently signposted
 - track changes in internal search terms over time
@@ -113,22 +113,15 @@ When filtered to the "view_search_results" event:
 - "Event count" represents the total number of searches performed for a given term
 - "Total users" represents the number of unique users who searched for that term
 
-If Event count is substantially higher than Total users for a term, this indicates that some users searched for the same term more than once during the selected date range.
+If Event count is substantially higher than Total users for a term, this indicates that some users searched for the same term more than once during the selected date range. If you sort the table by descending Total users and use the Bar chart cell type, you can see at a glance if certain terms were repeatedly entered by the same users.
 
 Repeated searches may reflect:
 
-- refinement of search queries
-- difficulty locating relevant results
-- users returning to the search function across sessions
+- users refining their search terms
+- users not finding relevant results immediately
+- users returning to search across sessions
 
-Interpret repeated searches in context rather than assuming a specific cause.
-
-To analyse search terms:
-
-1. Create the exploration using the variables and settings below.
-2. Sort by either Total users or Event count, depending on whether you want to prioritise reach or volume.
-3. Review terms in context of the pages where search was initiated, if filtering to a specific page.
-
+Interpret repeated searches in context.
 
 ### Variables
 
