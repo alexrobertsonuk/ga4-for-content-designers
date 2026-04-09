@@ -92,7 +92,7 @@ Interpret higher proportions in context. Search usage may reflect:
 | Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: view_search_results |
 
 
-## What terms are users searching for internally, site-wide or from a specific page?
+## What terms are users searching for internally?
 
 ### Potential insights
 
@@ -147,13 +147,13 @@ Interpret repeated searches in context.
 
 
 
-## What terms are users searching for internally, before arriving on a specific page?
+## What search terms are leading users to a specific page?
 
 ### Potential insights
 
 These explorations could help you to:
 
-- identify which search terms immediately preceded visits to a specific page
+- identify which search terms preceded visits to a specific page
 - assess whether users rely on search to reach content that is already available through navigation
 - understand whether certain pages are primarily discovered via internal search
 - review whether search results appear to guide users to relevant destinations
@@ -161,9 +161,9 @@ These explorations could help you to:
 
 ### Understand the data
 
-GA4 does not directly link an internal search term to the specific page a user selected from the results.
+GA4 does not directly link a search term to the specific page a user selected from the search results.
 
-However, you can approximate this behaviour by analysing "Page referrer" values that contain search query parameters.
+You can approximate this by analysing "Page referrer" values that contain search query parameters.
 
 When a user performs a search, the search term is often included in the URL of the search results page (for example, through parameters such as q, s, search, query, or keyword). If the user then clicks a result, the destination page will record the search results URL as its referrer.
 
@@ -180,7 +180,7 @@ This method only works when:
 
 It does not capture search behaviour from interfaces that do not update the URL or where referrer data is restricted.
 
-Interpret results cautiously. If a search referrer appears unrelated to the destination page, consider whether the user may have navigated via global navigation rather than selecting a search result.
+Interpret results cautiously. If a search referrer appears unrelated to the destination page, the user may have navigated via global navigation rather than selecting a search result.
 
 
 ### Variables
