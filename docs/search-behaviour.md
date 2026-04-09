@@ -165,7 +165,7 @@ GA4 does not directly link a search term to the specific page a user selected fr
 
 You can approximate this by analysing "Page referrer" values that contain search query parameters.
 
-When a user performs a search, the search term is often included in the URL of the search results page (for example, through parameters such as q, s, search, query, or keyword). If the user then clicks a result, the destination page will record the search results URL as its referrer.
+When a user performs a search, the search term is often included in the URL of the search results page (for example, through parameters such as "q", "s", "search", "query", or "keyword"). If the user then clicks a result, the destination page will record the search results URL as its referrer.
 
 By filtering "Page referrer" to values containing search parameters, you can:
 
