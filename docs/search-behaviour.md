@@ -6,21 +6,21 @@
 
 This section focuses on internal site search behaviour: searches performed within your own site or service.
 
-GA4 does not show the search terms users typed into external search engines such as Google. External search queries are not passed to GA4. To analyse search engine queries, you will need access to Google Search Console or an equivalent search analytics tool.
+GA4 does not show the search terms users typed into external search engines such as Google. These queries are not shared with GA4. To analyse search engine queries, you will need access to Google Search Console or a similar tool.
 
-If your site includes an internal search function, GA4 can automatically record search activity.
+If your site includes an internal search function, GA4 can record search activity when it detects recognised search query parameters in the page URL (for example, parameters such as "q", "s", or "search"). These parameters can also be configured in the property settings.
 
-When a user performs a search, GA4 records a "view_search_results" event. The search term is captured from recognised URL query parameters (for example, parameters such as q, s, or search). These parameters can also be configured in the property settings.
+When a user performs a search, GA4 records a "view_search_results" event. In reports, this typically appears as activity on the search results page.
 
-The "Page path and screen class" dimension will show the search results page itself. To identify where users initiated their search, use the "Page referrer" dimension. This shows the previous page viewed before the search results page loaded.
+The "Page path and screen class" dimension shows the search results page itself. To understand where the search was initiated, use the "Page referrer" dimension. This shows the page the user was viewing immediately before the search results page loaded.
 
-If no search data appears to be available, even for a broad date range:
+If no search data appears to be available, even when using a broad date range, check that search tracking is enabled:
 
 1. Go to Admin.
 2. Select Data collection and modification.
 3. Select Data streams.
 4. Select your website stream.
-5. Check that automatic search tracking is enabled.
+5. Check that site search tracking is enabled.
 
 If search tracking is not enabled, contact the property administrator.
 
@@ -33,7 +33,7 @@ If search tracking is not enabled, contact the property administrator.
 These explorations could help you to:
 
 - measure how often internal search is used
-- identify pages where a relatively high proportion of users initiate a search
+- identify pages where a relatively high proportion of users go on to perform a search
 - compare internal search activity between device categories
 - compare search behaviour between users referred from a specific domain and those who were not
 
@@ -42,32 +42,31 @@ These explorations could help you to:
 
 When a user performs a search, GA4 records a "view_search_results" event.
 
-The "Page referrer" dimension shows the page viewed immediately before the search results page. This represents the page where the search was initiated.
+The "Page referrer" dimension shows the page viewed immediately before the search results page. This represents the page where the search was likely initiated.
 
-Pages with more users will naturally generate more searches. To understand whether search usage is unusually high on a particular page, calculate the proportion of users on that page who performed a search.
+Pages with more users will naturally generate more searches. Absolute counts alone do not indicate whether search usage is high relative to page traffic.
 
-To calculate this proportion:
+To understand relative usage, calculate the proportion of users on each page who went on to perform a search:
 
-1. Create the exploration below to identify the number of users who initiated a search from each page.
+1. Create the exploration below to show how many users reached a search results page, from each page
 2. Create a second free-form exploration showing total users by page.
 3. Export both datasets to CSV.
-4. In a spreadsheet tool, match the two datasets by page path.
-5. Divide:
+4. In a spreadsheet tool, match the datasets using page path.
+5. Calculate:
 
-   Total users who initiated a search from the page  
+   Users associated with search results views (by page referrer)  
    ÷  
    Total users who viewed the page  
 
 6. Format the result as a percentage.
 7. Compare proportions across pages rather than relying on absolute counts.
 
-Interpret higher proportions cautiously. Search usage may reflect:
+Interpret higher proportions in context. Search usage may reflect:
 
-- difficulty locating content
-- users seeking additional detail
-- users refining their task
-- natural behaviour on complex landing pages
-
+- users not immediately finding what they need
+- users looking for more specific information
+- users refining or continuing a task
+- expected behaviour on pages with broad or complex content
 
 ### Variables
 
@@ -90,7 +89,6 @@ Interpret higher proportions cautiously. Search usage may reflect:
 | Values | Total users |
 | Cell type | Plain text |
 | Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: view_search_results |
-
 
 
 ## What terms are users searching for internally, from a specific page or site?
