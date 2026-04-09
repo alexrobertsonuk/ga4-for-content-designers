@@ -83,7 +83,7 @@ Interpret higher proportions in context. Search usage may reflect:
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Segment comparisons | Add only one comparison group at a time for clarity.<br><br>To compare referral source:<br>- Users referred from https://www.example.com/<br>- Users NOT referred from https://www.example.com/<br><br>To compare device type:<br>- Mobile traffic<br>- Web traffic |
+| Segment comparisons | Add only one comparison group at a time for clarity.<br><br>To compare referral source:<br>- Users referred from example.com<br>- Users NOT referred from example.com<br><br>To compare device type:<br>- Mobile traffic<br>- Web traffic |
 | Rows | Page referrer |
 | Show rows | 500 |
 | Nested rows | No |
