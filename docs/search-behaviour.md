@@ -53,7 +53,6 @@ To understand relative usage, calculate the proportion of users on each page who
 3. Export both datasets to CSV.
 4. In a spreadsheet tool, match the datasets by page path (for example, using VLOOKUP or an equivalent function).
 5. Calculate:
-
    Users who searched from the page   
    ÷  
    Total users who viewed the page  
