@@ -135,7 +135,8 @@ To analyse search terms:
 |---|---|
 | Dimensions | Event name<br>Search term<br>Page referrer |
 | Metrics | Total users<br>Event count |
-| Segments | 'Mobile traffic' (readymade segment)<br>'Web traffic' (readymade segment)<br><br>'Users referred from https://www.example.com/' (new segment):<br>Dimension: Page referrer<br>Condition: contains<br>Expression: https://www.example.com/<br><br>'Users NOT referred from https://www.example.com/' (new segment):<br>Dimension: Page referrer<br>Condition: does not contain<br>Expression: https://www.example.com/ |
+| Segments | Mobile traffic<br>Web traffic |
+| Custom segments | Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Page referrer<br>- contains<br>- https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Include users when:<br>- Page referrer<br>- does not contain<br>- https://www.example.com/ |
 
 ### Settings
 
