@@ -44,7 +44,7 @@ When a user performs a search, GA4 records a "view_search_results" event.
 
 The "Page referrer" dimension shows the page viewed immediately before the search results page. This represents the page where the search was likely initiated.
 
-Pages with more users will naturally generate more searches. Absolute counts alone do not indicate whether search usage is high relative to page traffic.
+Pages with more users will naturally tend to generate more searches. Absolute counts alone do not indicate whether search usage is high relative to page traffic.
 
 To understand relative usage, calculate the proportion of users on each page who went on to perform a search:
 
