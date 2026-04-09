@@ -57,7 +57,6 @@ To understand relative usage, calculate the proportion of users on each page who
    Users who searched from the page   
    ÷  
    Total users who viewed the page  
-
 6. Format the result as a percentage.
 7. Compare proportions across pages rather than relying on absolute counts.
 
