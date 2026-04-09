@@ -48,13 +48,13 @@ Pages with more users will naturally tend to generate more searches. Absolute co
 
 To understand relative usage, calculate the proportion of users on each page who went on to perform a search:
 
-1. Create the exploration below to show how many users reached a search results page, from each page
-2. Create a second free-form exploration showing total users by page.
+1. Create the exploration below to show how many users searched from each page
+2. Create a second free-form exploration showing total users by page for the same time period (dimension: Page path and screen class, metric: Total users).
 3. Export both datasets to CSV.
-4. In a spreadsheet tool, match the datasets using page path.
+4. In a spreadsheet tool, match the datasets by page path (for example, using VLOOKUP or an equivalent function).
 5. Calculate:
 
-   Users associated with search results views (by page referrer)  
+   Users who searched from the page   
    ÷  
    Total users who viewed the page  
 
