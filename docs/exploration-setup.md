@@ -133,7 +133,7 @@ Shared explorations cannot be edited by other users unless they duplicate them.
 
 ## Handling sampled results
 
-Sampling means GA4 may use a subset of data rather than the full dataset, so results are scaled up estimates rather than exact figures.
+As your dataset gets larger (for example, when using a long date range), GA4 may apply data sampling. Sampling means GA4 uses a subset of data rather than the full dataset, so results are scaled up estimates rather than exact figures.
 
 If sampling is applied, an indicator appears in the top-right of the exploration panel. Selecting the indicator shows the percentage of data used in the results.
 
