@@ -375,7 +375,7 @@ Completion time for returning users may include long gaps between visits, while 
 
 | Field | Value |
 |---|---|
-| Segments | All Users<br>Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: New users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- new<br><br>Type: User segment<br>Title: Returning users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- returning |
+| Segments | Add pre-built segments:<br><br>All Users<br>Mobile traffic<br>Web traffic<br><br>Create new segments:<br><br>Type: User segment<br>Title: New users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- new<br><br>Type: User segment<br>Title: Returning users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- returning |
 
 ### Settings
 
