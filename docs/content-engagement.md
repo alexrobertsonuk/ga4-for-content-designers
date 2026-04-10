@@ -169,7 +169,7 @@ These explorations could help you to:
 
 - compare engagement rate across device categories, referral sources, or landing pages
 - assess whether different entry points are associated with higher or lower engagement
-- evaluate whether changes to page titles, descriptions, or navigation are associated with changes in engagement
+- evaluate whether changes to page titles or navigation labels that may affect user expectations are associated with changes in engagement
 
 ### Understand the data
 
@@ -272,7 +272,7 @@ Engagement rate should be considered alongside user volumes and journey analysis
 These explorations could help you to:
 
 - estimate the proportion of users who reach the bottom of a page
-- compare scroll behaviour between device categories
+- compare scroll behaviour between device types
 - assess whether longer pages are likely to be fully viewed
 - monitor whether content restructuring changes scroll behaviour
 
