@@ -403,15 +403,13 @@ This exploration could help you to:
 
 ### Understand the data
 
-This method focuses only on users who reached the completion page.
+This method focuses only on users who reached the completion page. It does not reflect users who started the journey but failed to complete.
 
-You create a segment that only includes users who viewed the completion page, and apply it to the "Sessions per active user" metric. 
+Create a segment that includes users who viewed the completion page, and use it with the "Sessions per active user" metric. This shows the average number of sessions for users who completed the journey.
 
 A session begins when a user starts interacting with your site and ends after a period of inactivity (30 minutes by default, unless your GA4 property settings have been changed). If a user leaves and later returns, this creates a new session. As a result, users who take breaks before finishing will increase the average number of sessions.
 
-Note that this exploration does not reflect users who started the journey but failed to complete.
-
-This exploration uses "Active users" instead of the usual "Total users" because the "Sessions per active user" metric is calculated using active users.
+This exploration uses "Active users" instead of the usual "Total users", to correspond with the "Sessions per active user" metric.
 
 
 ### Variables
@@ -445,7 +443,7 @@ This exploration could help you to:
 
 - identify pages within a journey where users who did not complete are most frequently exiting
 - monitor whether content changes influence exit behaviour at specific steps
-- compare abandonment patterns by device category or referring domain
+- compare abandonment patterns by device category or by users associated with different referring domains
 
 
 ### Understand the data
@@ -468,7 +466,7 @@ To calculate exit rate:
 
 1. Create an exploration using the variables and settings below.
 2. Export the data to CSV.
-3. Open the CSV in a spreadsheet tool using comma as the delimiter.
+3. Open the CSV in a spreadsheet using comma as the delimiter.
 4. Remove any rows above the column headers so that the first visible row contains the data labels.
 5. Insert a new column titled "Exit rate".
 6. In the "Exit rate" column, divide the "Exits" column by the "Views" column.
@@ -487,7 +485,7 @@ High exit rates do not automatically indicate a problem. Interpretation should c
 
 | Field | Value |
 |---|---|
-| Custom segments | Type: User segment<br>Title: Users who have NOT completed<br>Exclude users when:<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation<br><br>Type: User segment<br>Title: Users referred from example.com who have NOT completed<br>Include users when:<br>- Page referrer<br>- contains<br>- https://www.example.com/<br>Exclude users when:<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation<br><br>Type: User segment<br>Title: Mobile users who have NOT completed<br>Include users when:<br>- Device category<br>- exactly matches (=)<br>- mobile<br>Exclude users when:<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation |
+| Custom segments | Type: User segment<br>Title: Users who have NOT completed<br>Exclude users when (Exclude from segment permanently):<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation<br><br>Type: User segment<br>Title: Users referred from example.com who have NOT completed<br>Include users when:<br>- Session source<br>- contains<br>- example.com<br>Exclude users when (Exclude from segment permanently):<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation<br><br>Type: User segment<br>Title: Mobile users who have NOT completed<br>Include users when:<br>- Device category<br>- exactly matches (=)<br>- mobile<br>Exclude users when (Exclude from segment permanently):<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation |
 
 ### Settings
 
@@ -529,22 +527,17 @@ The table will include:
 - Page path and screen class: the destination page
 - Page referrer: the previous page
 - Total users: the number of users who moved between those two pages
-- Views per active user: the average number of times the destination page was viewed by each active user during the selected date range
+- Views per active user: the average number of times the destination page was viewed by each active user during the selected date range. To avoid this being skewed higher by users who returned during your date range to work through the service in multiple sessions, this exploration filters to new users only.
 
-Rows where the referrer and destination are the same usually indicate page refreshes and can typically be ignored.
-
-Views per active user provides context about how often users return to a page within the selected date range. Interpretation should be relative across journey steps rather than based on fixed thresholds.
-
-To reduce the influence of users returning over multiple sessions, begin by analysing new users only. You can then compare with returning users to understand whether backward navigation differs between first-time and repeat visits.
+To identify potential problem areas, sort the output table by "Views per active user", high to low. Working down the table, look for instances where the "Page path and screen class" is the step immediately prior to the "Page referrer". Rows where the referrer and destination are the same usually indicate page refreshes and can typically be ignored.
 
 
 ### Variables
 
 | Field | Value |
 |---|---|
-| Dimensions | Page path and screen class<br>Page referrer |
+| Dimensions | New/Established<br>Page path and screen class<br>Page referrer |
 | Metrics | Total users<br>Views per active user |
-| Custom segments | Type: User segment<br>Title: New users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- new<br><br>Type: User segment<br>Title: Returning users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- returning |
 
 
 ### Settings
@@ -553,13 +546,12 @@ To reduce the influence of users returning over multiple sessions, begin by anal
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Segment comparisons | New users<br>Returning users (optional) |
 | Rows | Page path and screen class<br>Page referrer |
 | Show rows | 100 |
 | Nested rows | No |
 | Values | Total users<br>Views per active user |
 | Cell type | Plain text |
-| Filters | Dimension: Page referrer<br>Condition: contains<br>Expression: enter your service domain, such as https://www.example.com/, to restrict results to internal navigation |
+| Filters | Dimension: New/Established<br>Condition: exactly matches<br>Expression: new<br><br>Dimension: Page referrer<br>Condition: contains<br>Expression: enter your service domain, such as https://www.example.com/, to restrict results to internal navigation |
 
 
 
