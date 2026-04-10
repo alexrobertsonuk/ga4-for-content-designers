@@ -399,7 +399,7 @@ If file download tracking is not enabled, contact the property administrator.
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Plain text |
-| Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: file_download<br><br>Optional:<br><br>Dimension: Page path and screen class<br>Condition: contains OR exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
+| Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: file_download<br><br>To filter to an individual page:<br><br>Dimension: Page path and screen class<br>Condition: contains OR exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
 
 ---
 
