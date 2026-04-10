@@ -10,8 +10,8 @@ The exploration workspace has two configuration columns on the left:
   - load the segments, dimensions and metrics you want to use
 
 - **Settings** – where you:
-  -  choose how the data is displayed in the current tab (on the right)
-  -  select from the segments, dimensions and metrics you have loaded
+  -  select from the segments, dimensions and metrics you have loaded in Variables
+  -  choose how the data is displayed in the current tab (on the right of the screen)
 
 You must first add dimensions, metrics or segments to the **Variables** column before they can be used in **Settings**.
 
