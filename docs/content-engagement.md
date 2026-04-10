@@ -119,12 +119,11 @@ These explorations could help you to:
 - compare the breakdown of device types (desktop, mobile, tablet) across different sections of your site or service
 - assess whether device distribution changes after a redesign
 - ensure testing effort reflects the device categories most commonly used
-- identify whether certain content types are more frequently accessed on specific devices
-  
+- identify whether certain types of content are more frequently accessed on specific devices
 
 ### Understand the data
 
-Viewing device breakdown in isolation provides useful context, but comparison is often more informative.
+Device breakdown provides useful context, but comparisons are often more informative than standalone views.
 
 You can compare:
 
@@ -134,13 +133,12 @@ You can compare:
 
 Device distribution may vary depending on:
 
-- the complexity of tasks
+- task complexity
 - referral sources
 - user environment
 - content type
 
-Interpret differences cautiously. Device mix does not indicate user characteristics directly and may reflect contextual factors such as referral channel or time of use.
-
+Interpret differences cautiously. Device mix does not directly indicate user characteristics and may reflect contextual factors such as referral source or time of use.
 
 ### Variables
 
@@ -149,13 +147,12 @@ Interpret differences cautiously. Device mix does not indicate user characterist
 | Dimensions | Device category<br>Page path and screen class (optional, for filtering) |
 | Metrics | Total users |
 
-
 ### Settings
 
 | Field | Value |
 |---|---|
 | Technique | Free-form |
-| Visualisation | Doughnut chart OR Table |
+| Visualisation | Doughnut chart (for proportions) OR Table (for exact values) |
 | Breakdowns | Device category |
 | Values | Total users |
 | Filters | Optional:<br><br>Dimension: Page path and screen class<br>Condition: contains OR exactly matches (=)<br>Expression: enter the section or page path you want to analyse |
