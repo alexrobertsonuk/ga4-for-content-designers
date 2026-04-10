@@ -69,7 +69,7 @@ Interpret higher proportions in context. Search usage may reflect:
 |---|---|
 | Dimensions | Event name<br>Page referrer |
 | Metrics | Total users |
-| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www.")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when (Exclude from segment permanently):<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www.") |
+| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when (Exclude from segment permanently):<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www") |
 
 ### Settings
 
@@ -122,7 +122,7 @@ Interpret repeated searches in context.
 |---|---|
 | Dimensions | Event name<br>Search term<br>Page referrer |
 | Metrics | Total users<br>Event count |
-| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www.")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when (Exclude from segment permanently):<br>- Page referrer<br>- contains<br>- example.com (only enter the domain, do not include "www.") |
+| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when (Exclude from segment permanently):<br>- Page referrer<br>- contains<br>- example.com (only enter the domain, do not include "www") |
 
 ### Settings
 
