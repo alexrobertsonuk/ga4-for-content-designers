@@ -35,29 +35,19 @@ This may be:
 - another page within your own site
 - empty (no referrer recorded)
 
-For internal referrals, the full URL is shown, including the domain and any query string (for example, https://example.com/questions/fee?locale=en).
+For internal referrals, the full URL is shown, including the domain and any query string (https://www.example.com/questions/fee?locale=en).
 
-For external referrals, you may only see the top-level domain (for example, https://www.gov.uk). Many sites and browsers limit the referrer information passed, so the specific referring page is often unavailable.
+For external referrals, you may only see the top-level domain (https://www.example.com). Many sites and browsers limit the referrer information passed, so the specific referring page is often unavailable.
 
 An empty "Page referrer" value may indicate:
 
-- direct traffic (for example, typing the URL or using a bookmark)
+- direct traffic (for example, users typing the URL or using a bookmark)
 - referrer information blocked by browser or site policy
-- a previously opened page being revisited without a recorded referrer
+- the user reopening a page in an inactive browser tab
 
-Because "Page referrer" reflects the previous page for each page view, it does not always represent the original source of the visit. But in practice, external referrer information may persist across multiple page views within a session.
+Since "Page referrer" reflects the previous page for each "Page path and screen class", it does not always represent the original source of a site visit. When analysing external referrals, pair "Page referrer" with "Landing page + query string" instead. "Landing page + query string" identifies the first page visited in the session.
 
-The "Page path and screen class" dimension shows only the path portion of a URL (for example, /questions/fee).
-
-When analysing external referrals, pair "Page referrer" with "Landing page + query string" rather than "Page path and screen class".
-
-"Landing page + query string" identifies the first page visited in the session. This helps ensure that external referrals are associated with the correct entry point.
-
-If you instead use "Page path and screen class", later page views in the same visit may still appear associated with the original external referrer. This can inflate counts for non-landing pages.
-
-The "Nested rows" option groups secondary rows beneath their primary row, making it easier to see how landing pages relate to each referrer.
-
-Nested rows are limited to 10 rows per parent item. For example, only the top 10 landing pages will be shown under each referrer.
+The "Nested rows" option will group together all the pages which share the same referrer, giving you a more readable overview. Nested rows are limited to 10 rows per item.
 
 ### Variables
 
