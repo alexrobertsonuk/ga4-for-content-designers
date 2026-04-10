@@ -6,7 +6,7 @@
 
 Engagement metrics do not, by themselves, indicate content quality or success.
 
-Users may spend longer on a page because they are carefully reading and completing a task, or because they are struggling to find the information they need. Similarly, repeated views may reflect either clarity and usefulness or uncertainty and revision.
+Users may spend longer on a page because they are carefully reading and completing a task, or because they are struggling to find the information they need. Similarly, repeated views of a page may reflect either users finding the content useful or experiencing uncertainty.
 
 When interpreted alongside user volumes and journey data, engagement analysis can help:
 
@@ -33,17 +33,17 @@ These explorations could help you to:
 
 ### Understand the data
 
-There are several simple ways to estimate the number of unique users for a page or group of pages. The same variables can be used with different visualisations and filters.
+There are several simple ways to measure how many users for a page or group of pages. The same variables can be used with different visualisations and filters.
 
-The recommended metric is "Total users". This represents the number of unique users who triggered any event during the selected date range.
+The recommended metric is "Total users". This represents the number of users who were active on your site or app during the selected date range.
 
-When analysing content usage, consistency of metrics is more important than absolute precision. Relative differences between pages or over time are typically more informative than exact counts.
+When analysing content usage, consistency of metrics is more important than absolute precision. Relative differences between pages or over time are often more informative than exact counts.
 
 Interpret page usage in context. High volumes may indicate:
 
 - high demand
 - strong discoverability
-- mandatory navigation pathways
+- required navigation pathways
 
 Lower volumes may indicate:
 
