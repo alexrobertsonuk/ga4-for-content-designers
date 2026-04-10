@@ -206,7 +206,7 @@ Engagement rate should be considered alongside user volumes and journey analysis
 
 | Field | Value |
 |---|---|
-| Dimensions | Device category<br>Landing page<br>Page referrer<br>Session source |
+| Dimensions | Device category<br>Landing page<br>Session source |
 | Metrics | Engagement rate<br>Total users |
 
 
