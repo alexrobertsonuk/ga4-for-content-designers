@@ -208,7 +208,7 @@ Interpret results cautiously. If a search referrer appears unrelated to the dest
 These explorations could help you to:
 
 - identify search terms that produce no results
-- detect vocabulary mismatches between users and your content
+- detect differences between natural user language and your site's terminology
 - identify potential content gaps
 - monitor whether content changes reduce zero-result searches over time
 
@@ -217,19 +217,18 @@ These explorations could help you to:
 
 When a user performs an internal search, GA4 records a "view_search_results" event.
 
-This event includes a parameter indicating the number of results returned. When this value is 0, the search produced no results.
+This event includes the number of results returned (shown in GA4 as "Search results"). When this value is 0, the search returned no results.
 
-By filtering to searches where the number of results equals 0, you can isolate search terms that did not return any matching content.
+By filtering to searches where "Search results" equals 0, you can isolate terms that did not return any matching content.
 
-Interpret zero-result searches in context. They may indicate:
+Interpret zero-result searches in context. They may reflect:
 
 - missing content
 - differences between user language and site terminology
 - misspellings or typos
-- overly strict search configuration
+- restrictive search configuration (for example, search that only matches exact terms or hides less relevant but still useful results)
 
-High frequency zero-result terms may warrant further review, but smaller volumes can still be meaningful if they reflect important user needs.
-
+Higher frequency terms may indicate areas to review. Lower frequency terms can still be meaningful if they relate to important user needs.
 
 ### Variables
 
