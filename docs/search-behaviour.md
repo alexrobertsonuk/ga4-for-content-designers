@@ -8,7 +8,7 @@ This section focuses on internal site search behaviour: searches performed withi
 
 GA4 does not show the search terms users typed into external search engines such as Google. These queries are not shared with GA4. To analyse search engine queries, you will need access to Google Search Console or a similar tool.
 
-If your site includes an internal search function, GA4 can record search activity when it detects recognised search query parameters in the page URL (for example, parameters such as "q", "s", or "search"). These parameters can also be configured in the property settings.
+If your site includes an internal search function, GA4 can record search activity when it detects recognised search query parameters in the page URL (for example, parameters such as "q", "s", "search", "query", or "keyword"). These parameters can also be configured in the property settings.
 
 When a user performs a search, GA4 records a "view_search_results" event. In reports, this appears as activity on the search results page.
 
