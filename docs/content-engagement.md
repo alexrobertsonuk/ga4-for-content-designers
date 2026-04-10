@@ -13,7 +13,7 @@ When interpreted alongside user volumes and journey data, engagement analysis ca
 - identify high impact pages
 - prioritise content reviews
 - assess potential user impact of design changes
-- highlight patterns that warrant further investigation
+- highlight patterns that may be useful to explore further
 
 These measures should be interpreted in context rather than treated as standalone indicators of performance.
 
@@ -161,7 +161,7 @@ Interpret differences cautiously. Device mix does not directly indicate user cha
 
 
 
-## What factors influence user engagement with this site or service?
+## How does engagement differ across pages, sources, or devices?
 
 ### Potential insights
 
@@ -169,15 +169,13 @@ These explorations could help you to:
 
 - compare engagement rate across device categories, referral sources, or landing pages
 - assess whether different entry points are associated with higher or lower engagement
-- evaluate whether changes to page titles, descriptions, or navigation influence engagement patterns
-- identify groups of sessions that may warrant further investigation
-
+- evaluate whether changes to page titles, descriptions, or navigation are associated with changes in engagement
 
 ### Understand the data
 
 GA4 reports "Engagement rate" instead of the traditional "bounce rate".
 
-Engagement rate shows the percentage of visits that met at least one of these conditions:
+Engagement rate shows the percentage of sessions that met at least one of these conditions:
 
 - the visit lasted longer than 10 seconds
 - the user viewed 2 or more pages
@@ -187,7 +185,7 @@ In simple terms, engagement rate estimates how many visits involved some meaning
 
 When you break this down by a dimension (for example, Landing page or Device category), the engagement rate shows the percentage of visits in that group that were engaged.
 
-Engagement rate does not measure how engaging a single page is on its own. A visit may include several pages, and engagement is based on the whole visit.
+Engagement rate does not measure how engaging a single page is on its own. A session may include several pages, and engagement is based on the whole session.
 
 Interpret engagement rate in context. Lower values may reflect:
 
