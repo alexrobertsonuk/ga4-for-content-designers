@@ -247,7 +247,7 @@ Engagement rate should be considered alongside user volumes and journey analysis
 | Nested rows | Yes |
 | Values | Engagement rate<br>Total users |
 | Cell type | Plain text |
-| Filters | Dimension: Page referrer<br>Condition: does not contain<br>Expression: enter your site domain (for example, example.com)<br><br>Dimension: Page referrer<br>Condition: matches regex<br>Expression: ^.+$<br><br>Dimension: Landing page<br>Condition: matches regex<br>Expression: ^.+$ |
+| Filters | Dimension: Page referrer<br>Condition: does not contain<br>Expression: enter your site domain (example.com)
 
 
 ### Settings: to see engagement by device type
