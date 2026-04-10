@@ -265,15 +265,15 @@ Engagement rate should be considered alongside user volumes and journey analysis
 
 
 
-## How many users scroll to the bottom of guidance pages?
+## How many users scroll to the bottom of a page?
 
 ### Potential insights
 
 These explorations could help you to:
 
-- estimate the proportion of users who reach near the bottom of a page
+- estimate the proportion of users who reach the bottom of a page
 - compare scroll behaviour between device categories
-- assess whether long guidance pages are likely to be fully viewed
+- assess whether longer pages are likely to be fully viewed
 - monitor whether content restructuring changes scroll behaviour
 
 
@@ -320,7 +320,7 @@ If scroll tracking is not enabled, contact the property administrator.
 |---|---|
 | Dimensions | Page path and screen class<br>Per cent scrolled |
 | Metrics | Total users |
-| Segments | 'Mobile traffic' (readymade segment)<br>'Web traffic' (readymade segment) |
+| Segments | Mobile traffic<br>Web traffic |
 
 
 ### Settings
