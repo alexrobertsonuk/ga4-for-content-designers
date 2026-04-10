@@ -108,9 +108,7 @@ This exploration can help you to:
 
 ### Understand the data
 
-This exploration builds on the same referrer-based approach described in "Where are users coming from?", but limits results to known LLM domains.
-
-Common LLM referral domains include:
+This exploration builds on the same referrer-based approach described in "Where are users coming from?", but limits results to known LLM domains:
 
 - openai.com and chat.openai.com (ChatGPT)
 - claude.ai (Anthropic)
@@ -169,18 +167,16 @@ These explorations can help you to:
 
 A path exploration creates an interactive Sankey diagram showing the most common next steps users take from a selected page (or the most common previous steps if you build the path backwards from an ending point).
 
-Paths are shown up to a fixed number of steps in the interface (typically up to 10). For large or branching journeys, use path exploration to examine a specific section, decision point, or step that you are currently investigating.
+Paths are shown up to 10 steps ("nodes"). For large or branching journeys, use path exploration to examine a specific section or decision point.
 
 Path explorations are designed for a single path view at a time. You can apply a segment, but you cannot view multiple segments side-by-side in the same Sankey chart (for example, mobile vs desktop).
 
-When you first create a path exploration, GA4 may default to an "Event name" starting point. To build a page-based path exploration:
+When you first create a path exploration, GA4 defaults to an "Event name" starting point. To build a page-based path exploration:
 
 1. Select "Start again" (top right of the exploration output)
-2. Choose whether you want a "Starting point" or an "Ending point"
-3. Select "Page path and screen class" and choose a page
-4. In the Sankey chart, select nodes to expand the path step by step
-
-If you see event names rather than page paths in the nodes, reselect the starting/ending point dimension and choose "Page path and screen class".
+2. Choose whether you want a "Starting point" or an "Ending point" by selecting the corresponding "Drop or select node" option
+3. Select "Page path and screen class" and choose a page for your start or end point
+4. In the Sankey chart, click a page (a "node" on the chart) to expand the path step by step, up to 10 total steps
 
 
 ### Variables
