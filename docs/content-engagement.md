@@ -144,7 +144,7 @@ Interpret differences cautiously. Device mix does not directly indicate user cha
 
 | Field | Value |
 |---|---|
-| Dimensions | Device category<br>Page path and screen class (optional, for filtering) |
+| Dimensions | Device category |
 | Metrics | Total users |
 | Custom segments | Type: User segment<br>Title: Section A<br>Include users when:<br>- Page path and screen class<br>- contains<br>- /section-a/<br><br>Type: User segment<br>Title: Section B<br>Include users when:<br>- Page path and screen class<br>- contains<br>- /section-b/ |
 
