@@ -405,11 +405,11 @@ This exploration could help you to:
 
 This method focuses only on users who reached the completion page.
 
-You create a segment that only includes users who viewed the completion page, and apply it to the "Sessions per active user" metric.
+You create a segment that only includes users who viewed the completion page, and apply it to the "Sessions per active user" metric. 
 
 A session begins when a user starts interacting with your site and ends after a period of inactivity (30 minutes by default, unless your GA4 property settings have been changed). If a user leaves and later returns, this creates a new session. As a result, users who take breaks before finishing will increase the average number of sessions.
 
-These calculations reflect behaviour only among users who completed the journey. They do not show how many users who started the journey failed to complete.
+Note that this exploration does not reflect users who started the journey but failed to complete.
 
 This exploration uses "Active users" instead of the usual "Total users" because the "Sessions per active user" metric is calculated using active users.
 
@@ -434,7 +434,6 @@ This exploration uses "Active users" instead of the usual "Total users" because 
 | Nested rows | No |
 | Values | Active users<br>Sessions<br>Sessions per active user |
 | Cell type | Plain text |
-
 
 
 
