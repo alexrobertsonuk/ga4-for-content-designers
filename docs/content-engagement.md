@@ -146,13 +146,15 @@ Interpret differences cautiously. Device mix does not directly indicate user cha
 |---|---|
 | Dimensions | Device category<br>Page path and screen class (optional, for filtering) |
 | Metrics | Total users |
+| Custom segments | Type: User segment<br>Title: Section A<br>Include users when:<br>- Page path and screen class<br>- contains<br>- /section-a/<br><br>Type: User segment<br>Title: Section B<br>Include users when:<br>- Page path and screen class<br>- contains<br>- /section-b/ |
 
 ### Settings
 
 | Field | Value |
 |---|---|
 | Technique | Free-form |
-| Visualisation | Doughnut chart (for proportions) OR Table (for exact values) |
+| Visualisation | Doughnut chart |
+| Segment comparisons | Add only one comparison group at a time.<br><br>For example:<br>- Section A<br>- Section B |
 | Breakdowns | Device category |
 | Values | Total users |
 | Filters | Optional:<br><br>Dimension: Page path and screen class<br>Condition: contains OR exactly matches (=)<br>Expression: enter the section or page path you want to analyse |
