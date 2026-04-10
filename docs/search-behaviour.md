@@ -33,16 +33,14 @@ If search tracking is not enabled, contact the property administrator.
 These explorations could help you to:
 
 - measure how often internal search is used
-- identify pages where a relatively high proportion of users go on to perform a search
-- compare internal search activity between device categories
-- compare search behaviour between users associated with a specific referral domain and those not
+- identify pages where above average proportions of users perform a search, which may indicate a content discovery issue
+- compare internal search activity by device type, to understand if any content may be harder to find on mobile or desktop
+- compare search behaviour between users associated with a specific referral domain or not
 
 
 ### Understand the data
 
-When a user performs a search, GA4 records a "view_search_results" event.
-
-The "Page referrer" dimension shows the page viewed immediately before the search results page. This represents the page where the search was likely initiated.
+In this exploration, the "Page referrer" dimension shows the page viewed immediately before the search results page. This represents the page where the search was likely initiated.
 
 Pages with more users will naturally tend to generate more searches. Absolute counts alone do not indicate whether search usage is high relative to page traffic.
 
@@ -51,8 +49,8 @@ To understand relative usage, calculate the proportion of users on each page who
 1. Create the exploration below to show how many users searched from each page
 2. Create a second free-form exploration showing total users by page for the same time period (dimension: Page path and screen class, metric: Total users).
 3. Export both datasets to CSV.
-4. In a spreadsheet tool, match the datasets by page path (for example, using VLOOKUP or an equivalent function).
-5. Calculate: Users who searched from the page ÷ Total users who viewed the page  
+4. In a spreadsheet, match the datasets by page path (for example, using VLOOKUP or an equivalent function).
+5. In a new column, divide the number of users who searched from the page by the total users who viewed the page.
 6. Format the result as a percentage.
 7. Compare proportions across pages rather than relying on absolute counts.
 
@@ -96,8 +94,8 @@ These explorations could help you to:
 - identify information or tasks users expect to find but cannot locate easily
 - assess whether certain topics are unclear or insufficiently signposted
 - track changes in internal search terms over time
-- compare search terms between device categories
-- compare search terms between users associated with a specific referral domain and those not
+- compare search terms between device categories, to understand if any content may be harder to find or more useful on mobile or desktop
+- compare search terms between users associated with a specific referral domain or not
 
 
 ### Understand the data
