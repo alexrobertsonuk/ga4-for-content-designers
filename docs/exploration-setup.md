@@ -9,7 +9,9 @@ The exploration workspace has two configuration columns on the left:
   - set your date range
   - load the segments, dimensions and metrics you want to use
 
-- **Settings** – where you choose how the data is displayed in the current tab (on the right), and select from the segments, dimensions and metrics you have loaded
+- **Settings** – where you:
+  -  choose how the data is displayed in the current tab (on the right)
+  -  select from the segments, dimensions and metrics you have loaded
 
 You must first add dimensions, metrics or segments to the **Variables** column before they can be used in **Settings**.
 
