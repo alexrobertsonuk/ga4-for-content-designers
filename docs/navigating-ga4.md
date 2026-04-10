@@ -37,7 +37,7 @@ After selecting a property, the left-hand menu displays the main sections of GA4
 - **Advertising** – advertising and campaign reports (if enabled)
 - **Admin** – account and property configuration settings
 
-This guide focuses on the **Explore** section, where you can build custom reports.
+This guide focuses on the **Explore** section, which is most useful for custom content design analysis.
 
 Unlike the standard Reports section, Explore gives you much more control over how the data is selected and displayed. You can:
 
@@ -52,7 +52,7 @@ Select **Explore** from the left-hand menu.
 
 The Explore landing page displays:
 
-- existing explorations you have created
+- existing explorations you've created
 - explorations shared with you by other users
 
 Explorations are private by default unless you choose to share them. You cannot break anything by creating or editing an exploration. Creating or editing one does not change your GA4 data, and it does not affect the standard reports used by others.
