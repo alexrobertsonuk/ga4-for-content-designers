@@ -1,6 +1,6 @@
 # Exploration setup
 
-## Variables and settings
+## Variables and Settings
 
 The exploration workspace has two configuration columns on the left:
 
@@ -20,7 +20,7 @@ To use a variable:
 - drag it into the appropriate field in **Settings**, or  
 - double-click it to add it automatically to a compatible field
 
-To the right of these columns, the exploration output is displayed.
+To the right of the Variables and Settings columns, the exploration output is displayed.
 
 Each exploration can contain up to 10 tabs of output.
 
