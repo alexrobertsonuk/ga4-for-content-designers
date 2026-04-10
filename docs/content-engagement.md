@@ -338,14 +338,13 @@ If scroll tracking is not enabled, contact the property administrator.
 | Filters | To filter to an individual page:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
 
 
-
 ## How many users are downloading linked files?
 
 ### Potential insights
 
 These explorations could help you to:
 
-- include downloadable files in content audits
+- include downloadable files in content reviews or audits
 - identify which files receive the most interaction
 - assess whether downloadable content is heavily relied upon
 - prioritise files for review, consolidation, or conversion to HTML where appropriate
@@ -353,7 +352,7 @@ These explorations could help you to:
 
 ### Understand the data
 
-When automatic file download tracking is enabled, GA4 records a "file_download" event when a user clicks a link that points to a recognised file type.
+When automatic file download tracking is enabled, GA4 records a "file_download" event when a user clicks a link to a recognised file type.
 
 Common tracked file extensions include:
 
@@ -366,7 +365,7 @@ Common tracked file extensions include:
 - .ppt
 - .zip
 
-The metric "Total users" represents the number of unique users who clicked a file link during the selected date range.
+The metric "Total users" represents the number of unique users who clicked a link to a file during the selected date range.
 
 This method records link clicks, not confirmed successful downloads. It also does not capture downloads triggered without a standard link click.
 
