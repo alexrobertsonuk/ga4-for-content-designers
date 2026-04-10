@@ -335,7 +335,7 @@ If scroll tracking is not enabled, contact the property administrator.
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Plain text |
-| Filters | Optional:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
+| Filters | To filter to an individual page:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
 
 
 
