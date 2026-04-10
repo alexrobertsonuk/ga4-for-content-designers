@@ -242,12 +242,11 @@ Engagement rate should be considered alongside user volumes and journey analysis
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Rows | Page referrer<br>Landing page |
+| Rows | Session source<br>Landing page |
 | Show rows | 100 |
 | Nested rows | Yes |
 | Values | Engagement rate<br>Total users |
 | Cell type | Plain text |
-| Filters | Dimension: Page referrer<br>Condition: does not contain<br>Expression: enter your site domain (example.com)
 
 
 ### Settings: to see engagement by device type
