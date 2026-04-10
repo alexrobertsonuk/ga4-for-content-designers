@@ -109,7 +109,7 @@ When selecting a date range, consider:
 2. **Data retention settings** – in free tier GA4 properties, data retention is 2 months by default and can be extended to 14 months. Check under:
    Admin > Data collection and modification > Data retention
 3. **Processing time** – longer date ranges may take more time to process.
-4. **Sampling** – longer date ranges increase the likelihood of sampled results in the free tier. See "Handling sampled results" below.
+4. **Sampling** – longer date ranges increase the likelihood of sampled results. See "Handling sampled results" below.
 
 ## Exporting data
 
