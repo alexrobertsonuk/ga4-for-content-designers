@@ -187,6 +187,8 @@ When you break this down by a dimension (for example, Landing page or Device cat
 
 Engagement rate does not measure how engaging a single page is on its own. A session may include several pages, and engagement is based on the whole session.
 
+Sort by Total users (highest to lowest) to focus on the most significant sources. Smaller volumes may show extreme engagement rates that are not representative.
+
 Interpret engagement rate in context. Lower values may reflect:
 
 - short informational visits
