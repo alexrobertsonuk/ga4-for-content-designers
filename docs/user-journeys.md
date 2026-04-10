@@ -508,9 +508,8 @@ High exit rates do not automatically indicate a problem. Interpretation should c
 
 This exploration could help you to:
 
-- identify steps in a journey where users frequently navigate back to an earlier page
-- highlight parts of the journey where users may be reviewing or reconsidering previous answers
-- compare backward navigation patterns between new and returning users
+- identify steps in a journey that may be causing confusion or uncertainty for users
+- identify steps in a journey where users may be reviewing or reconsidering previous answers
 
 
 ### Understand the data
