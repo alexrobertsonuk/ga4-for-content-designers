@@ -35,7 +35,7 @@ These explorations could help you to:
 - measure how often internal search is used
 - identify pages where a relatively high proportion of users go on to perform a search
 - compare internal search activity between device categories
-- compare search behaviour between users referred from a specific domain and those who were not
+- compare search behaviour between users associated with a specific referral domain and those not
 
 
 ### Understand the data
@@ -69,8 +69,7 @@ Interpret higher proportions in context. Search usage may reflect:
 |---|---|
 | Dimensions | Event name<br>Page referrer |
 | Metrics | Total users |
-| Segments | Mobile traffic<br>Web traffic |
-| Custom segments | Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Page referrer<br>- contains<br>- https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Include users when:<br>- Page referrer<br>- does not contain<br>- https://www.example.com/ |
+| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www.")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when (Exclude from segment permanently):<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www.") |
 
 ### Settings
 
@@ -98,7 +97,7 @@ These explorations could help you to:
 - assess whether certain topics are unclear or insufficiently signposted
 - track changes in internal search terms over time
 - compare search terms between device categories
-- compare search terms between users referred from a specific domain and those who were not
+- compare search terms between users associated with a specific referral domain and those not
 
 
 ### Understand the data
@@ -123,8 +122,7 @@ Interpret repeated searches in context.
 |---|---|
 | Dimensions | Event name<br>Search term<br>Page referrer |
 | Metrics | Total users<br>Event count |
-| Segments | Mobile traffic<br>Web traffic |
-| Custom segments | Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Page referrer<br>- contains<br>- https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Include users when:<br>- Page referrer<br>- does not contain<br>- https://www.example.com/ |
+| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www.")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when (Exclude from segment permanently):<br>- Page referrer<br>- contains<br>- example.com (only enter the domain, do not include "www.") |
 
 ### Settings
 
