@@ -201,76 +201,24 @@ Interpret results cautiously. If a search referrer appears unrelated to the dest
 
 
 
-## What search terms return no results?
+## Which search terms are associated with exits from the search results page?
 
 ### Potential insights
 
 These explorations could help you to:
 
-- identify search terms that produce no results
-- detect differences between natural user language and your site's terminology
-- identify potential content gaps
-- monitor whether content changes reduce zero-result searches over time
-
-
-### Understand the data
-
-When a user performs an internal search, GA4 records a "view_search_results" event.
-
-This event includes the number of results returned (shown in GA4 as "Search results"). When this value is 0, the search returned no results.
-
-By filtering to searches where "Search results" equals 0, you can isolate terms that did not return any matching content.
-
-Interpret zero-result searches in context. They may reflect:
-
-- missing content
-- differences between user language and site terminology
-- misspellings or typos
-- restrictive search configuration (for example, search that only matches exact terms or hides less relevant but still useful results)
-
-Higher frequency terms may indicate areas to review. Lower frequency terms can still be meaningful if they relate to important user needs.
-
-### Variables
-
-| Field | Value |
-|---|---|
-| Dimensions | Event name<br>Search term |
-| Metrics | Event count<br>Total users |
-
-
-### Settings
-
-| Field | Value |
-|---|---|
-| Technique | Free-form |
-| Visualisation | Table |
-| Rows | Search term |
-| Show rows | 500 |
-| Nested rows | No |
-| Values | Event count<br>Total users |
-| Cell type | Plain text |
-| Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: view_search_results<br><br>Dimension: Search results<br>Condition: exactly matches (=)<br>Expression: 0 |
-
-
-## What search terms lead to immediate exits?
-
-### Potential insights
-
-These explorations could help you to:
-
-- identify search terms after which users frequently leave the site
-- assess whether search results appear to guide users to relevant content
-- compare whether certain search topics are associated with higher exit rates
-- monitor whether search improvements reduce exits following specific terms
-
+- identify search terms associated with higher proportions of exits from the search results page
+- assess whether search results appear to support further navigation for different topics
+- compare whether certain search topics are associated with more exits than others
+- monitor whether changes to search or content reduce exits from search results pages over time
 
 ### Understand the data
 
 When a user performs a search, GA4 records a "view_search_results" event.
 
-If the user leaves the site without viewing another page, the search results page will record an exit.
+The search results page can also record an exit. In GA4, an exit means the last event in the session happened on that page.
 
-By analysing exits from search results pages grouped by search term, you can estimate the proportion of searches that did not lead to further navigation.
+By analysing exits from search results pages grouped by search term, you can estimate how often searches for a term are associated with users leaving from the search results page rather than continuing to another page.
 
 GA4 does not provide an exit rate metric directly in Explorations. You can calculate it by dividing:
 
@@ -279,25 +227,24 @@ Exits ÷ Views
 In this case:
 
 - "Views" represents views of the search results page
-- "Exits" represents sessions that ended on the search results page
+- "Exits" represents exits from the search results page
 
-To calculate exit rate by search term:
+To calculate this proportion by search term:
 
 1. Create the exploration using the variables and settings below.
 2. Export the data as CSV.
 3. Open the file in a spreadsheet tool.
-4. Insert a new column titled "Exit rate".
+4. Insert a new column titled "Exit proportion".
 5. Divide the "Exits" value by the "Views" value.
 6. Format the result as a percentage.
 7. Compare proportions across search terms rather than relying on absolute counts.
 
-Interpret higher exit rates in context. An exit after search may indicate:
+Interpret higher proportions cautiously. An exit from the search results page may indicate:
 
-- the search returned no relevant results
-- the user found the needed information directly in the search results summary
+- the search results did not support the next step
+- the user found enough information on the search results page itself
 - the user decided not to continue
 - the search intent was informational rather than task-based
-
 
 ### Variables
 
@@ -305,7 +252,6 @@ Interpret higher exit rates in context. An exit after search may indicate:
 |---|---|
 | Dimensions | Event name<br>Search term |
 | Metrics | Views<br>Exits |
-
 
 ### Settings
 
@@ -319,7 +265,6 @@ Interpret higher exit rates in context. An exit after search may indicate:
 | Values | Views<br>Exits |
 | Cell type | Plain text |
 | Filters | Dimension: Event name<br>Condition: exactly matches (=)<br>Expression: view_search_results |
-
 ---
 
 <small>GA4 for content designers by Alex Robertson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small>
