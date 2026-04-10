@@ -204,14 +204,12 @@ These explorations can help you to:
 
 - identify circular or repeated navigation patterns
 - detect backwards steps within a multi-step service
-- identify guidance pages that users revisit frequently (for example, to evaluate whether the information should be integrated at the point of need instead)
+- identify reference or guidance pages that users revisit frequently (for example, to evaluate whether the information should be integrated at the point of need instead)
 - highlight potential drop-off points where users exit after repeated views
 
 ### Understand the data
 
 The "Views per active user" metric divides the total number of views for a page by the number of active users who viewed it.
-
-This exploration uses "Active users" instead of "Total users" because the "Views per active user" metric is calculated using active users.
 
 For example, if a page received 100 views from 70 active users, the result would be 1.43 views per active user.
 
@@ -222,22 +220,24 @@ Higher values may indicate that users are revisiting the page multiple times wit
 - users returning to reference material
 - refreshes or repeated interactions
 
+This exploration uses "Active users" instead of the usual "Total users" because the "Views per active user" metric is calculated using active users.
+
 Interpret this metric in context. Compare pages against others within the same site or service rather than relying on a fixed threshold.
 
-Adding "Exits" allows you to identify pages that are both frequently revisited and common exit points.
+Adding the "Exits" metric allows you to identify pages that are both frequently revisited and common exit points.
 
-The absolute number of exits is less informative than the proportion of views that result in an exit (exit rate). GA4 Explorations may not display exit rate directly, but you can calculate it by exporting the data:
+The absolute number of exits is less informative than the proportion of views that result in an exit (exit rate). GA4 does not display exit rate directly, but you can calculate it by exporting the data:
 
 1. Create the exploration using the variables and settings below.
 2. Export the data as CSV.
-3. Open the CSV in a spreadsheet tool using comma as the delimiter.
+3. Open the CSV in a spreadsheet using comma as the delimiter.
 4. Remove any rows above the column headers so that the first visible row contains the column headers.
 5. Insert a new column titled "Exit rate".
 6. In the "Exit rate" column, divide the "Exits" value by the "Views" value.
 7. Format the result as a percentage.
-8. Sort by Exit rate to identify pages with relatively high proportions of exits.
+8. Sort by "Exit rate" to identify pages with relatively high proportions of exits.
 
-Pages with both high views per active user and high exit rates may warrant further investigation.
+Pages with both high views per active user and high exit rates may indicate user difficulties that are worth investigating further.
 
 
 ### Variables
@@ -270,9 +270,9 @@ Pages with both high views per active user and high exit rates may warrant furth
 These explorations can help you to:
 
 - identify pages where users spend longer than average
+- identify pages where users spend less time than is likely to be necessary (for instance where content is lengthy or complex), indicating the content may need to be broken up or reformatted
 - assess whether content changes influence average time spent
-- compare time spent with exit behaviour
-- identify pages where users spend unusually little time relative to content length
+- compare time spent on each page with exits, to identify behaviour patterns
 
 ### Understand the data
 
@@ -284,7 +284,7 @@ To estimate average time spent per page view:
 
 1. Create an exploration using the variables and settings below.
 2. Export the data as CSV.
-3. Open the CSV in a spreadsheet tool using comma as the delimiter.
+3. Open the CSV in a spreadsheet using comma as the delimiter.
 4. Remove any rows above the column headers so that the first visible row contains the column headers.
 5. Insert a new column titled "Average time per view (seconds)".
 6. In the "Average time per view (seconds)" column, divide the "User engagement" value by the "Views" value.
@@ -296,7 +296,7 @@ Interpret this metric in context. Longer time spent may indicate:
 - careful reading
 - task completion
 - difficulty progressing
-- repeated revisiting
+- repeated visits
 
 Shorter time spent may indicate:
 
@@ -311,9 +311,7 @@ To compare time spent with exit behaviour, in your spreadsheet:
 3. Format as a percentage.
 4. Compare your "Exit rate" and "Average time per view (seconds)" values to identify outliers.
 
-Pages with both high average time per view and high exit rates may warrant further investigation.
-
-
+Pages with both high average time per view and high exit rates may indicate user difficulties that are worth investigating further.
 
 ### Variables
 
@@ -342,9 +340,9 @@ Pages with both high average time per view and high exit rates may warrant furth
 ### Potential insights
 These explorations could help you to:
 
-- benchmark current completion rates and average completion time, and later compare these after content changes
+- benchmark current completion rates and average completion time, and compare these after content changes
 - identify page-to-page transitions where drop-off rates are higher than normal
-- compare completion rates and completion time across different user groups, such as:
+- compare completion rates and times across different user groups, such as:
   - mobile vs desktop
   - new vs returning users
   - users referred from a specific domain or page
@@ -381,7 +379,7 @@ The segments below enable different types of comparison. You do not need to use 
 | Field | Value |
 |---|---|
 | Segments | All Users<br>Mobile traffic<br>Web traffic
-| Custom segments | Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Page referrer<br>- contains<br>- https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Include users when:<br>- Page referrer<br>- does not contain<br>- https://www.example.com/<br><br>Type: User segment<br>Title: New users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- new<br><br>Type: User segment<br>Title: Returning users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- returning |
+| Custom segments | Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Page referrer<br>- contains<br>- https://www.example.com/<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when:<br>- Page referrer<br>- contains<br>- https://www.example.com/<br><br>Type: User segment<br>Title: New users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- new<br><br>Type: User segment<br>Title: Returning users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- returning |
 
 ### Settings
 
