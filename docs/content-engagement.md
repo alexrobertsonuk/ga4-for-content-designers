@@ -309,7 +309,7 @@ If no scroll data appears:
 2. Select Data collection and modification.
 3. Select Data streams.
 4. Select your website stream.
-5. Check that automatic scroll tracking is enabled.
+5. Check that 'Enhanced measurement' contains 'Scrolls'.
 
 If scroll tracking is not enabled, contact the property administrator.
 
@@ -375,7 +375,7 @@ If no download data appears:
 2. Select Data collection and modification.
 3. Select Data streams.
 4. Select your website stream.
-5. Check that automatic file download tracking is enabled.
+5. Check that 'Enhanced measurement' contains 'File downloads'.
 
 If file download tracking is not enabled, contact the property administrator.
 
