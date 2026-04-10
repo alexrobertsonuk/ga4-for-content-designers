@@ -573,7 +573,7 @@ This method compares device category for:
 - new users
 - returning users
 
-A difference in device distribution between these groups may suggest that users begin a journey on one device type and later return using another.
+A difference in device distribution between these groups indicates that users begin a journey on one device type and later return using another.
 
 However, this method does not directly confirm that individual users switched devices. It shows aggregate differences between first-time and returning sessions.
 
@@ -621,16 +621,7 @@ External link clicks are only recorded if automatic click tracking is enabled in
 - the page where the click occurred
 - the destination URL of the external link
 
-Enabling nested rows groups external links under the page where they were clicked. This helps you see which pages are prompting users to leave the site.
-
-The metric "Total users" represents the number of users who clicked a given external link at least once during the selected date range. It does not represent the total number of clicks.
-
-Interpretation should consider:
-
-- whether the external link is intended as a primary pathway
-- whether the link appears before or instead of a key task step
-- whether users may be seeking clarification before continuing
-
+Enabling nested rows groups external links under the page where they were clicked.
 
 If no external link data appears:
 
