@@ -399,9 +399,7 @@ This exploration could help you to:
 
 - estimate how many sessions, on average, it takes users who complete a journey to reach the final page
 - assess whether content or structural changes reduce the need for users to return later
-- compare whether session requirements differ depending on:
-  - referring domain
-  - device category
+- compare whether session requirements differ depending on device category
 
 
 ### Understand the data
@@ -417,18 +415,17 @@ GA4 does not provide a built-in "average sessions per user" metric. However, you
 
 Sessions ÷ Total users
 
-This produces the average number of sessions required for users in the completion segment.
+This produces the average number of sessions for users in the completion segment.
 
 A session begins when a user starts interacting with your site and ends after a period of inactivity (30 minutes by default, unless your GA4 property settings have been changed). If a user leaves and later returns, this creates a new session. As a result, users who take breaks before finishing will increase the average number of sessions.
 
 These calculations reflect behaviour only among users who completed the journey. They do not show how many users who started the journey failed to complete.
 
-
 To calculate the values:
 
 1. Create an exploration using the variables and settings below.
 2. Export the data to CSV.
-3. Open the CSV in a spreadsheet tool using comma as the delimiter.
+3. Open the CSV in a spreadsheet using comma as the delimiter.
 4. Remove any rows above the column headers so that the first visible row contains the column headers.
 6. Add a new column titled "Average sessions per user".
 7. In the "Average sessions per user" column, divide the "Sessions" column by the "Total users" column.
@@ -440,7 +437,7 @@ To calculate the values:
 |---|---|
 | Dimensions | Device category |
 | Metrics | Sessions<br>Total users |
-| Custom segments | Type: User segment<br>Title: Completion page viewed (all users)<br>Include users when:<br>- Page path and screen class<br>- exactly matches (=)<br>- enter your completion page path, such as /confirmation<br><br>Type: User segment<br>Title: Completion page viewed (users referred from example.com)<br>Include users when:<br>- Page path and screen class<br>- exactly matches (=)<br>- enter your completion page path, such as /confirmation<br>And<br>- Page referrer<br>- contains<br>- https://www.example.com/ |
+| Segments | Type: User segment<br>Title: Completion page viewed<br>Include users when:<br>- Page path and screen class<br>- exactly matches (=)<br>- enter your completion page path, such as /confirmation |
 
 ### Settings
 
@@ -448,7 +445,7 @@ To calculate the values:
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Segment comparisons | Completion page viewed (all users)<br>Completion page viewed (users referred from example.com) |
+| Segment comparisons | Completion page viewed |
 | Rows | Device category |
 | Show rows | 10 |
 | Nested rows | No |
