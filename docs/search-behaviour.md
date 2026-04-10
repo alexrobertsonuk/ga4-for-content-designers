@@ -20,7 +20,7 @@ If no search data appears to be available, even when using a broad date range, c
 2. Select Data collection and modification.
 3. Select Data streams.
 4. Select your website stream.
-5. Check that site search tracking is enabled.
+5. Check that 'Enhanced measurement' contains 'Site search'.
 
 If search tracking is not enabled, contact the property administrator.
 
