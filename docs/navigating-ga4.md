@@ -2,7 +2,7 @@
 
 To use GA4, you need access to your organisation's GA4 account.
 
-You should request **'Analyst'** level access to the relevant **property** (the individual website or app you want to analyse). Analyst access allows you to create and save explorations, which are used throughout this guide.
+You should request **Analyst** level access to the relevant **property** (the individual website or app you want to analyse). Analyst access is recommended as it allows you to save and share your explorations (custom reports). If you only have 'Viewer' access, you can still create explorations to see data, but you cannot save them or share them with others.
 
 Access is usually granted by a digital analytics or product team.
 
@@ -44,7 +44,7 @@ Unlike the standard Reports section, Explore gives you much more control over ho
 - choose exactly which metrics to include
 - focus on a specific page or group of pages
 - apply more detailed filters
-- choose how the data is visualised (for example as tables, line or bar charts)
+- choose how the data is visualised, such as in tables or charts
 
 ## Using Explore
 
