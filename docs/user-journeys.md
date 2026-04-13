@@ -114,7 +114,7 @@ This exploration can help you to:
 
 This exploration builds on the same referrer-based approach described in "Where are users coming from?", but limits results to known LLM domains:
 
-- openai.com and chat.openai.com (ChatGPT)
+- chatgpt.com, chat.openai.com (ChatGPT)
 - claude.ai (Anthropic)
 - copilot.microsoft.com (Microsoft Copilot)
 - gemini.google.com (Google Gemini)
@@ -126,8 +126,9 @@ This exploration builds on the same referrer-based approach described in "Where 
 - ernie.baidu.com
 - deepseek.com
 - grok.com and x.ai
+- you.com
 
-Referrals from LLMs differ from many other external sources. Some LLM interfaces operate through mobile apps or embedded environments that do not reliably pass referrer information to the browser. As a result, this exploration will under-represent the true volume of LLM-influenced visits. It captures only visits where a referral can be identified.
+Referrals from LLMs differ from many other external sources. Some LLM interfaces operate through mobile apps or embedded environments that do not reliably pass referrer information to the browser. They may also strip the referrer entirely for privacy reasons. In these cases, the visit will often be recorded as "Direct" traffic. As a result, this exploration will under-represent the true volume of LLM-influenced visits. It captures only visits where a referral can be identified.
 
 This exploration also only measures visits where a user clicked through to your site. It does not capture content that may have been summarised or paraphrased within an LLM response without generating a visit.
 
@@ -152,7 +153,7 @@ You may see landing pages grouped as "(not set)". This indicates that GA4 was un
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Bar chart or Plain text |
-| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: `^https?://([^/]+\.)?(chat\.openai\.com\|chatgpt\.com\|claude\.ai\|gemini\.google\.com\|copilot\.microsoft\.com\|perplexity\.ai\|poe\.com\|you\.com\|grok\.com\|x\.ai\|mistral\.ai\|qwen\.ai\|kimi\.com\|ernie\.baidu\.com\|deepseek\.com)(/\|$)`<br><br>To see referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the full landing page URL including https:// and any query string (https://www.example.com/questions/fee?locale=en) |
+| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: `^https?://([^/]+\.)?(chat\.openai\.com\|chatgpt\.com\|claude\.ai\|gemini\.google\.com\|copilot\.microsoft\.com\|perplexity\.ai\|poe\.com\|you\.com\|grok\.com\|x\.ai\|mistral\.ai\|qwen\.ai\|kimi\.com\|ernie\.baidu\.com\|deepseek\.com)(/\|$)`<br><br>To see referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the page path and any query string (for example, /ask-for-help/new?topic=benefits) |
 
 
 
