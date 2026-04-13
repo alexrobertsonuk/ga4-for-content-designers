@@ -9,7 +9,7 @@ It covers:
 - building custom reports ("explorations")
 - answering common content questions
 
-The examples assume a standard (free tier) GA4 setup without additional custom tracking. Additional features available in enhanced configurations are noted where relevant.
+The examples focus on a standard GA4 setup without custom tracking. This provides a baseline that works for both free accounts and paid GA4 360 subscriptions. Additional features available in more advanced configurations are noted where relevant.
 
 Always follow your organisation's data protection and analytics policies.
 
