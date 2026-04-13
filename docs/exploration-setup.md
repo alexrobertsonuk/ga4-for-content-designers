@@ -46,7 +46,7 @@ Common dimensions include:
 - "Page path and screen class" – the path of a webpage after the domain name (for example, /apply/start)  
 - "Page referrer" – the full URL of the previous page from which the user arrived
 - "Device category" – desktop, mobile or tablet  
-- "Event name" – the name of a recorded event (for example 'click', 'file_download', 'scroll')
+- "Event name" – the name of a recorded event (for example "click", "file_download", "scroll")
 
 ### Metrics
 
