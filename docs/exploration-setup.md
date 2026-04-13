@@ -54,7 +54,7 @@ Metrics are numerical measurements.
 
 Common metrics include:
 
-- **Views** – total number of page or screen views  
+- **Views** – total number of times a page or screen was loaded 
 - **Total users** – number of unique users during the selected date range  
 - **New users** – number of unique users who interacted for the first time  
 - **Event count** – number of times a tracked event occurred
@@ -129,13 +129,20 @@ To share an exploration in read-only mode with other users who have access to th
 1. Select the share icon in the top-right corner.
 2. Confirm sharing.
 
-Shared explorations cannot be edited by other users unless they duplicate them.
+Once shared, the exploration becomes visible to all users of that property. They can find it on the Explore landing page by filtering the **Owner** column to **Not owned by me** or **Owned by anyone**.
+
+Shared explorations are read-only. To customise a shared exploration:
+
+- select the **More actions** (three dot) menu to the right of the exploration name
+- choose **Duplicate**
+
+This creates a private, editable copy in your own account.
 
 ## Handling sampled results
 
 As your dataset gets larger (for example, when using a long date range), GA4 may apply data sampling. Sampling means GA4 uses a subset of data rather than the full dataset, so results are scaled up estimates rather than exact figures.
 
-If sampling is applied, an indicator appears in the top-right of the exploration panel. Selecting the indicator shows the percentage of data used in the results.
+If sampling is applied, a warning indicator appears in the top-right of the exploration panel. Selecting the indicator shows the percentage of data used in the results. If data is unsampled, a green tick indicator is shown.
 
 In paid-for GA4 360 properties, sampling thresholds are higher and a detailed results option may be available.
 
