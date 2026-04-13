@@ -43,7 +43,7 @@ Dimensions describe attributes of your data — for example, which page was view
 
 Common dimensions include:
 
-- "Page path and screen class" – the path of a webpage after the domain name (for example '/apply/start')  
+- "Page path and screen class" – the path of a webpage after the domain name (for example, /apply/start)  
 - "Page referrer" – the full URL of the previous page from which the user arrived
 - "Device category" – desktop, mobile or tablet  
 - "Event name" – the name of a recorded event (for example 'click', 'file_download', 'scroll')
