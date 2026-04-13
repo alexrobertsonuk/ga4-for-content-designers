@@ -65,7 +65,7 @@ This guide focuses on identifying patterns and differences in behaviour to suppo
 
 For that reason, "Total users" is used as the default metric in most examples.
 
-Google defines Total users as the number of unique users who triggered any event during the selected date range.
+Google defines "Total users" as the number of unique users who triggered any event during the selected date range.
 
 It is not a perfectly precise measure in every context, but it is consistent and comparable. This makes it useful for understanding relative differences between pages, journeys or user groups.
 
