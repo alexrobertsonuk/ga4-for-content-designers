@@ -37,7 +37,7 @@ This may be:
 
 For internal referrals, the full URL is shown, including the domain and any query string (https://www.example.com/ask-for-help/new?topic=benefits).
 
-For external referrals, you may only see the top-level domain (https://www.example.com). Many sites and browsers limit the referrer information passed, so the specific referring page is often unavailable.
+For external referrals, you may only see the top-level domain (https://www.example.com), or nothing at all. Many browsers and sites restrict how much referrer information is passed, so external referrer data is often incomplete.
 
 An empty "Page referrer" value may indicate:
 
@@ -49,7 +49,7 @@ Since "Page referrer" reflects the previous page for each "Page path and screen 
 
 When analysing external referrals, pair "Page referrer" with "Landing page + query string". "Landing page + query string" identifies the first page visited in the session.
 
-For more broad analysis, the "Session source" dimension identifies the external origin of the whole visit, using high level groupings such as "google", "bing", "reddit.com".
+For more broad analysis, the "Session source" dimension identifies the external origin of the whole visit, using values such as "google", "bing", or "reddit.com". You may also see "(direct)" for users with no recorded source, and "(not set)" where the source could not be determined.
 
 The "Nested rows" option will group together all the pages which share the same referrer, giving you a more readable overview. Nested rows are limited to 10 rows per item - to see all pages, turn nesting off.
 
@@ -83,7 +83,7 @@ The "Nested rows" option will group together all the pages which share the same 
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Bar chart or Plain text |
-| Filters | Dimension: Page referrer<br>Condition: does not contain<br>Expression: enter your site or service domain (example.com)<br><br>Dimension: Page referrer<br>Condition: matches regex<br>Expression: `^.+$` (this excludes empty results where no referrer was recorded)<br><br>To see external referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the landing page path and any query string (for example, /ask-for-help/new?topic=benefits) |
+| Filters | Dimension: Page referrer<br>Condition: does not contain<br>Expression: enter your site or service domain (example.com)<br><br>Dimension: Page referrer<br>Condition: matches regex<br>Expression: `^.+$` This is a regular expression that matches any non-empty value — it excludes rows where no referrer was recorded. Copy it exactly as shown.<br><br>To see external referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the landing page path and any query string (for example, /ask-for-help/new?topic=benefits) |
 
 ### Settings: to see detailed internal referrers for a specific page
 
@@ -118,14 +118,14 @@ This exploration builds on the same referrer-based approach described in "Where 
 - claude.ai (Anthropic)
 - copilot.microsoft.com (Microsoft Copilot)
 - gemini.google.com (Google Gemini)
+- grok.x.ai (Grok/xAI)
+- qwen.com (Qwen/Alibaba)
+- yiyan.baidu.com (Ernie Bot/Baidu)
+- deepseek.com
+- kimi.com
+- mistral.ai
 - perplexity.ai
 - poe.com
-- mistral.ai
-- qwen.ai
-- kimi.com
-- ernie.baidu.com
-- deepseek.com
-- grok.com and x.ai
 - you.com
 
 Referrals from LLMs differ from many other external sources. Some LLM interfaces operate through mobile apps or embedded environments that do not reliably pass referrer information to the browser. They may also strip the referrer entirely for privacy reasons. In these cases, the visit will often be recorded as "Direct" traffic. As a result, this exploration will under-represent the true volume of LLM-influenced visits. It captures only visits where a referral can be identified.
@@ -153,7 +153,7 @@ You may see landing pages grouped as "(not set)". This indicates that GA4 was un
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Bar chart or Plain text |
-| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: `^https?://([^/]+\.)?(chat\.openai\.com\|chatgpt\.com\|claude\.ai\|gemini\.google\.com\|copilot\.microsoft\.com\|perplexity\.ai\|poe\.com\|you\.com\|grok\.com\|x\.ai\|mistral\.ai\|qwen\.ai\|kimi\.com\|ernie\.baidu\.com\|deepseek\.com)(/\|$)`<br><br>To see referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the page path and any query string (for example, /ask-for-help/new?topic=benefits) |
+| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: `^https?://([^/]+\.)?(chat\.openai\.com\|chatgpt\.com\|claude\.ai\|gemini\.google\.com\|copilot\.microsoft\.com\|perplexity\.ai\|poe\.com\|you\.com\|grok\.x\.ai\|mistral\.ai\|qwen\.com\|kimi\.com\|yiyan\.baidu\.com\|deepseek\.com)(/\|$)`<br><br>To see referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the page path and any query string (for example, /ask-for-help/new?topic=benefits) |
 
 
 
@@ -182,6 +182,8 @@ When you first create a path exploration, GA4 defaults to an "Event name" starti
 2. Choose whether you want a "Starting point" or an "Ending point" by selecting the corresponding "Drop or select node" option
 3. Select "Page path and screen class" and choose a page for your start or end point
 4. In the Sankey chart, click a page (a "node" on the chart) to expand the path step by step, up to 10 total steps
+
+Setting "View unique nodes only" to "Yes" prevents the same page appearing multiple times across different steps in the chart. This gives a cleaner view of the overall journey and avoids inflating the apparent complexity of paths where users revisit pages.
 
 
 ### Variables
@@ -218,14 +220,14 @@ The "Views per active user" metric divides the total number of views for a page 
 
 For example, if a page received 100 views from 70 active users, the result would be 1.43 views per active user.
 
-Higher values may indicate that users are revisiting the page multiple times within a session or across sessions. This can reflect:
+Higher values may indicate that users are revisiting the page — either multiple times within a single session, or returning to it across different sessions over the selected date range. This can reflect:
 
 - difficulty progressing
 - repeated backwards steps
 - users returning to reference material
 - refreshes or repeated interactions
 
-This exploration uses "Active users" instead of the usual "Total users" because the "Views per active user" metric is calculated using active users.
+This exploration uses "Active users" instead of "Total users" because the "Views per active user" metric is calculated using active users. In GA4, "Active users" counts users who had an "engaged" session (one that lasted longer than 10 seconds, included a conversion event, or included at least 2 page views).
 
 Interpret this metric in context. Compare pages against others within the same site or service rather than relying on a fixed threshold.
 
@@ -264,7 +266,7 @@ Pages with both high views per active user and high exit rates may indicate user
 | Nested rows | No |
 | Values | Active users<br>Views<br>Views per active user<br>Exits |
 | Cell type | Bar chart or Plain text |
-| Filters | To analyse a specific page:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /questions/fee) |
+| Filters | To analyse a specific page, add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /questions/fee) |
 
 
 
@@ -283,7 +285,7 @@ These explorations can help you to:
 
 GA4 does not include a direct "time spent on page" metric.
 
-Instead, use the "User engagement" metric, which measures the cumulative time (in seconds) that a page was actively in focus in the user's browser.
+Instead, use the "User engagement" metric, which measures the cumulative time (in seconds) that a page was actively in focus in the user's browser. This is an approximation — GA4 calculates engagement time from events rather than tracking focus continuously, so treat these figures as directional rather than precise.
 
 To estimate average time spent per page view:
 
@@ -294,7 +296,7 @@ To estimate average time spent per page view:
 5. Insert a new column titled "Average time per view (seconds)".
 6. In the "Average time per view (seconds)" column, divide the "User engagement" value by the "Views" value.
 
-This produces an estimate of average engaged time per page view.
+This produces an estimate of average engaged time per page view. Note that this figure averages across all views, including repeat views by the same user. A user who visits the same page three times contributes three views to the calculation.
 
 Interpret this metric in context. Longer time spent may indicate:
 
@@ -337,7 +339,7 @@ Pages with both high average time per view and high exit rates may indicate user
 | Nested rows | No |
 | Values | User engagement<br>Views<br>Exits |
 | Cell type | Bar chart or Plain text |
-| Filters | To analyse a specific page:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /questions/fee) |
+| Filters | To analyse a specific page, add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /questions/fee) |
 
 
 ## What percentage of users are completing a multi-step journey, and how long is it taking them?
@@ -374,6 +376,8 @@ This value can be heavily influenced by users who leave and return over multiple
 - returning users
 
 Completion time for returning users may include long gaps between visits, while for new users it is more likely to reflect completion within a single visit.
+
+The funnel is set to "closed" by default ("Make open funnel": off). This means only users who reach the first defined step are counted in the completion calculation. Users who arrive directly at a later step are excluded. This gives a more accurate picture of completion for users who attempt the full journey.
 
 
 ### Variables
