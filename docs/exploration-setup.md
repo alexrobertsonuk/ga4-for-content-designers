@@ -43,10 +43,10 @@ Dimensions describe attributes of your data — for example, which page was view
 
 Common dimensions include:
 
-- **Page path and screen class** – the path of a webpage after the domain name (for example '/apply/start')  
-- **Page referrer** – the full URL of the previous page from which the user arrived
-- **Device category** – desktop, mobile or tablet  
-- **Event name** – the name of a recorded event (for example 'click', 'file_download', 'scroll')
+- "Page path and screen class" – the path of a webpage after the domain name (for example '/apply/start')  
+- "Page referrer" – the full URL of the previous page from which the user arrived
+- "Device category" – desktop, mobile or tablet  
+- "Event name" – the name of a recorded event (for example 'click', 'file_download', 'scroll')
 
 ### Metrics
 
@@ -54,16 +54,16 @@ Metrics are numerical measurements.
 
 Common metrics include:
 
-- **Views** – total number of times a page or screen was loaded 
-- **Total users** – number of unique users during the selected date range  
-- **New users** – number of unique users who interacted for the first time  
-- **Event count** – number of times a tracked event occurred
+- "Views" – total number of times a page or screen was loaded 
+- "Total users" – number of unique users during the selected date range  
+- "New users" – number of unique users who interacted for the first time  
+- "Event count" – number of times a tracked event occurred
 
-## Consistent use of 'Total users'
+## Consistent use of "Total users"
 
 This guide focuses on identifying patterns and differences in behaviour to support design insight and decision-making, rather than reporting exact audience numbers.
 
-For that reason, **Total users** is used as the default metric in most examples.
+For that reason, "Total users" is used as the default metric in most examples.
 
 Google defines Total users as the number of unique users who triggered any event during the selected date range.
 
@@ -105,11 +105,11 @@ The exploration sections in this guide provide the exact dimensions, conditions 
 
 When selecting a date range, consider:
 
-1. **Property start date** – data is only available from when GA4 tracking began for the property.
-2. **Data retention settings** – in free tier GA4 properties, data retention is 2 months by default and can be extended to 14 months. Check under:
+1. Property start date – data is only available from when GA4 tracking began for the property.
+2. Data retention settings – in free tier GA4 properties, data retention is 2 months by default and can be extended to 14 months. Check under:
    Admin > Data collection and modification > Data retention
-3. **Processing time** – longer date ranges may take more time to process.
-4. **Sampling** – longer date ranges increase the likelihood of sampled results. See "Handling sampled results" below.
+3. Processing time – longer date ranges may take more time to process.
+4. Sampling – longer date ranges increase the likelihood of sampled results. See "Handling sampled results" below.
 
 ## Exporting data
 
