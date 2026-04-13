@@ -537,7 +537,7 @@ The table will include:
 - Total users: the number of users who moved between those two pages
 - Views per active user: the average number of times the destination page was viewed by each active user during the selected date range. To avoid this being skewed higher by users who returned during your date range to work through the service in multiple sessions, this exploration filters to new users only.
 
-To identify potential problem areas, sort the output table by "Views per active user", high to low. Working down the table, look for instances where the "Page path and screen class" is the step immediately prior to the "Page referrer". Rows where the referrer and destination are the same usually indicate page refreshes and can typically be ignored.
+To identify potential problem areas, sort the output table by "Views per active user", high to low. Working down the table, look for instances where the "Page path and screen class" is the step immediately prior to the "Page referrer". Rows where the referrer and destination are the same often indicate page refreshes or resubmissions and can typically be ignored, though they may occasionally reflect other in-page interactions.
 
 
 ### Variables
@@ -559,7 +559,7 @@ To identify potential problem areas, sort the output table by "Views per active 
 | Nested rows | No |
 | Values | Total users<br>Views per active user |
 | Cell type | Plain text |
-| Filters | Dimension: New/Established<br>Condition: exactly matches<br>Expression: new<br><br>Dimension: Page referrer<br>Condition: contains<br>Expression: enter your service domain, such as https://www.example.com/, to restrict results to internal navigation |
+| Filters | Dimension: New/Established<br>Condition: exactly matches<br>Expression: new<br><br>Dimension: Page referrer<br>Condition: contains<br>Expression: enter your service domain, such as www.example.com, to restrict results to internal navigation |
 
 
 
@@ -579,17 +579,14 @@ This exploration could help you to:
 
 This method compares device category for:
 
-- new users
-- returning users
+- new users - users whose first recorded visit falls within the selected date range
+- returning users - users who visited before the date range and came back within it
 
-A difference in device distribution between these groups indicates that users begin a journey on one device type and later return using another.
+The two counts are independent and will not add up to total users.
 
-However, this method does not directly confirm that individual users switched devices. It shows aggregate differences between first-time and returning sessions.
-
-Returning users are only counted if they returned within the selected date range. Users who return outside the date range will not be included as returning users. Using a longer date range can reduce this under-representation, particularly for services that take longer to complete.
+A difference in device distribution between new and returning users may suggest that some users begin a journey on one device and return on another. However, it could equally reflect that different types of users — with different device preferences — make up the new and returning user groups. This method cannot distinguish between the two.
 
 When reviewing the chart, compare the proportion of each device category between new and returning users.
-
 
 ### Variables
 
