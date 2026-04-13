@@ -1,12 +1,12 @@
 # GA4 for content designers
 
 ## About this guide
-This guide explains how content designers can use GA4 (Google Analytics 4) to explore user behaviour and inform content decisions.
+This guide explains how content designers can use GA4 (Google Analytics 4) to explore user behaviour and inform content design decisions.
 
-It focuses on:
+It covers:
 
 - navigating the GA4 interface
-- building explorations
+- building custom reports (Explorations)
 - answering common content questions
 
 The examples assume a standard (free tier) GA4 setup without additional custom tracking. Additional features available in enhanced configurations are noted where relevant.
@@ -25,9 +25,6 @@ This guide is written in a personal capacity and does not represent the views of
 
 This guide is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
-You may share and adapt this material for any purpose, including commercial use, provided appropriate credit is given.
-
 If you reuse or reference this guide, please credit:
 
 "GA4 for content designers by Alex Robertson"
-
