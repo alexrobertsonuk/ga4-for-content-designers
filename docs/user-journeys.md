@@ -35,7 +35,7 @@ This may be:
 - another page within your own site
 - empty (no referrer recorded)
 
-For internal referrals, the full URL is shown, including the domain and any query string (https://www.example.com/questions/fee?locale=en).
+For internal referrals, the full URL is shown, including the domain and any query string (https://www.example.com/ask-for-help/new?topic=benefits).
 
 For external referrals, you may only see the top-level domain (https://www.example.com). Many sites and browsers limit the referrer information passed, so the specific referring page is often unavailable.
 
@@ -45,9 +45,13 @@ An empty "Page referrer" value may indicate:
 - referrer information blocked by browser or site policy
 - the user reopening a page in an inactive browser tab
 
-Since "Page referrer" reflects the previous page for each "Page path and screen class", it does not always represent the original source of a site visit. When analysing external referrals, pair "Page referrer" with "Landing page + query string" instead. "Landing page + query string" identifies the first page visited in the session.
+Since "Page referrer" reflects the previous page for each "Page path and screen class", it does not always represent the original source of a site visit.
 
-The "Nested rows" option will group together all the pages which share the same referrer, giving you a more readable overview. Nested rows are limited to 10 rows per item.
+When analysing external referrals, pair "Page referrer" with "Landing page + query string". "Landing page + query string" identifies the first page visited in the session.
+
+For more broad analysis, the "Session source" dimension identifies the external origin of the whole visit, using high level groupings such as "google", "bing", "reddit.com".
+
+The "Nested rows" option will group together all the pages which share the same referrer, giving you a more readable overview. Nested rows are limited to 10 rows per item - to see all pages, turn nesting off.
 
 ### Variables
 
@@ -79,7 +83,7 @@ The "Nested rows" option will group together all the pages which share the same 
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Bar chart or Plain text |
-| Filters | Dimension: Page referrer<br>Condition: does not contain<br>Expression: enter your site or service domain (example.com)<br><br>Dimension: Page referrer<br>Condition: matches regex<br>Expression: `^.+$` (matches any non-empty referrer value)<br><br>To see external referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the full landing page URL including https:// and any query string (https://www.example.com/questions/fee?locale=en) |
+| Filters | Dimension: Page referrer<br>Condition: does not contain<br>Expression: enter your site or service domain (example.com)<br><br>Dimension: Page referrer<br>Condition: matches regex<br>Expression: `^.+$` (this excludes empty results where no referrer was recorded)<br><br>To see external referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the landing page path and any query string (for example, /ask-for-help/new?topic=benefits) |
 
 ### Settings: to see detailed internal referrers for a specific page
 
@@ -92,7 +96,7 @@ The "Nested rows" option will group together all the pages which share the same 
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Bar chart or Plain text |
-| Filters | Dimension: Page referrer<br>Condition: contains<br>Expression: enter your site domain (example.com)<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path of the target page (for example, /ask-for-help/new) |
+| Filters | Dimension: Page referrer<br>Condition: contains<br>Expression: enter your site domain (example.com)<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path, minus any query string (for example, /ask-for-help/new) |
 
 
 ## What referrals are coming from LLMs (large language models)?
