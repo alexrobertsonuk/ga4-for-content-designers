@@ -384,7 +384,7 @@ The funnel is set to "closed" by default ("Make open funnel": off). This means o
 
 | Field | Value |
 |---|---|
-| Segments | All Users<br>Mobile traffic<br>Web traffic<br><br>(New) Type: User segment<br>Title: New users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- new<br><br>(New) Type: User segment<br>Title: Returning users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- returning |
+| Segments | All Users<br>Mobile traffic<br>Web traffic<br><br>Create a custom segment<br>Type: User segment<br>Title: New users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- new<br><br>Create a custom segment<br>Type: User segment<br>Title: Returning users<br>Include users when:<br>- New/returning<br>- exactly matches (=)<br>- returning |
 
 ### Settings
 
