@@ -4,12 +4,12 @@
 
 The exploration workspace has two configuration columns on the left:
 
-- **Variables** – where you:
+1. **Variables** – where you:
   - name your exploration
   - set your date range
   - load the segments, dimensions and metrics you want to use
 
-- **Settings** – where you:
+2. **Settings** – where you:
   -  select from the segments, dimensions and metrics you've loaded in Variables
   -  choose how the data is displayed in the current tab (on the right of the screen)
 
