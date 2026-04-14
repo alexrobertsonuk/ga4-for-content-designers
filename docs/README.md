@@ -6,7 +6,7 @@ This guide explains how content designers can use GA4 (Google Analytics 4) to ex
 It covers:
 
 - navigating the GA4 interface
-- building custom explorations (GA4's flexible analysis tool)
+- building custom explorations (GA4's tool for flexible analysis)
 - answering common content questions
 
 The examples focus on a basic GA4 implementation using default tracking, without any specialist configuration. This provides a baseline that works for both free accounts and paid GA4 360 subscriptions. Additional features available in more advanced configurations are noted where relevant.
