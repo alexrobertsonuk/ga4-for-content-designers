@@ -67,7 +67,7 @@ Interpret higher proportions in context. Search usage may reflect:
 |---|---|
 | Dimensions | Event name<br>Page referrer |
 | Metrics | Total users |
-| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www") |
+| Segments | Mobile traffic<br>Web traffic<br><br>(Create a new segment)<br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br><br>(Create a new segment)<br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www") |
 
 ### Settings
 
@@ -122,7 +122,7 @@ GA4 may suppress low-volume search terms in free accounts due to data thresholds
 |---|---|
 | Dimensions | Event name<br>Search term<br>Page referrer |
 | Metrics | Total users<br>Event count |
-| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www") |
+| Segments | Mobile traffic<br>Web traffic<br><br>(Create a new segment)<br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br><br>(Create a new segment)<br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www") |
 
 ### Settings
 
