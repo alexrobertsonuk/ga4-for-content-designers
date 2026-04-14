@@ -83,7 +83,7 @@ The "Nested rows" option will group together all the pages which share the same 
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Bar chart or Plain text |
-| Filters | Dimension: Page referrer<br>Condition: does not contain<br>Expression: enter your site or service domain (example.com)<br><br>Dimension: Page referrer<br>Condition: matches regex<br>Expression: `^.+$` This is a regular expression that matches any non-empty value — it excludes rows where no referrer was recorded. Copy it exactly as shown.<br><br>To see external referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the landing page path and any query string (for example, /ask-for-help/new?topic=benefits) |
+| Filters | Dimension: Page referrer<br>Condition: does not contain<br>Expression: enter your site or service domain (example.com)<br><br>Dimension: Page referrer<br>Condition: matches regex<br>Expression: `^.+$` This is a regular expression that matches any non-empty value - it excludes rows where no referrer was recorded. Copy it exactly as shown.<br><br>To see external referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the landing page path and any query string (for example, /ask-for-help/new?topic=benefits) |
 
 ### Settings: to see detailed internal referrers for a specific page
 
