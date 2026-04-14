@@ -8,9 +8,9 @@ This section focuses on internal site search behaviour: searches performed withi
 
 GA4 does not show the search terms users typed into external search engines such as Google. These queries are not shared with GA4. To analyse search engine queries, you will need access to Google Search Console or a similar tool.
 
-If your site includes an internal search function, GA4 can record search activity when it detects recognised search query parameters in the page URL (for example, parameters such as "q", "s", "search", "query", or "keyword"). These parameters can also be configured in the property settings.
+If your site includes an internal search function, GA4 can record search activity when the page URL contains a query parameter from GA4's default list, which includes "q", "s", "search", "query", and "keyword". If your site uses a different parameter, it can be added in the property settings.
 
-When a user performs a search, GA4 records a "view_search_results" event. In reports, this appears as activity on the search results page.
+When a user performs a search, GA4 records a "view_search_results" event against the search results page — not the page where the search was initiated. This event is triggered by the presence of a search parameter in the URL, so it may occasionally include visits to search results pages that were not initiated by a user typing a query — for example, a user following a direct link to a search results page.
 
 The "Page path and screen class" dimension shows the search results page itself. To understand where the search was initiated, use the "Page referrer" dimension. This shows the page the user was viewing immediately before the search results page loaded.
 
@@ -67,7 +67,7 @@ Interpret higher proportions in context. Search usage may reflect:
 |---|---|
 | Dimensions | Event name<br>Page referrer |
 | Metrics | Total users |
-| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when (Exclude from segment permanently):<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www") |
+| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www") |
 
 ### Settings
 
@@ -114,13 +114,15 @@ Repeated searches may reflect:
 
 Interpret repeated searches in context.
 
+GA4 may suppress low-volume search terms in free accounts due to data thresholds, grouping them as "(other)". If you see a significant "(other)" row, some less common search terms may not be visible.
+
 ### Variables
 
 | Field | Value |
 |---|---|
 | Dimensions | Event name<br>Search term<br>Page referrer |
 | Metrics | Total users<br>Event count |
-| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when (Exclude from segment permanently):<br>- Page referrer<br>- contains<br>- example.com (only enter the domain, do not include "www") |
+| Segments | Mobile traffic<br>Web traffic<br><br>Type: User segment<br>Title: Users referred from example.com<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br><br>Type: User segment<br>Title: Users NOT referred from example.com<br>Exclude users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www") |
 
 ### Settings
 
@@ -163,15 +165,9 @@ By filtering "Page referrer" to values containing search parameters, you can:
 - identify pages that were visited immediately after a search
 - review the associated search query strings
 
-This method only works when:
+This method only works when the search term is present in the URL and the browser passes referrer information. It does not capture search behaviour from interfaces that do not update the URL or where referrer data is restricted.
 
-- the search term is present in the URL
-- the browser passes referrer information
-- the search submission uses URL parameters rather than POST requests
-
-It does not capture search behaviour from interfaces that do not update the URL or where referrer data is restricted.
-
-Interpret results cautiously. If a search referrer appears unrelated to the destination page, the user may have navigated via global navigation rather than selecting a search result.
+Interpret results cautiously. If a search referrer appears unrelated to the destination page, the user may have used the site's main navigation from the search results page rather than clicking a search result directly.
 
 
 ### Variables
@@ -193,7 +189,7 @@ Interpret results cautiously. If a search referrer appears unrelated to the dest
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Plain text |
-| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: `.*\?(q=\|s=\|search=\|query=\|keyword=).*`<br><br>To filter results by an individual page, also add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
+| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: `.*[?&](q=|s=|search=|query=|keyword=).*`<br><br>To filter results by an individual page, also add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
 
 ---
 
