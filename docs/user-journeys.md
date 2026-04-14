@@ -266,7 +266,7 @@ Pages with both high views per active user and high exit rates may indicate user
 | Nested rows | No |
 | Values | Active users<br>Views<br>Views per active user<br>Exits |
 | Cell type | Bar chart or Plain text |
-| Filters | To analyse a specific page, add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /questions/fee) |
+| Filters | To analyse a specific page, add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /ask-for-help/new) |
 
 
 
@@ -339,7 +339,7 @@ Pages with both high average time per view and high exit rates may indicate user
 | Nested rows | No |
 | Values | User engagement<br>Views<br>Exits |
 | Cell type | Bar chart or Plain text |
-| Filters | To analyse a specific page, add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /questions/fee) |
+| Filters | To analyse a specific page, add:<br><br>Dimension: Page path and screen class<br>Condition: exactly matches<br>Expression: enter the page path (for example, /ask-for-help/new) |
 
 
 ## What percentage of users are completing a multi-step journey, and how long is it taking them?
