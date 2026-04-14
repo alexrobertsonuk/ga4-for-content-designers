@@ -427,7 +427,7 @@ This exploration uses "Active users" instead of the usual "Total users", to corr
 |---|---|
 | Dimensions | Device category |
 | Metrics | Sessions<br>Active users<br>Sessions per active user |
-| Segments | Type: User segment<br>Title: Completion page viewed<br>Include users when:<br>- Page path and screen class<br>- exactly matches (=)<br>- enter your completion page path, such as /confirmation |
+| Segments | (Create a new segment)<br>Type: User segment<br>Title: Completion page viewed<br>Include users when:<br>- Page path and screen class<br>- exactly matches (=)<br>- enter your completion page path, such as /confirmation |
 
 ### Settings
 
@@ -494,7 +494,7 @@ High exit rates do not automatically indicate a problem. Interpretation should c
 
 | Field | Value |
 |---|---|
-| Segments | Type: User segment<br>Title: Users who have NOT completed<br>Exclude users when (Exclude from segment permanently):<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation<br><br>Type: User segment<br>Title: Users referred from example.com who have NOT completed<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br>Exclude users when (Exclude from segment permanently):<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation<br><br>Type: User segment<br>Title: Mobile users who have NOT completed<br>Include users when:<br>- Device category<br>- exactly matches (=)<br>- mobile<br>Exclude users when (Exclude from segment permanently):<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation |
+| Segments | (Create a new segment)<br>Type: User segment<br>Title: Users who have NOT completed<br>Exclude users when (Exclude from segment permanently):<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation<br><br>(Create a new segment)<br>Type: User segment<br>Title: Users referred from example.com who have NOT completed<br>Include users when:<br>- Session source<br>- contains<br>- example.com (only enter the domain, do not include "www")<br>Exclude users when (Exclude from segment permanently):<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation<br><br>(Create a new segment)<br>Type: User segment<br>Title: Mobile users who have NOT completed<br>Include users when:<br>- Device category<br>- exactly matches (=)<br>- mobile<br>Exclude users when (Exclude from segment permanently):<br>- Page path and screen class<br>- contains<br>- enter the page path of the completion page, such as /confirmation |
 
 ### Settings
 
