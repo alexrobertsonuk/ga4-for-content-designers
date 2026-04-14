@@ -1,2 +1,2 @@
 # GA4 for content designers: a practical guide
-Learn how to use Google Analytics 4 (GA4) to answer content and user behaviour questions.
+This guide explains how content designers can use GA4 (Google Analytics 4) to explore user behaviour and inform content design decisions.
