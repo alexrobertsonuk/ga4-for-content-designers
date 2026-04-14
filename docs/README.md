@@ -27,4 +27,4 @@ This guide is licensed under the [Creative Commons Attribution 4.0 International
 
 If you reuse or reference this guide, please credit:
 
-"GA4 for content designers: a practical guide, by Alex Robertson"
+"GA4 for content designers by Alex Robertson"
