@@ -6,7 +6,7 @@
 
 Engagement metrics do not, by themselves, indicate content quality or success.
 
-Users may spend longer on a page because they are carefully reading and completing a task, or because they are struggling to find the information they need. Similarly, repeated views of a page may reflect either users finding the content useful or experiencing uncertainty.
+Users may spend longer on a page because they are carefully reading and completing a task, or because they are struggling to find the information they need. Similarly, epeated views of a page may reflect users returning to reference material intentionally, or experiencing uncertainty and difficulty progressing.
 
 When interpreted alongside user volumes and journey data, engagement analysis can help:
 
@@ -35,7 +35,7 @@ These explorations could help you to:
 
 There are several simple ways to measure how many users for a page or group of pages. The same variables can be used with different visualisations and filters.
 
-The recommended metric is "Total users". This represents the number of users who were active on your site or app during the selected date range.
+The recommended metric is "Total users". "Total users" represents the number of unique users who triggered any event on your site during the selected date range (including users whose sessions were brief or unengaged).
 
 When analysing content usage, consistency of metrics is more important than absolute precision. Relative differences between pages or over time are often more informative than exact counts.
 
@@ -50,6 +50,8 @@ Lower volumes may indicate:
 - niche content
 - seasonal demand
 - limited discoverability
+
+"Anomaly detection" in charts highlights statistically unusual data points on the chart. It is turned off here to keep the view clean, but can be enabled if you want GA4 to flag unexpected spikes or drops automatically.
 
 
 ### Variables
@@ -80,6 +82,7 @@ Lower volumes may indicate:
 | Technique | Free-form |
 | Visualisation | Table |
 | Rows | Page path and screen class |
+| Show rows | 10 |
 | Columns | Device category (optional) |
 | Values | Total users |
 | Cell type | Plain text |
@@ -157,7 +160,6 @@ Interpret differences cautiously. Device mix does not directly indicate user cha
 | Segment comparisons | Add only one comparison group at a time.<br><br>For example:<br>- Section A<br>- Section B |
 | Breakdowns | Device category |
 | Values | Total users |
-| Filters | Optional:<br><br>Dimension: Page path and screen class<br>Condition: contains OR exactly matches (=)<br>Expression: enter the section or page path you want to analyse |
 
 
 
@@ -177,9 +179,9 @@ GA4 reports "Engagement rate" instead of the traditional "bounce rate".
 
 Engagement rate shows the percentage of sessions that met at least one of these conditions:
 
-- the visit lasted longer than 10 seconds
+- the session lasted longer than 10 seconds
 - the user viewed 2 or more pages
-- the user completed a key event (if one has been configured)
+- the user completed a key event (a specific action marked as significant in your property settings, such as completing a form — not all properties will have these configured)
 
 In simple terms, engagement rate estimates how many visits involved some meaningful interaction.
 
@@ -208,7 +210,7 @@ Engagement rate should be considered alongside user volumes and journey analysis
 
 | Field | Value |
 |---|---|
-| Dimensions | Device category<br>Landing page<br>Session source |
+| Dimensions | Device category<br>Landing page + query string<br>Session source |
 | Metrics | Engagement rate<br>Total users |
 
 
@@ -231,7 +233,7 @@ Engagement rate should be considered alongside user volumes and journey analysis
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Rows | Landing page |
+| Rows | Landing page + query string |
 | Show rows | 100 |
 | Nested rows | No |
 | Values | Engagement rate<br>Total users |
@@ -244,7 +246,7 @@ Engagement rate should be considered alongside user volumes and journey analysis
 |---|---|
 | Technique | Free-form |
 | Visualisation | Table |
-| Rows | Session source<br>Landing page |
+| Rows | Session source<br>Landing page + query string |
 | Show rows | 100 |
 | Nested rows | Yes |
 | Values | Engagement rate<br>Total users |
@@ -299,9 +301,10 @@ This produces the proportion of users who reached at least 90% of the page.
 Interpret scroll depth cautiously. Not reaching 90% may reflect:
 
 - users finding the information they needed earlier on the page
-- short pages where 90% is reached quickly
 - users leaving intentionally
 - users navigating via in-page links
+
+Also consider very short pages where 90% scroll depth is reached almost immediately by most users, making high rates less informative.
 
 If no scroll data appears:
 
@@ -356,18 +359,21 @@ When automatic file download tracking is enabled, GA4 records a "file_download" 
 
 Common tracked file extensions include:
 
-- .pdf
-- .xlsx
-- .doc
-- .txt
-- .rtf
 - .csv
-- .ppt
+- .doc, .docx
+- .mp3, .mp4
+- .pdf
+- .ppt, .pptx
+- .rtf
+- .txt
+- .xls, .xlsx
 - .zip
 
 The metric "Total users" represents the number of unique users who clicked a link to a file during the selected date range.
 
 This method records link clicks, not confirmed successful downloads. It also does not capture downloads triggered without a standard link click.
+
+The "Link text" dimension captures the visible text of the download link. Links that use icons, images, or non-visible accessible labels may return blank or unexpected values here.
 
 If no download data appears:
 
@@ -375,7 +381,7 @@ If no download data appears:
 2. Select Data collection and modification.
 3. Select Data streams.
 4. Select your website stream.
-5. Check that 'Enhanced measurement' contains 'File downloads'.
+5. Check that "Enhanced measurement" contains "File downloads".
 
 If file download tracking is not enabled, contact the property administrator.
 
