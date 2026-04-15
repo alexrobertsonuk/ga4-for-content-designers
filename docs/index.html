@@ -7,55 +7,6 @@
 
   <!-- Docsify base styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
-
-  <!-- Custom overrides -->
-  <style>
-    :root {
-      --sidebar-width: 22rem;
-    }
-
-    body,
-    .markdown-section,
-    .sidebar,
-    .sidebar-nav,
-    .app-name,
-    input,
-    button {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
-
-    .sidebar {
-      width: var(--sidebar-width);
-    }
-
-    .content {
-      left: var(--sidebar-width);
-    }
-  
-    .sidebar-nav a {
-      white-space: normal;
-      overflow: visible;
-      text-overflow: unset;
-      line-height: 1.4;
-      display: block;
-      overflow-wrap: anywhere;
-    }
-
-    .sidebar ul li {
-      margin-bottom: 0.25rem;
-    }
-
-    @media screen and (max-width: 768px) {
-      .sidebar {
-        width: 18rem;
-      }
-
-      .content {
-        left: 0;
-      }
-    }
-  </style>
 </head>
 <body>
   <div id="app"></div>
@@ -63,7 +14,7 @@
   <script>
     window.$docsify = {
       name: 'GA4 for content designers: a practical guide',
-      repo: '',
+      repo: '',                 // leave blank to avoid “edit on GitHub” vibe
       loadSidebar: true,
       subMaxLevel: 2,
       auto2top: true,
