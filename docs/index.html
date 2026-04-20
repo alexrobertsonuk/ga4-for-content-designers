@@ -157,6 +157,21 @@
     display: block;
     overflow-x: auto;
   }
+
+  .markdown-section h2 + ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .markdown-section h2 + ul li::before {
+    content: "– ";
+    color: #666;
+  }
+  
+  .markdown-section h2 + ul li {
+    padding-left: 1rem;
+    text-indent: -1rem;
+  }
   </style>
   
 </head>
