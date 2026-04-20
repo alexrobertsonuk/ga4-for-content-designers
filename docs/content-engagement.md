@@ -1,12 +1,19 @@
 # Content engagement
 
-> Each section below outlines how to build an exploration that answers a specific content question.
-> 
-> Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
+## Contents
+
+- [Using these explorations](content-engagement?id=using-these-explorations)
+- [How many users access this content?](content-engagement?id=how-many-users-access-this-content)
+- [How does device usage differ across sections or services?](content-engagement?id=how-does-device-usage-differ-across-sections-or-services)
+- [How does engagement differ across pages, sources, or devices?](content-engagement?id=how-does-engagement-differ-across-pages-sources-or-devices)
+- [How many users scroll to the bottom of a page?](content-engagement?id=how-many-users-scroll-to-the-bottom-of-a-page)
+- [How many users are downloading linked files?](content-engagement?id=how-many-users-are-downloading-linked-files)
+
+## Using these explorations
 
 Engagement metrics do not, by themselves, indicate content quality or success.
 
-Users may spend longer on a page because they are carefully reading and completing a task, or because they are struggling to find the information they need. Similarly, epeated views of a page may reflect users returning to reference material intentionally, or experiencing uncertainty and difficulty progressing.
+Users may spend longer on a page because they are carefully reading and completing a task, or because they are struggling to find the information they need. Similarly, repeated views of a page may reflect users returning to reference material intentionally, or experiencing uncertainty and difficulty progressing.
 
 When interpreted alongside user volumes and journey data, engagement analysis can help:
 
@@ -16,6 +23,8 @@ When interpreted alongside user volumes and journey data, engagement analysis ca
 - highlight patterns that may be useful to explore further
 
 These measures should be interpreted in context rather than treated as standalone indicators of performance.
+
+Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
 
 
 ## How many users access this content?
