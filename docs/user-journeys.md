@@ -6,7 +6,7 @@
 
 ## Contents
 
-<div id="toc"></div>
+<div data-page-toc></div>
 
 By combining the explorations below, you can build an understanding of:
 
