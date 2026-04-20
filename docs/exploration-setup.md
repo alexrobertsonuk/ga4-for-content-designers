@@ -1,5 +1,16 @@
 # Exploration setup
 
+## Contents
+
+- [Variables and settings](exploration-setup?id=variables-and-settings)
+- [Dimensions and metrics](exploration-setup?id=dimensions-and-metrics)
+- [Consistent use of "Total users"](exploration-setup?id=consistent-use-of-total-users)
+- [Filters and segments](exploration-setup?id=filters-and-segments)
+- [Date ranges](exploration-setup?id=date-ranges)
+- [Exporting data](exploration-setup?id=exporting-data)
+- [Sharing explorations](exploration-setup?id=sharing-explorations)
+- [Handling sampled results](exploration-setup?id=handling-sampled-results)
+
 ## Variables and settings
 
 The exploration workspace has two configuration columns on the left:
