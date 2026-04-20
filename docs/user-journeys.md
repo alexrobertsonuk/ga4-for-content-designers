@@ -5,6 +5,7 @@
 > Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
 
 ## Contents
+<!-- {docsify-ignore} -->
 
 <div data-page-toc></div>
 
