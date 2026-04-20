@@ -1,19 +1,14 @@
 # User journeys and pain points
 
-> Each section below outlines how to build an exploration that answers a specific content question.
-> 
-> Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
+## Contents
 
-<div data-page-toc></div>
+[Add contents here]
 
-By combining the explorations below, you can build an understanding of:
+## Using these explorations
 
-- where users arrive from
-- how they move through a site or service
-- which pages they visit next
-- where users drop off in multi-step journeys
-- how long journeys take to complete
-- how many sessions are typically required to reach completion
+Each section below outlines how to build an exploration that answers a specific content question.
+
+Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
 
 ## Where are users coming from?
 
