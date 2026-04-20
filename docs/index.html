@@ -154,16 +154,48 @@
         buttonText: 'Copy',
         errorText: 'Error',
         successText: 'Copied'
-      },
-      toc: {
-        tocMaxLevel: 2,   // only H2s
-        target: 'h2, h3', // what to include
       }
     }
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script>
+    window.$docsify = window.$docsify || {};
+  
+    window.$docsify.plugins = [].concat(window.$docsify.plugins || [], function (hook, vm) {
+      hook.doneEach(function () {
+        const marker = document.querySelector('[data-page-toc]');
+        if (!marker) return;
+  
+        const content = document.querySelector('.markdown-section');
+        if (!content) return;
+  
+        const headings = Array.from(content.querySelectorAll('h2'));
+  
+        if (!headings.length) {
+          marker.innerHTML = '';
+          return;
+        }
+  
+        const list = document.createElement('ul');
+        list.className = 'page-toc-list';
+  
+        headings.forEach(function (heading) {
+          if (!heading.id) return;
+  
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = '#' + heading.id;
+          a.textContent = heading.textContent.trim();
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+  
+        marker.innerHTML = '';
+        marker.appendChild(list);
+      });
+    });
+  </script>
 </body>
 </html>
