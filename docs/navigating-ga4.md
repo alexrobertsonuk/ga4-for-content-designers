@@ -1,5 +1,14 @@
 # Navigating the GA4 interface
 
+## Contents
+
+- [Getting started](navigating-ga4?id=getting-started)
+- [Selecting a property](navigating-ga4?id=selecting-a-property)
+- [Understanding the main navigation](navigating-ga4?id=understanding-the-main-navigation)
+- [Using Explore](navigating-ga4?id=using-explore)
+
+## Getting started
+
 To use GA4, you need access to your organisation's GA4 account.
 
 You should request **Analyst** level access to the relevant **property** (the individual website or app you want to analyse). Analyst access is recommended as it allows you to share your explorations with other users of the same property. If you only have **Viewer** access, you can create and save explorations, but you cannot share them with others.
