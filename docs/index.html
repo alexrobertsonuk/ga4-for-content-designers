@@ -167,5 +167,34 @@
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script>
+    function updateSidebarActiveState() {
+      var hash = window.location.hash || '';
+      var baseHash = hash.split('?id=')[0];
+  
+      var links = document.querySelectorAll('.sidebar-nav a');
+  
+      links.forEach(function (link) {
+        var li = link.parentElement;
+        if (!li) return;
+  
+        li.classList.remove('active');
+  
+        var href = link.getAttribute('href') || '';
+        if (href === baseHash) {
+          li.classList.add('active');
+        }
+      });
+    }
+  
+    window.addEventListener('hashchange', function () {
+      setTimeout(updateSidebarActiveState, 0);
+    });
+  
+    window.addEventListener('load', function () {
+      setTimeout(updateSidebarActiveState, 0);
+    });
+  </script>
+  
 </body>
 </html>
