@@ -1,14 +1,14 @@
 # Content engagement
 
 ## Contents
-<div class="contents-list">
+
 - [Using these explorations](content-engagement?id=using-these-explorations)
 - [How many users access this content?](content-engagement?id=how-many-users-access-this-content)
 - [How does device usage differ across sections or services?](content-engagement?id=how-does-device-usage-differ-across-sections-or-services)
 - [How does engagement differ across pages, sources, or devices?](content-engagement?id=how-does-engagement-differ-across-pages-sources-or-devices)
 - [How many users scroll to the bottom of a page?](content-engagement?id=how-many-users-scroll-to-the-bottom-of-a-page)
 - [How many users are downloading linked files?](content-engagement?id=how-many-users-are-downloading-linked-files)
-</div>
+
 
 ## Using these explorations
 
