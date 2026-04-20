@@ -158,33 +158,49 @@
     plugins: [
       function (hook, vm) {
         hook.doneEach(function () {
-          var marker = document.querySelector('[data-page-toc]');
-          if (!marker) return;
+          setTimeout(function () {
+            var marker = document.querySelector('[data-page-toc]');
+            if (!marker) return;
 
-          var content = document.querySelector('.markdown-section');
-          if (!content) return;
+            var section = document.querySelector('.markdown-section');
+            if (!section) return;
 
-          var headings = Array.from(content.querySelectorAll('h2'));
-          var items = headings.filter(function (heading) {
-            return heading.id && heading.textContent.trim() !== 'Contents';
-          });
+            var headings = Array.prototype.slice.call(section.querySelectorAll('h2'));
+            var items = headings
+              .map(function (heading) {
+                var anchor = heading.querySelector('a.anchor');
+                var href = anchor ? anchor.getAttribute('href') : '';
+                var text = heading.textContent.trim();
 
-          if (!items.length) {
-            marker.innerHTML = '';
-            return;
-          }
+                if (!href) return null;
+                if (!text) return null;
+                if (text === 'Contents') return null;
 
-          var html = '<ul class="page-toc-list">' +
-            items.map(function (heading) {
-              return '<li><a href="#' + heading.id + '">' + heading.textContent + '</a></li>';
-            }).join('') +
-            '</ul>';
+                return {
+                  href: href,
+                  text: text
+                };
+              })
+              .filter(function (item) {
+                return item !== null;
+              });
 
-          marker.innerHTML = html;
+            if (!items.length) {
+              marker.innerHTML = '';
+              return;
+            }
+
+            marker.innerHTML =
+              '<ul class="page-toc-list">' +
+              items.map(function (item) {
+                return '<li><a href="' + item.href + '">' + item.text + '</a></li>';
+              }).join('') +
+              '</ul>';
+          }, 0);
         });
       }
     ]
-  }
+  };
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
