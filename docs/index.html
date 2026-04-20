@@ -11,8 +11,31 @@
   <!-- Custom styles -->
   <style>
   :root {
-      --sidebar-width: 22rem;
-    }
+    --sidebar-width: 18rem;
+    --page-max-width: 1200px;
+  }
+  
+  /* Create a centred layout frame */
+  body {
+    margin: 0;
+  }
+  
+  .sidebar,
+  .content {
+    max-width: var(--page-max-width);
+  }
+  
+  /* Sidebar positioned relative to centred page width */
+  .sidebar {
+    width: var(--sidebar-width);
+    left: max(0px, calc((100vw - var(--page-max-width)) / 2));
+  }
+  
+  /* Content starts after sidebar, within same centred frame */
+  .content {
+    left: calc(max(0px, calc((100vw - var(--page-max-width)) / 2)) + var(--sidebar-width));
+    right: max(0px, calc((100vw - var(--page-max-width)) / 2));
+  }
 
   body,
     .markdown-section,
@@ -38,9 +61,7 @@
       padding-top: 40px;
       position: absolute;
       top: 0;
-      right: 0;
       bottom: 0;
-      left: 300px;
       transition: left .25s ease;
   }
 
