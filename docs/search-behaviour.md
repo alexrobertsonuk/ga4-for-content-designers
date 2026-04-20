@@ -1,9 +1,13 @@
 # Search behaviour
 
-> Each section below outlines how to build an exploration that answers a specific content question.
-> 
-> Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
+## Contents
 
+- [Using these explorations](search-behaviour?id=using-these-explorations)
+- [How many searches are conducted from each page?](search-behaviour?id=how-many-searches-are-conducted-from-each-page)
+- [What terms are users searching for internally?](search-behaviour?id=what-terms-are-users-searching-for-internally)
+- [What search terms are leading users to a specific page?](search-behaviour?id=what-search-terms-are-leading-users-to-a-specific-page)
+
+## Using these explorations
 This section focuses on internal site search behaviour: searches performed within your own site or service.
 
 GA4 does not show the search terms users typed into external search engines such as Google. These queries are not shared with GA4. To analyse search engine queries, you will need access to Google Search Console or a similar tool.
@@ -24,7 +28,7 @@ If no search data appears to be available, even when using a broad date range, c
 
 If search tracking is not enabled, contact the property administrator.
 
-   
+Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
 
 ## How many searches are conducted from each page?
 
