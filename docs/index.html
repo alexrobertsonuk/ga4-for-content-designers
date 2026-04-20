@@ -143,59 +143,51 @@
   <div id="app"></div>
 
   <script>
-    window.$docsify = {
-      name: 'GA4 for content designers: a practical guide',
-      repo: '',
-      loadSidebar: true,
-      subMaxLevel: 0,
-      auto2top: true,
-      homepage: 'README.md',
-      copyCode: {
-        buttonText: 'Copy',
-        errorText: 'Error',
-        successText: 'Copied'
+  window.$docsify = {
+    name: 'GA4 for content designers: a practical guide',
+    repo: '',
+    loadSidebar: true,
+    subMaxLevel: 0,
+    auto2top: true,
+    homepage: 'README.md',
+    copyCode: {
+      buttonText: 'Copy',
+      errorText: 'Error',
+      successText: 'Copied'
+    },
+    plugins: [
+      function (hook, vm) {
+        hook.doneEach(function () {
+          var marker = document.querySelector('[data-page-toc]');
+          if (!marker) return;
+
+          var content = document.querySelector('.markdown-section');
+          if (!content) return;
+
+          var headings = Array.from(content.querySelectorAll('h2'));
+          var items = headings.filter(function (heading) {
+            return heading.id && heading.textContent.trim() !== 'Contents';
+          });
+
+          if (!items.length) {
+            marker.innerHTML = '';
+            return;
+          }
+
+          var html = '<ul class="page-toc-list">' +
+            items.map(function (heading) {
+              return '<li><a href="#' + heading.id + '">' + heading.textContent + '</a></li>';
+            }).join('') +
+            '</ul>';
+
+          marker.innerHTML = html;
+        });
       }
-    }
+    ]
+  }
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <script>
-    window.$docsify = window.$docsify || {};
-  
-    window.$docsify.plugins = [].concat(window.$docsify.plugins || [], function (hook, vm) {
-      hook.doneEach(function () {
-        const marker = document.querySelector('[data-page-toc]');
-        if (!marker) return;
-  
-        const content = document.querySelector('.markdown-section');
-        if (!content) return;
-  
-        const headings = Array.from(content.querySelectorAll('h2'));
-  
-        if (!headings.length) {
-          marker.innerHTML = '';
-          return;
-        }
-  
-        const list = document.createElement('ul');
-        list.className = 'page-toc-list';
-  
-        headings.forEach(function (heading) {
-          if (!heading.id) return;
-  
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          a.href = '#' + heading.id;
-          a.textContent = heading.textContent.trim();
-          li.appendChild(a);
-          list.appendChild(li);
-        });
-  
-        marker.innerHTML = '';
-        marker.appendChild(list);
-      });
-    });
-  </script>
 </body>
 </html>
