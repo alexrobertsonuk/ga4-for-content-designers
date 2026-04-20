@@ -2,18 +2,18 @@
 
 ## Contents
 
-- [Using these explorations](?id=using-these-explorations)
-- [Where are users coming from?](?id=where-are-users-coming-from)
-- [What referrals are coming from LLMs (large language models)?](?id=what-referrals-are-coming-from-llms-large-language-models)
-- [What are the most common user paths through a site or multi-step journey?](?id=what-are-the-most-common-user-paths-through-a-site-or-multi-step-journey)
-- [Are users repeatedly returning to the same page?](?id=are-users-repeatedly-returning-to-the-same-page)
-- [How long are users spending on each page?](?id=how-long-are-users-spending-on-each-page)
-- [What percentage of users are completing a multi-step journey, and how long is it taking them?](?id=what-percentage-of-users-are-completing-a-multi-step-journey-and-how-long-is-it-taking-them)
-- [How many sessions do users need to complete a multi-step journey?](?id=how-many-sessions-do-users-need-to-complete-a-multi-step-journey)
-- [Where are non-completing users abandoning a multi-step journey?](?id=where-are-non-completing-users-abandoning-a-multi-step-journey)
-- [Which pages in a multi-step journey are users commonly moving backwards to?](?id=which-pages-in-a-multi-step-journey-are-users-commonly-moving-backwards-to)
-- [Do users change devices mid-journey to complete tasks?](?id=do-users-change-devices-mid-journey-to-complete-tasks)
-- [What external links are most clicked?](?id=what-external-links-are-most-clicked)
+- [Using these explorations](user-journeys?id=using-these-explorations)
+- [Where are users coming from?](user-journeys?id=where-are-users-coming-from)
+- [What referrals are coming from LLMs (large language models)?](user-journeys?id=what-referrals-are-coming-from-llms-large-language-models)
+- [What are the most common user paths through a site or multi-step journey?](user-journeys?id=what-are-the-most-common-user-paths-through-a-site-or-multi-step-journey)
+- [Are users repeatedly returning to the same page?](user-journeys?id=are-users-repeatedly-returning-to-the-same-page)
+- [How long are users spending on each page?](user-journeys?id=how-long-are-users-spending-on-each-page)
+- [What percentage of users are completing a multi-step journey, and how long is it taking them?](user-journeys?id=what-percentage-of-users-are-completing-a-multi-step-journey-and-how-long-is-it-taking-them)
+- [How many sessions do users need to complete a multi-step journey?](user-journeys?id=how-many-sessions-do-users-need-to-complete-a-multi-step-journey)
+- [Where are non-completing users abandoning a multi-step journey?](user-journeys?id=where-are-non-completing-users-abandoning-a-multi-step-journey)
+- [Which pages in a multi-step journey are users commonly moving backwards to?](user-journeys?id=which-pages-in-a-multi-step-journey-are-users-commonly-moving-backwards-to)
+- [Do users change devices mid-journey to complete tasks?](user-journeys?id=do-users-change-devices-mid-journey-to-complete-tasks)
+- [What external links are most clicked?](user-journeys?id=what-external-links-are-most-clicked)
 
 ## Using these explorations
 
