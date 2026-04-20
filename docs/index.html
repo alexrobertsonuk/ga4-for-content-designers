@@ -151,15 +151,19 @@
       auto2top: true,
       homepage: 'README.md',
       copyCode: {
-      buttonText: 'Copy',
-      errorText: 'Error',
-      successText: 'Copied'
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied'
+      },
+      toc: {
+        tocMaxLevel: 2,   // only H2s
+        target: 'h2, h3', // what to include
       }
     }
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1"></script>
+  <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 </body>
 </html>
