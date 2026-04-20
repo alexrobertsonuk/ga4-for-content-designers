@@ -4,7 +4,7 @@
 
 - [Variables and settings](exploration-setup?id=variables-and-settings)
 - [Dimensions and metrics](exploration-setup?id=dimensions-and-metrics)
-- [Consistent use of "Total users"](exploration-setup?id=consistent-use-of-total-users)
+- [Consistent use of "Total users"](exploration-setup?id=consistent-use-of-quottotal-usersquot)
 - [Filters and segments](exploration-setup?id=filters-and-segments)
 - [Date ranges](exploration-setup?id=date-ranges)
 - [Exporting data](exploration-setup?id=exporting-data)
