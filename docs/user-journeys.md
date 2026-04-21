@@ -161,9 +161,9 @@ You may see landing pages grouped as "(not set)". This indicates that GA4 was un
 | Nested rows | Yes |
 | Values | Total users |
 | Cell type | Bar chart or Plain text |
-| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: enter the regex below<br><br>To see referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the page path and any query string (for example, /ask-for-help/new?topic=benefits) |
+| Filters | Dimension: Page referrer<br>Condition: matches regex<br>Expression: enter the regex below (this is a regular expression that matches any known LLM domains)<br><br>To see referrals for an individual page, also add:<br><br>Dimension: Landing page + query string<br>Condition: exactly matches<br>Expression: enter the page path and any query string (for example, /ask-for-help/new?topic=benefits) |
 
-### Filter regex
+### Regex
 
 ```text 
 ^https?://([^/]+\.)?(chat\.openai\.com|chatgpt\.com|claude\.ai|gemini\.google\.com|copilot\.microsoft\.com|perplexity\.ai|poe\.com|you\.com|grok\.x\.ai|mistral\.ai|qwen\.com|kimi\.com|yiyan\.baidu\.com|deepseek\.com)(/|$)
