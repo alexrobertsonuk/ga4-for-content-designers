@@ -176,6 +176,86 @@
     text-indent: -1rem;
     margin-bottom: 0.3em;
   }
+
+  /* Narrow screens: turn sidebar into off-canvas menu */
+  @media screen and (max-width: 860px) {
+    :root {
+      --mobile-header-height: 56px;
+    }
+  
+    .sidebar,
+    .content {
+      max-width: none;
+    }
+  
+    .sidebar {
+      width: min(20rem, 86vw);
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 30;
+      padding: calc(var(--mobile-header-height) + 12px) 1rem 1.25rem;
+      background: #fff;
+      border-right: 1px solid #e6e6e6;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    .content {
+      position: static;
+      left: 0;
+      right: 0;
+      top: auto;
+      bottom: auto;
+      padding: calc(var(--mobile-header-height) + 8px) 20px 32px;
+    }
+  
+    .markdown-section {
+      max-width: 100%;
+    }
+  
+    .app-name {
+      margin-bottom: 1.25rem !important;
+      padding-left: 0;
+      font-size: 1.15rem !important;
+    }
+  
+    /* Move Docsify's built-in toggle to the top-left */
+    .sidebar-toggle {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      bottom: auto;
+      z-index: 40;
+      padding: 10px 12px;
+      background: #fff;
+      border: 1px solid #d8d8d8;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+  
+    .sidebar-toggle span {
+      background-color: #000;
+    }
+  
+    /* Optional top bar */
+    body::before {
+      content: "GA4 for content designers";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      height: var(--mobile-header-height);
+      display: flex;
+      align-items: center;
+      padding: 0 16px 0 56px;
+      background: #fff;
+      border-bottom: 1px solid #e6e6e6;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+  }
   </style>
   
 </head>
