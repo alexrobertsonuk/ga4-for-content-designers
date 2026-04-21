@@ -166,7 +166,7 @@ You may see landing pages grouped as "(not set)". This indicates that GA4 was un
 ### Filter regex
 
 ```text 
-^https?://([^/]+\.)?(chat\.openai\.com\|chatgpt\.com\|claude\.ai\|gemini\.google\.com\|copilot\.microsoft\.com\|perplexity\.ai\|poe\.com\|you\.com\|grok\.x\.ai\|mistral\.ai\|qwen\.com\|kimi\.com\|yiyan\.baidu\.com\|deepseek\.com)(/\|$)
+^https?://([^/]+\.)?(chat\.openai\.com|chatgpt\.com|claude\.ai|gemini\.google\.com|copilot\.microsoft\.com|perplexity\.ai|poe\.com|you\.com|grok\.x\.ai|mistral\.ai|qwen\.com|kimi\.com|yiyan\.baidu\.com|deepseek\.com)(/|$)
 ```
 
 ## What are the most common user paths through a site or multi-step journey?
