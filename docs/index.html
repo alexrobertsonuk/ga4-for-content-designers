@@ -15,7 +15,6 @@
     --page-max-width: 1200px;
   }
   
-  /* Create a centred layout frame */
   body {
     margin: 0;
   }
@@ -25,13 +24,11 @@
     max-width: var(--page-max-width);
   }
   
-  /* Sidebar positioned relative to centred page width */
   .sidebar {
     width: var(--sidebar-width);
     left: max(0px, calc((100vw - var(--page-max-width)) / 2));
   }
   
-  /* Content starts after sidebar, within same centred frame */
   .content {
     left: calc(max(0px, calc((100vw - var(--page-max-width)) / 2)) + var(--sidebar-width));
     right: max(0px, calc((100vw - var(--page-max-width)) / 2));
@@ -126,7 +123,6 @@
   .markdown-section h2 {
     font-size: 1.6rem;
     margin: 50px 0 0.8rem 0;
-    /* border-top: 1px solid #eee; */
   }
   
   .markdown-section h3 {
@@ -181,7 +177,12 @@
     margin-bottom: 0.3em;
   }
   
-  /* Narrow screens: turn sidebar into off-canvas menu */
+  /* Hide custom mobile button on wide screens */
+  .mobile-nav-toggle {
+    display: none;
+  }
+  
+  /* Narrow screens */
   @media screen and (max-width: 860px) {
     :root {
       --mobile-header-height: 56px;
@@ -193,15 +194,12 @@
       max-width: none;
     }
   
-    /* Keep page content full width on mobile */
-    .content,
-    body.close .content {
+    .content {
       position: static !important;
       left: 0 !important;
       right: 0 !important;
       top: auto !important;
       bottom: auto !important;
-      max-width: none;
       padding: calc(var(--mobile-header-height) + 12px) 20px 32px;
     }
   
@@ -209,7 +207,6 @@
       max-width: 100%;
     }
   
-    /* Mobile sidebar: closed by default */
     .sidebar {
       width: var(--mobile-sidebar-width);
       left: calc(-1 * var(--mobile-sidebar-width));
@@ -224,8 +221,7 @@
       z-index: 1001;
     }
   
-    /* Mobile sidebar: open when Docsify toggles body.close */
-    body.close .sidebar {
+    body.nav-open .sidebar {
       left: 0;
     }
   
@@ -239,26 +235,25 @@
       margin-bottom: 1.25rem !important;
     }
   
-    /* Force Docsify toggle to show at this wider breakpoint */
-    .sidebar-toggle {
-      display: block !important;
+    .mobile-nav-toggle {
+      display: block;
       position: fixed;
       top: 10px;
       left: 10px;
-      bottom: auto;
-      z-index: 1002;
-      padding: 10px 12px;
-      background: #fff;
+      z-index: 1003;
+      width: 40px;
+      height: 40px;
+      padding: 0;
       border: 1px solid #d8d8d8;
       border-radius: 4px;
+      background: #fff;
+      color: #000;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     }
   
-    .sidebar-toggle span {
-      background-color: #000;
-    }
-  
-    /* Simple mobile top bar without extra markup */
     body::before {
       content: "GA4 for content designers";
       position: fixed;
@@ -275,11 +270,29 @@
       font-size: 0.95rem;
       font-weight: 600;
     }
+  
+    /* Backdrop */
+    body.nav-open::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.35);
+    }
+  
+    .mobile-nav-toggle,
+    .sidebar {
+      pointer-events: auto;
+    }
   }
   </style>
   
 </head>
 <body>
+  <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">
+  ☰
+  </button>
+
   <div id="app"></div>
 
   <script>
@@ -327,6 +340,55 @@
     window.addEventListener('load', function () {
       setTimeout(updateSidebarActiveState, 0);
     });
+  </script>
+  <script>
+    (function () {
+      var button = document.querySelector('.mobile-nav-toggle');
+  
+      if (!button) return;
+  
+      function closeNav() {
+        document.body.classList.remove('nav-open');
+        button.setAttribute('aria-expanded', 'false');
+      }
+  
+      function openNav() {
+        document.body.classList.add('nav-open');
+        button.setAttribute('aria-expanded', 'true');
+      }
+  
+      button.addEventListener('click', function () {
+        if (document.body.classList.contains('nav-open')) {
+          closeNav();
+        } else {
+          openNav();
+        }
+      });
+  
+      document.addEventListener('click', function (event) {
+        if (window.innerWidth > 860) return;
+        if (!document.body.classList.contains('nav-open')) return;
+  
+        var clickedInsideSidebar = event.target.closest('.sidebar');
+        var clickedToggle = event.target.closest('.mobile-nav-toggle');
+  
+        if (!clickedInsideSidebar && !clickedToggle) {
+          closeNav();
+        }
+      });
+  
+      window.addEventListener('hashchange', function () {
+        if (window.innerWidth <= 860) {
+          closeNav();
+        }
+      });
+  
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 860) {
+          closeNav();
+        }
+      });
+    })();
   </script>
   
 </body>
