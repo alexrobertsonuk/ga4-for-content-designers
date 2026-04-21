@@ -36,71 +36,72 @@
     left: calc(max(0px, calc((100vw - var(--page-max-width)) / 2)) + var(--sidebar-width));
     right: max(0px, calc((100vw - var(--page-max-width)) / 2));
   }
-
+  
   body,
-    .markdown-section,
-    .sidebar,
-    .sidebar-nav,
-    .app-name,
-    input,
-    button {
-      font-family: sans-serif, arial;
-      line-height: 1.6;
-    }
-
+  .markdown-section,
+  .sidebar,
+  .sidebar-nav,
+  .app-name,
+  input,
+  button {
+    font-family: sans-serif, arial;
+    line-height: 1.6;
+  }
+  
   body {
     font-size: 17px;
     color: #000000;
   }
-
+  
   .sidebar {
-      top: 40px;
+    top: 40px;
   }
-
-  .sidebar>h1 {
-      margin: 0 auto 1rem;
-      font-size: 1.5rem;
-      font-weight: 300;
-      text-align: center;
-      padding-right: 1rem;
+  
+  .sidebar > h1 {
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    padding-right: 1rem;
   }
-    
+  
   .content {
-      padding-top: 40px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      transition: left .25s ease;
+    padding-top: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: left .25s ease;
   }
-
+  
   .anchor span {
-      color: #000000;
+    color: #000000;
   }
-    
+  
   a.anchor {
-      font-weight: 600 !important;
+    font-weight: 600 !important;
   }
-
-  .sidebar-nav a, .sidebar-nav a span {
+  
+  .sidebar-nav a,
+  .sidebar-nav a span {
     white-space: normal !important;
   }
-
+  
   .sidebar ul li a {
-      color: #000000;
-      font-size: 15px;
-      font-weight: 400;
-      overflow: hidden;
-      text-decoration: none;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
-
-  .sidebar ul li.active>a {
-      border-right: 2px solid;
-      color: var(--theme-color, #1d70b8);
-      font-weight: 600;
+  
+  .sidebar ul li.active > a {
+    border-right: 2px solid;
+    color: var(--theme-color, #1d70b8);
+    font-weight: 600;
   }
-
+  
   .app-name {
     text-align: left !important;
     font-size: 21px !important;
@@ -108,34 +109,37 @@
     padding-left: 15px;
     margin-bottom: 35px !important;
   }
-
+  
   li {
-      margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
   }
-
+  
   .markdown-section {
-      max-width: 800px;
+    max-width: 800px;
   }
+  
   .markdown-section h1 {
-      font-size: 2.6rem;
-      margin-bottom: 2rem;
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
   }
+  
   .markdown-section h2 {
-      font-size: 1.6rem;
-      margin: 50px 0 0.8rem 0;
-      /* border-top: 1px solid #eee; */
+    font-size: 1.6rem;
+    margin: 50px 0 0.8rem 0;
+    /* border-top: 1px solid #eee; */
   }
+  
   .markdown-section h3 {
-      font-size: 1.2rem;
-      margin: 30px 0 .6rem;
+    font-size: 1.2rem;
+    margin: 30px 0 .6rem;
   }
-
+  
   .markdown-section a {
     color: var(--theme-color, #1d70b8);
     font-weight: 400;
     text-decoration-thickness: 1px;
   }
-
+  
   .markdown-section code {
     border-radius: 2px;
     color: #e96900;
@@ -147,7 +151,7 @@
   .markdown-section pre {
     overflow-x: auto;
   }
-    
+  
   .markdown-section pre code {
     white-space: pre;
     display: block;
@@ -158,7 +162,7 @@
     display: block;
     overflow-x: auto;
   }
-
+  
   .markdown-section h2 + ul {
     list-style: none;
     padding-left: 0;
@@ -176,12 +180,17 @@
     text-indent: -1rem;
     margin-bottom: 0.3em;
   }
-
+  
   /* Narrow screens: turn sidebar into off-canvas menu */
   @media screen and (max-width: 860px) {
     :root {
       --mobile-header-height: 56px;
       --mobile-sidebar-width: min(19rem, 86vw);
+    }
+  
+    .sidebar,
+    .content {
+      max-width: none;
     }
   
     /* Keep page content full width on mobile */
@@ -200,10 +209,9 @@
       max-width: 100%;
     }
   
-    /* Mobile sidebar: CLOSED by default */
+    /* Mobile sidebar: closed by default */
     .sidebar {
       width: var(--mobile-sidebar-width);
-      max-width: none;
       left: calc(-1 * var(--mobile-sidebar-width));
       top: 0;
       bottom: 0;
@@ -213,21 +221,32 @@
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
       transition: left 0.25s ease;
-      z-index: 30;
+      z-index: 1001;
     }
   
-    /* Mobile sidebar: OPEN when Docsify toggles body.close */
+    /* Mobile sidebar: open when Docsify toggles body.close */
     body.close .sidebar {
       left: 0;
     }
   
-    /* Move toggle button to top left */
+    .sidebar > h1 {
+      padding-right: 0;
+    }
+  
+    .app-name {
+      font-size: 1.15rem !important;
+      padding-left: 0;
+      margin-bottom: 1.25rem !important;
+    }
+  
+    /* Force Docsify toggle to show at this wider breakpoint */
     .sidebar-toggle {
+      display: block !important;
       position: fixed;
       top: 10px;
       left: 10px;
       bottom: auto;
-      z-index: 40;
+      z-index: 1002;
       padding: 10px 12px;
       background: #fff;
       border: 1px solid #d8d8d8;
@@ -239,14 +258,14 @@
       background-color: #000;
     }
   
-    /* Small top bar feel without extra markup */
+    /* Simple mobile top bar without extra markup */
     body::before {
       content: "GA4 for content designers";
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 20;
+      z-index: 1000;
       height: var(--mobile-header-height);
       display: flex;
       align-items: center;
@@ -255,12 +274,6 @@
       border-bottom: 1px solid #e6e6e6;
       font-size: 0.95rem;
       font-weight: 600;
-    }
-  
-    .app-name {
-      font-size: 1.15rem !important;
-      padding-left: 0;
-      margin-bottom: 1.25rem !important;
     }
   }
   </style>
