@@ -181,46 +181,47 @@
   @media screen and (max-width: 860px) {
     :root {
       --mobile-header-height: 56px;
+      --mobile-sidebar-width: min(19rem, 86vw);
     }
   
-    .sidebar,
-    .content {
+    /* Keep page content full width on mobile */
+    .content,
+    body.close .content {
+      position: static !important;
+      left: 0 !important;
+      right: 0 !important;
+      top: auto !important;
+      bottom: auto !important;
       max-width: none;
-    }
-  
-    .sidebar {
-      width: min(20rem, 86vw);
-      left: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 30;
-      padding: calc(var(--mobile-header-height) + 12px) 1rem 1.25rem;
-      background: #fff;
-      border-right: 1px solid #e6e6e6;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-  
-    .content {
-      position: static;
-      left: 0;
-      right: 0;
-      top: auto;
-      bottom: auto;
-      padding: calc(var(--mobile-header-height) + 8px) 20px 32px;
+      padding: calc(var(--mobile-header-height) + 12px) 20px 32px;
     }
   
     .markdown-section {
       max-width: 100%;
     }
   
-    .app-name {
-      margin-bottom: 1.25rem !important;
-      padding-left: 0;
-      font-size: 1.15rem !important;
+    /* Mobile sidebar: CLOSED by default */
+    .sidebar {
+      width: var(--mobile-sidebar-width);
+      max-width: none;
+      left: calc(-1 * var(--mobile-sidebar-width));
+      top: 0;
+      bottom: 0;
+      padding: calc(var(--mobile-header-height) + 12px) 16px 24px;
+      background: #fff;
+      border-right: 1px solid #e6e6e6;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      transition: left 0.25s ease;
+      z-index: 30;
     }
   
-    /* Move Docsify's built-in toggle to the top-left */
+    /* Mobile sidebar: OPEN when Docsify toggles body.close */
+    body.close .sidebar {
+      left: 0;
+    }
+  
+    /* Move toggle button to top left */
     .sidebar-toggle {
       position: fixed;
       top: 10px;
@@ -231,11 +232,35 @@
       background: #fff;
       border: 1px solid #d8d8d8;
       border-radius: 4px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     }
   
     .sidebar-toggle span {
       background-color: #000;
+    }
+  
+    /* Small top bar feel without extra markup */
+    body::before {
+      content: "GA4 for content designers";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      height: var(--mobile-header-height);
+      display: flex;
+      align-items: center;
+      padding: 0 16px 0 56px;
+      background: #fff;
+      border-bottom: 1px solid #e6e6e6;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+  
+    .app-name {
+      font-size: 1.15rem !important;
+      padding-left: 0;
+      margin-bottom: 1.25rem !important;
     }
   }
   </style>
