@@ -17,7 +17,7 @@
 
 ## Using these explorations
 
-Each section below outlines how to build an exploration that answers a specific content question.
+Each section below describes how to build an exploration that answers a common content question.
 
 Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
 
@@ -27,15 +27,15 @@ Add dimensions and metrics into the Settings column in the order specified. Unle
 
 These explorations can help you to:
 
-- assess whether improvements to navigation or cross-linking have increased findability
-- identify which external sources send the most users to your site, and prioritise ensuring their information is consistent and up-to-date
-- detect underperforming referral sources where navigation or signposting may need improvement
-- identify the needs of users being referred from external sources, by tracing and evaluating the call to action that they respond to
+- assess whether improvements to navigation or incoming links have increased content findability
+- identify top external referrers, and prioritise ensuring their information is consistent and up-to-date
+- detect underperforming referrers where navigation or signposting may need improvement
+- explore the needs of users being referred from external sources, by tracing and evaluating the call to action that they respond to
 - identify internal pages that are a disproportionate source of referrals to technical support or contact us pages
 
 ### Understand the data
 
-The "Page referrer" dimension shows the previous URL recorded for a page view.
+The "Page referrer" dimension shows the previous URL visited before the current page.
 
 This may be:
 
@@ -53,13 +53,11 @@ An empty "Page referrer" value may indicate:
 - referrer information blocked by browser or site policy
 - the user reopening a page in an inactive browser tab
 
-Since "Page referrer" reflects the previous page for each "Page path and screen class", it does not always represent the original source of a site visit.
+To more accurately analyse external referrals, pair "Page referrer" with "Landing page + query string". "Landing page + query string" identifies the entry point for a user's session.
 
-When analysing external referrals, pair "Page referrer" with "Landing page + query string". "Landing page + query string" identifies the first page visited in the session.
+For less in-depth analysis, the "Session source" dimension groups external referrers using values such as "google", "bing", or "reddit.com". You may also see "(direct)" for users with no recorded source, and "(not set)" where the source could not be determined.
 
-For more broad analysis, the "Session source" dimension identifies the external origin of the whole visit, using values such as "google", "bing", or "reddit.com". You may also see "(direct)" for users with no recorded source, and "(not set)" where the source could not be determined.
-
-The "Nested rows" option will group together all the pages which share the same referrer, giving you a more readable overview. Nested rows are limited to 10 rows per item - to see all pages, turn nesting off.
+The "Nested rows" option will group together all pages that share the same referrer, for a more readable overview. Nested rows are limited to 10 rows per item - to see all pages, turn nesting off.
 
 ### Variables
 
