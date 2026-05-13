@@ -12,7 +12,7 @@
 - [How many sessions do users need to complete a multi-step journey?](user-journeys?id=how-many-sessions-do-users-need-to-complete-a-multi-step-journey)
 - [Where are non-completing users abandoning a multi-step journey?](user-journeys?id=where-are-non-completing-users-abandoning-a-multi-step-journey)
 - [Which pages in a multi-step journey are users commonly moving backwards to?](user-journeys?id=which-pages-in-a-multi-step-journey-are-users-commonly-moving-backwards-to)
-- [Do users change devices mid-journey to complete tasks?](user-journeys?id=do-users-change-devices-mid-journey-to-complete-tasks)
+- [Do users change device type mid-journey to complete tasks?](user-journeys?id=do-users-change-device-type-mid-journey-to-complete-tasks)
 - [What external links are most clicked?](user-journeys?id=what-external-links-are-most-clicked)
 
 ## Using these explorations
@@ -433,7 +433,7 @@ This exploration uses "Active users" instead of the usual "Total users", to corr
 
 ### Potential insights
 
-This exploration could help you to:
+This exploration can help you to:
 
 - identify pages within a journey where users who did not complete are most frequently exiting
 - monitor whether content changes influence exit behaviour at specific steps
@@ -446,9 +446,9 @@ Funnel and path explorations are limited to 10 defined steps. For longer or more
 
 This method focuses only on users who did not reach the completion page within the selected date range.
 
-Users who return after the date range to complete will still be counted here as non-completing. Extending the date range can reduce this effect, but it does not remove it entirely.
+Users who return after the date range to complete will still be counted here as non-completing. Extending the date range can reduce this effect, but not remove it entirely.
 
-An "Exit" is recorded when a session ends on a page. This does not necessarily mean the user has permanently abandoned the journey. Users who pause and return later will still generate exits in earlier sessions.
+An "Exit" is recorded when a session ends on a page. This does not necessarily mean the user has permanently abandoned the journey - users who pause and return later still generate exits in their earlier sessions.
 
 GA4 does not provide a built-in "exit rate" metric. You can estimate it with:
 
@@ -463,12 +463,12 @@ To calculate exit rate:
 3. Open the CSV in a spreadsheet.
 4. Remove any rows above the column headers so that the first visible row contains the data labels.
 5. Insert a new column titled "Exit rate".
-6. In the "Exit rate" column, divide the "Exits" column by the "Views" column.
+6. In the "Exit rate" column, divide the "Exits" values by the "Views" values.
 7. Format the result as a percentage.
 8. Review pages that are part of the transaction journey and compare their relative exit rates.
 
 
-High exit rates do not automatically indicate a problem. Interpretation should consider:
+High exit rates do not automatically indicate a problem. Consider:
 
 - whether the page represents a natural stopping point
 - whether users may be pausing intentionally
@@ -500,9 +500,9 @@ High exit rates do not automatically indicate a problem. Interpretation should c
 
 ### Potential insights
 
-This exploration could help you to:
+This exploration can help you to:
 
-- identify steps in a journey that may be causing confusion or uncertainty for users
+- identify steps in a journey that may be pain points causing confusion or uncertainty
 - identify steps in a journey where users may be reviewing or reconsidering previous answers
 
 
@@ -513,9 +513,9 @@ This method identifies backward navigation by comparing:
 - Page referrer (the page users came from)
 - Page path and screen class (the page users arrived at)
 
-Backward movement occurs when the destination page represents an earlier step in the journey than the referrer page.
+Backward movement is indicated when the destination page is an earlier step in the journey than the referrer page.
 
-The table will include:
+The exploration table will include:
 
 - Page path and screen class: the destination page
 - Page referrer: the previous page
@@ -549,11 +549,11 @@ To identify potential problem areas, sort the output table by "Views per active 
 
 
 
-## Do users change devices mid-journey to complete tasks?
+## Do users change device type mid-journey to complete tasks?
 
 ### Potential insights
 
-This exploration could help you to:
+This exploration can help you to:
 
 - compare the device distribution of new and returning users
 - identify whether returning users are more likely to use a different device category than new users
