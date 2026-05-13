@@ -555,9 +555,7 @@ To identify potential problem areas, sort the output table by "Views per active 
 
 This exploration can help you to:
 
-- compare the device distribution of new and returning users
-- identify whether returning users are more likely to use a different device category than new users
-- monitor whether design changes reduce differences between device categories over time
+- compare the device types of new and returning users, and monitor whether this is influenced by design changes
 
 
 ### Understand the data
@@ -569,9 +567,7 @@ This method compares device category for:
 
 The two counts are independent and will not add up to total users.
 
-A difference in device distribution between new and returning users may suggest that some users begin a journey on one device and return on another. However, it could equally reflect that different types of users — with different device preferences — make up the new and returning user groups. This method cannot distinguish between the two.
-
-When reviewing the chart, compare the proportion of each device category between new and returning users.
+A difference in device type distribution between new and returning users may suggest that some users begin a journey on one device and return on another. Depending on the context, it could equally reflect that different types of users — with different device preferences — make up the new and returning user groups.
 
 ### Variables
 
@@ -595,12 +591,11 @@ When reviewing the chart, compare the proportion of each device category between
 
 ### Potential insights
 
-This exploration could help you to:
+This exploration can help you to:
 
-- identify which external links are most frequently clicked
-- review whether some links receive little interaction
-- compare whether external links are clicked more often than primary calls to action
-- assess whether users are leaving the service to seek additional information
+- identify which external resources may be most valuable for users
+- identify underperforming links which may need to be removed or signposted more effectively
+- compare whether external links are clicked more often than primary calls to action, which may indicate that external information needs more effective integration
 
 
 ### Understand the data
@@ -612,13 +607,13 @@ External link clicks are only recorded if automatic click tracking is enabled in
 - the page where the click occurred
 - the destination URL of the external link
 
-Enabling nested rows groups external links under the page where they were clicked.
+Enabling nested rows will group external links under the page where they were clicked.
 
 If no external link data appears:
 
-1. Go to Admin.
-2. Select Data collection and modification.
-3. Select Data streams.
+1. Visit "Admin" in the main left-hand navigation.
+2. Select "Data collection and modification".
+3. Select "Data streams".
 4. Select your website stream.
 5. Check that "Enhanced measurement" contains "Outbound clicks".
 
