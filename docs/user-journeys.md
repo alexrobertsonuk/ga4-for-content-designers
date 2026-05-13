@@ -111,14 +111,14 @@ The "Nested rows" option will group together all pages that share the same refer
 
 This exploration can help you to:
 
-- identify content that users are discovering via LLM interfaces
-- assess whether LLM-referred landing pages are clear and well signposted for first-time visitors
+- identify pages that users are discovering via LLMs
+- assess whether pages regularly referred from LLMs are well signposted for new visitors
 - compare behaviour of LLM-referred users with other external referral sources
 
 
 ### Understand the data
 
-This exploration builds on the same referrer-based approach described in "Where are users coming from?", but limits results to known LLM domains:
+This exploration builds on the same referrer-based approach described in "Where are users coming from?", but filters results to known LLM domains:
 
 - chatgpt.com, chat.openai.com (ChatGPT)
 - claude.ai (Anthropic)
@@ -134,11 +134,11 @@ This exploration builds on the same referrer-based approach described in "Where 
 - poe.com
 - you.com
 
-Referrals from LLMs differ from many other external sources. Some LLM interfaces operate through mobile apps or embedded environments that do not reliably pass referrer information to the browser. They may also strip the referrer entirely for privacy reasons. In these cases, the visit will often be recorded as "Direct" traffic. As a result, this exploration will under-represent the true volume of LLM-influenced visits. It captures only visits where a referral can be identified.
+This exploration measures visits where a user clicked through from a known LLM site. It does not capture content that may have been summarised or paraphrased within an LLM response without generating a visit.
 
-This exploration also only measures visits where a user clicked through to your site. It does not capture content that may have been summarised or paraphrased within an LLM response without generating a visit.
+Some LLM interfaces operate through mobile apps or embedded environments that do not reliably pass referrer information to the browser. They may also strip the referrer entirely for privacy reasons. In these cases, the visit will often be recorded as "Direct" traffic. As a result, this exploration will under-represent the true volume of LLM-influenced visits. It captures only visits where a referral can be identified.
 
-You may see landing pages grouped as "(not set)". This indicates that GA4 was unable to record a landing page for the session. This commonly occurs when traffic originates from apps, redirects, or where consent or tagging loads after the initial page request. It does not necessarily indicate a tracking error.
+You may see landing pages grouped as "(not set)". This commonly occurs when visits originate from apps or via a redirect, or where consent or tagging loads after the initial page request.
 
 ### Variables
 
