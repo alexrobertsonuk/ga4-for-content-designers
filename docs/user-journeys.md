@@ -284,13 +284,13 @@ These explorations can help you to:
 - identify pages where users spend longer than average
 - identify pages where users spend less time than is likely to be necessary (for instance where content is lengthy or complex), indicating the content may need to be broken up or reformatted
 - assess whether content changes influence average time spent
-- compare time spent on each page with exits, to identify behaviour patterns
+- compare time spent on each page with exits, to spot potential pain points
 
 ### Understand the data
 
 GA4 does not include a direct "time spent on page" metric.
 
-Instead, use the "User engagement" metric, which measures the cumulative time (in seconds) that a page was actively in focus in the user's browser. This is an approximation — GA4 calculates engagement time from events rather than tracking focus continuously, so treat these figures as directional rather than precise.
+Instead, use the "User engagement" metric, which estimates the cumulative time (in seconds) that a page was actively in focus in the user's browser. GA4 calculates engagement time from interactions rather than tracking focus continuously, so these figures are estimates rather than absolutely precise.
 
 To estimate average time spent per page view:
 
@@ -299,22 +299,9 @@ To estimate average time spent per page view:
 3. Open the CSV in a spreadsheet.
 4. Remove any rows above the column headers so that the first visible row contains the column headers.
 5. Insert a new column titled "Average time per view (seconds)".
-6. In the "Average time per view (seconds)" column, divide the "User engagement" value by the "Views" value.
+6. In the "Average time per view (seconds)" column, divide the "User engagement" values by the "Views" values.
 
-This produces an estimate of average engaged time per page view. Note that this figure averages across all views, including repeat views by the same user. A user who visits the same page three times contributes three views to the calculation.
-
-Interpret this metric in context. Longer time spent may indicate:
-
-- careful reading
-- task completion
-- difficulty progressing
-- repeated visits
-
-Shorter time spent may indicate:
-
-- quick completion
-- skimming
-- immediate exits
+What to deduce from the average time spent on a page requires contextual analysis. Longer time spent may indicate difficulty progressing, but could also indicate careful reading. Shorter time spent could indicate hasty exits, but could also indicate efficient completion of a task or typical skim-reading.
 
 To compare time spent with exit behaviour, in your spreadsheet:
 
@@ -323,7 +310,7 @@ To compare time spent with exit behaviour, in your spreadsheet:
 3. Format as a percentage.
 4. Compare your "Exit rate" and "Average time per view (seconds)" values to identify outliers.
 
-Pages with both high average time per view and high exit rates may indicate user difficulties that are worth investigating further.
+Pages with both high average time per view and high exit rates may indicate user pain points to investigate further.
 
 ### Variables
 
@@ -350,39 +337,32 @@ Pages with both high average time per view and high exit rates may indicate user
 ## What percentage of users are completing a multi-step journey, and how long is it taking them?
 
 ### Potential insights
-These explorations could help you to:
+These explorations can help you to:
 
 - benchmark current completion rates and average completion time, and compare these after content changes
 - identify page-to-page transitions where drop-off rates are higher than normal
-- compare completion rates and times across different user groups, such as:
-  - mobile vs desktop
-  - new vs returning users
+- compare completion rates and times across different user groups, such as mobile vs desktop or new vs returning users
 
 ### Understand the data
 A funnel exploration can be used to measure how many users complete a defined multi-step journey, and how long it takes them.
 
-Unlike a path exploration, which expands dynamically in a non-linear way, a funnel requires you to define each step in advance. You can add up to 10 steps. This makes it suitable for:
+Unlike a path exploration, which expands from a start or end point as you click on each "node" (representing a page), a funnel requires you to define each step in advance. You can add up to 10 steps, which makes it suitable for:
 
 - measuring completion between a defined start and end page
 - examining a small number of critical steps within a longer journey
 
-It is not designed to map complex branching services in full.
+Funnel explorations are not designed to map complex branching services in full.
 
 The funnel will calculate:
 
-- the proportion of users who move from the first defined step to the final step
+- the proportion of users who moved from the first defined step to the final step
 - the average "Elapsed time" between those steps (when enabled)
 
-When only a start and completion page are defined, "Elapsed time" represents the average time between first reaching the start page and reaching the completion page.
+When only a start and completion page are defined, "Elapsed time" represents the average time to completion.
 
-This value can be heavily influenced by users who leave and return over multiple days before completing. To better understand typical in-session behaviour, compare:
+This value can be heavily influenced by users who leave and return over multiple days before completing. To better understand typical in-session behaviour, compare new and returning users. Completion time for returning users may include long gaps between visits, while for new users it's more likely to reflect completion within a single visit.
 
-- new users
-- returning users
-
-Completion time for returning users may include long gaps between visits, while for new users it is more likely to reflect completion within a single visit.
-
-The funnel is set to "closed" by default ("Make open funnel": off). This means only users who reach the first defined step are counted in the completion calculation. Users who arrive directly at a later step are excluded. This gives a more accurate picture of completion for users who attempt the full journey.
+The funnel is set to "closed" by default ("Make open funnel": off). This means only users who begin at the first step are counted. Users who arrive directly at a later step are excluded. This gives a more accurate picture of completion for users who attempt the full journey.
 
 
 ### Variables
@@ -408,20 +388,20 @@ The funnel is set to "closed" by default ("Make open funnel": off). This means o
 
 ### Potential insights
 
-This exploration could help you to:
+This exploration can help you to:
 
 - estimate how many sessions, on average, it takes users who complete a journey to reach the final page
-- assess whether content or structural changes reduce the need for users to return later
-- compare whether session requirements differ depending on device category
+- assess whether content changes reduce the need for users to return later
+- assess the influence of device category (desktop, mobile or tablet) on the average number of sessions to complete
 
 
 ### Understand the data
 
-This method focuses only on users who reached the completion page. It does not reflect users who started the journey but failed to complete.
+This method focuses only on users who reached a completion page. It does not include users who started the journey but failed to complete.
 
-Create a segment that includes users who viewed the completion page, and use it with the "Sessions per active user" metric. This shows the average number of sessions for users who completed the journey.
+Create a segment that includes users who viewed the completion page, and apply it with the "Sessions per active user" metric. This shows the average number of sessions for users who completed the journey.
 
-A session begins when a user starts interacting with your site and ends after a period of inactivity (30 minutes by default, unless your GA4 property settings have been changed). If a user leaves and later returns, this creates a new session. As a result, users who take breaks before finishing will increase the average number of sessions.
+A session begins when a user starts interacting with your site and ends after a period of inactivity (30 minutes by default, unless your GA4 property settings have been changed). If a user leaves and later returns, this creates a new session. Consequently, users who take breaks before finishing will increase the average number of sessions.
 
 This exploration uses "Active users" instead of the usual "Total users", to correspond with the "Sessions per active user" metric.
 
