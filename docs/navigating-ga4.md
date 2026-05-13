@@ -42,9 +42,11 @@ This guide focuses on the **Explore** section, which is most useful for custom c
 
 ## Using Explore
 
-Unlike the standard Reports section, Explore gives you much more control over how the data is selected and displayed. You can:
+Unlike the standard Reports section, Explore gives you much more control over how the data is selected and displayed. 
 
-- choose exactly which metrics to include
+In Explore, you can:
+
+- choose your exact combination of metrics
 - focus on a specific page or group of pages
 - apply more detailed filters
 - choose how the data is visualised, such as in tables or charts
