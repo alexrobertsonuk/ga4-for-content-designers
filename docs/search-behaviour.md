@@ -8,23 +8,23 @@
 - [What search terms are leading users to a specific page?](search-behaviour?id=what-search-terms-are-leading-users-to-a-specific-page)
 
 ## Using these explorations
-This section focuses on internal site search behaviour: searches performed within your own site or service.
+These explorations focus on searches conducted within your own site or service, where an internal search function exists. 
 
-GA4 does not show the search terms users typed into external search engines such as Google. These queries are not shared with GA4. To analyse search engine queries, you will need access to Google Search Console or a similar tool.
+GA4 does not capture external search terms from referrers like Google. To analyse search engine queries, you'll need access to Google Search Console or a similar tool.
 
-If your site includes an internal search function, GA4 can record search activity when the page URL contains a query parameter from GA4's default list, which includes "q", "s", "search", "query", and "keyword". If your site uses a different parameter, it can be added in the property settings.
+If your site includes an internal search function, GA4 can record search activity when the page URL contains a query parameter from GA4's default list, which includes "q", "s", "search", "query", and "keyword" (such as www.example.com/?q=search+term). If your site uses a different parameter, it can be added in the property admin settings.
 
-When a user performs a search, GA4 records a "view_search_results" event against the search results page — not the page where the search was initiated. This event is triggered by the presence of a search parameter in the URL, so it may occasionally include visits to search results pages that were not initiated by a user typing a query — for example, a user following a direct link to a search results page.
+When a user conducts a search, GA4 records a "view_search_results" event against the search results page — not the page where the search was initiated. Since this event is triggered by the presence of a search parameter in the URL, it may occasionally include visits to search results pages that were not initiated by a user typing a query — for example, a user following a direct link to a search results page.
 
-The "Page path and screen class" dimension shows the search results page itself. To understand where the search was initiated, use the "Page referrer" dimension. This shows the page the user was viewing immediately before the search results page loaded.
+For this "view_search_results" event, the "Page path and screen class" dimension will show the search results page itself. To understand where the search was initiated, use the "Page referrer" dimension.
 
-If no search data appears to be available, even when using a broad date range, check that search tracking is enabled:
+If no search data appears to be available, even when using a wide date range, check that search tracking is enabled:
 
-1. Go to Admin.
-2. Select Data collection and modification.
-3. Select Data streams.
+1. Go to "Admin".
+2. Select "Data collection and modification".
+3. Select "Data streams".
 4. Select your website stream.
-5. Check that 'Enhanced measurement' contains 'Site search'.
+5. Check that "Enhanced measurement" contains "Site search".
 
 If search tracking is not enabled, contact the property administrator.
 
@@ -34,31 +34,30 @@ Add dimensions and metrics into the Settings column in the order specified. Unle
 
 ### Potential insights
 
-These explorations could help you to:
+These explorations can help you to:
 
 - measure how often internal search is used
-- identify pages where above average proportions of users perform a search, which may indicate a content discovery issue
+- identify pages where above average proportions of users conduct a search, which may indicate a content discovery issue
 - compare internal search activity by device type, to understand if any content may be harder to find on mobile or desktop
-- compare search behaviour between users associated with a specific referral domain or not
+- compare search volumes by referral domain, to explore the potential influence of background context
 
 
 ### Understand the data
 
 In this exploration, the "Page referrer" dimension shows the page viewed immediately before the search results page. This represents the page where the search was likely initiated.
 
-Pages with more users will naturally tend to generate more searches. Absolute counts alone do not indicate whether search usage is high relative to page traffic.
+Pages with more users will naturally tend to generate more searches, so relative search volumes are more useful than absolute numbers.
 
-To understand relative usage, calculate the proportion of users on each page who went on to perform a search:
+To understand relative search volumes, calculate the proportion of users on each page who conducted a search:
 
-1. Create the exploration below to show how many users searched from each page
-2. Create a second free-form exploration showing total users by page for the same time period (dimension: Page path and screen class, metric: Total users).
+1. Create the exploration below to show how many users searched from each page.
+2. Create a second free-form exploration showing total users by page for the same time period (dimension: "Page path and screen class", metric: "Total users").
 3. Export both datasets to CSV.
 4. In a spreadsheet, match the datasets by page path (for example, using VLOOKUP or an equivalent function).
 5. In a new column, divide the number of users who searched from the page by the total users who viewed the page.
 6. Format the result as a percentage.
-7. Compare proportions across pages rather than relying on absolute counts.
 
-Interpret higher proportions in context. Search usage may reflect:
+Relatively high search volumes may reflect:
 
 - users not immediately finding what they need
 - users looking for more specific information
@@ -92,31 +91,29 @@ Interpret higher proportions in context. Search usage may reflect:
 
 ### Potential insights
 
-These explorations could help you to:
+These explorations can help you to:
 
 - understand the natural language of users
-- identify information or tasks users expect to find but cannot locate easily
+- identify information or tasks that users expect to find but cannot locate easily
 - assess whether certain topics are unclear or insufficiently signposted
 - track changes in internal search terms over time
-- compare search terms between device categories, to understand if any content may be harder to find or more useful on mobile or desktop
-- compare search terms between users associated with a specific referral domain or not
+- compare search terms between device types, to understand if any content may be harder to find or more useful on mobile or desktop
+- compare search behaviour by referral domain, to explore if user expectations or needs vary depending on where the journey originated
 
 
 ### Understand the data
 
 When filtered to the "view_search_results" event:
 
-- "Event count" represents the total number of searches performed for a given term
+- "Event count" represents the total number of searches conducted for a given term
 - "Total users" represents the number of unique users who searched for that term
 
-If Event count is substantially higher than Total users for a term, this indicates that some users searched for the same term more than once during the selected date range. Sort the table by descending Total users and use the Bar chart cell type to see at a glance if certain terms were repeatedly entered by the same users.
+If "Event count" is substantially higher than "Total users" for a term, this indicates that some users searched for the same term more than once during the selected date range. Sort the table by descending "Total users" and use the Bar chart cell type to see at a glance if certain terms were repeatedly entered by the same users.
 
 Repeated searches may reflect:
 
 - users not finding relevant results immediately
 - users returning to search across sessions
-
-Interpret repeated searches in context.
 
 GA4 may suppress low-volume search terms in free accounts due to data thresholds, grouping them as "(other)". If you see a significant "(other)" row, some less common search terms may not be visible.
 
@@ -148,21 +145,19 @@ GA4 may suppress low-volume search terms in free accounts due to data thresholds
 
 ### Potential insights
 
-These explorations could help you to:
+These explorations can help you to:
 
-- identify which search terms preceded visits to a specific page
-- assess whether users rely on search to reach content that is already available through navigation
-- understand whether certain pages are primarily discovered via internal search
+- assess whether users rely on search to reach content that is or could be signposted through navigation
 - review whether search results appear to guide users to relevant destinations
 
 
 ### Understand the data
 
-GA4 does not directly link a search term to the specific page a user selected from the search results.
+GA4 does not directly associate the search term with the page selected from search results.
 
 You can approximate this by analysing "Page referrer" values that contain search query parameters.
 
-When a user performs a search, the search term is often included in the URL of the search results page (for example, through parameters such as "q", "s", "search", "query", or "keyword"). If the user then clicks a result, the destination page will record the search results URL as its referrer.
+When a user conducts a search, the search term is often included in the URL of the search results page (such as www.example.com/?q=search+term). If the user then clicks a result, the destination page will record the search results URL as its referrer.
 
 By filtering "Page referrer" to values containing search parameters, you can:
 
@@ -171,7 +166,7 @@ By filtering "Page referrer" to values containing search parameters, you can:
 
 This method only works when the search term is present in the URL and the browser passes referrer information. It does not capture search behaviour from interfaces that do not update the URL or where referrer data is restricted.
 
-Interpret results cautiously. If a search referrer appears unrelated to the destination page, the user may have used the site's main navigation from the search results page rather than clicking a search result directly.
+If referring search term appears completely unrelated to the destination page, consider whether the user could have used the site's main navigation from the search results page rather than clicking a search result directly.
 
 
 ### Variables
