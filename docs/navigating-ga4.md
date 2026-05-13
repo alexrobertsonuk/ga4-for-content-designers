@@ -1,4 +1,4 @@
-# Navigating the GA4 interface
+# Navigating GA4
 
 ## Contents
 
@@ -68,7 +68,7 @@ To create a new exploration:
 2. Select **Explore** in the left-hand menu.
 3. Under **Start a new exploration**, choose **Blank**.
 
-A blank exploration workspace will open.
+A blank exploration editor will open.
 
 ---
 
