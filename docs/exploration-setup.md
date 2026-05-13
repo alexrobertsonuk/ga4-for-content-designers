@@ -13,7 +13,7 @@
 
 ## Variables and settings
 
-The exploration workspace has two configuration columns on the left:
+The exploration editor has two configuration columns on the left:
 
 1. **Variables** – where you:
   - name your exploration
@@ -22,35 +22,35 @@ The exploration workspace has two configuration columns on the left:
 
 2. **Settings** – where you:
   -  select from the segments, dimensions and metrics you've loaded in Variables
-  -  choose how the data is displayed in the current tab (on the right of the screen)
+  -  choose how the data is displayed in the current tab (on the right of the editor)
 
-You must first add dimensions, metrics or segments to the **Variables** column before they can be used in **Settings**.
+You must add dimensions, metrics or segments to the **Variables** column before they can be used in **Settings**.
 
 To use a variable:
 
-- drag it into the appropriate field in **Settings**, or  
+- drag it into the appropriate field in **Settings**, or 
 - double-click it to add it automatically to a compatible field
 
-To the right of the Variables and Settings columns, the exploration output is displayed.
-
-Each exploration can contain up to 10 tabs of output.
+The exploration output is displayed to the right of the Variables and Settings columns. Each exploration can contain up to 10 tabs of output.
 
 The **Variables** you choose are available across all tabs within the same exploration, but each tab has its own **Settings** that are configured independently.
 
-Give each exploration a clear, descriptive name.
+Give each exploration a clear, descriptive name, using your organisation's naming conventions if you intend to share with other users.
 
 ## Dimensions and metrics
 
 Explorations are built using **dimensions** and **metrics**.
 
-A practical distinction:
+A simple distinction:
 
-- **Dimensions** group data and describe it.
+- **Dimensions** describe and group data.
 - **Metrics** measure data and are numerical.
+
+For example, the dimension "Device category" paired with the metric "Total users" will show you the number of unique users who used each device type (desktop, mobile or tablet) within your date range.
 
 ### Dimensions
 
-Dimensions describe attributes of your data — for example, which page was viewed or which device was used.
+Dimensions describe attributes of data — for example, the page viewed or device used.
 
 Common dimensions include:
 
@@ -72,15 +72,11 @@ Common metrics include:
 
 ## Consistent use of "Total users"
 
-This guide focuses on identifying patterns and differences in behaviour to support design insight and decision-making, rather than reporting exact audience numbers.
-
-For that reason, "Total users" is used as the default metric in most examples.
+"Total users" is recommended throughout most of this guide.
 
 Google defines "Total users" as the number of unique users who triggered any event during the selected date range.
 
-It is not a perfectly precise measure in every context, but it is consistent and comparable. This makes it useful for understanding relative differences between pages, journeys or user groups.
-
-Different metrics answer different questions. However, using a consistent metric across similar explorations makes comparisons clearer and easier to interpret.
+This guide is about design insights rather than management reporting - it focuses on identifying patterns and differences in behaviour rather than exact audience numbers. So while "Total users" is not a perfectly precise measure in every context, using a consistent metric supports understanding relative differences between pages, journeys or user groups.
 
 ## Filters and segments
 
@@ -88,9 +84,9 @@ By default, an exploration shows data for the entire property within the selecte
 
 To analyse a subset of data, use filters or segments.
 
-- **Filters** – created and applied in the Settings column. Filters include or exclude data based on specific criteria (for example, include only a specific page or exclude internal traffic). Filters apply only to the current tab.
+- **Filters** – created and applied in the Settings column. Filters include or exclude data based on specific criteria (for example, include only a specific page or exclude internal traffic). Filters apply only to the current exploration tab.
 
-- **Segments** – created in the Variables column, applied in the Settings column. Segments define a subset of users, sessions or events, and can be applied to one or more tabs within the exploration.
+- **Segments** – created in the Variables column, applied in the Settings column. Segments define a subset of users, sessions or events, and can be applied to one or more tabs within an exploration.
 
 Segments are particularly useful for side-by-side comparisons (for example, mobile vs desktop users, or new vs returning users).
 
@@ -110,7 +106,7 @@ Segments are particularly useful for side-by-side comparisons (for example, mobi
 4. Enter a name.
 5. Add one or more conditions.
 
-The exploration sections in this guide provide the exact dimensions, conditions and values to use for each exploration.
+The explorations throughout this guide describe the exact dimensions, conditions and values to use.
 
 ## Date ranges
 
@@ -119,7 +115,7 @@ When selecting a date range, consider:
 1. Property start date – data is only available from when GA4 tracking began for the property.
 2. Data retention settings – in free tier GA4 properties, data retention is 2 months by default and can be extended to 14 months. Check under:
    Admin > Data collection and modification > Data retention
-3. Processing time – longer date ranges may take more time to process.
+3. Processing time – longer date ranges will take more time to process.
 4. Sampling – longer date ranges increase the likelihood of sampled results. See "Handling sampled results" below.
 
 ## Exporting data
@@ -127,23 +123,20 @@ When selecting a date range, consider:
 To export data from an exploration tab:
 
 1. Select the download icon in the top-right corner.
-2. Choose a format (for example, CSV).
-
-Exported files can be opened in a spreadsheet for further analysis.
+2. Choose a format (for example, CSV - useful if you want to do further analysis in a spreadsheet).
 
 ## Sharing explorations
 
-Explorations are private by default.
+Explorations are private by default. Even when shared, they remain read-only.
 
-To share an exploration in read-only mode with other users who have access to the same property:
-
-1. Select the share icon in the top-right corner.
-2. Confirm sharing.
+To share an exploration with other users who have access to the same property, use the share icon in the top-right corner of your exploration.
 
 Once shared, the exploration becomes visible to all users of that property. They can find it on the Explore landing page by filtering the **Owner** column to **Not owned by me** or **Owned by anyone**.
 
-Shared explorations are read-only. To customise a shared exploration:
+To customise an exploration someone else has shared:
 
+- open the **Explore** page
+- find the shared exploration
 - select the **More actions** (three dot) menu to the right of the exploration name
 - choose **Duplicate**
 
@@ -157,10 +150,10 @@ If sampling is applied, a warning indicator appears in the top-right of the expl
 
 In paid-for GA4 360 properties, sampling thresholds are higher and a detailed results option may be available.
 
-To view more complete results (if available):
+To view more detailed results (if available):
 
-1. Select the sampling indicator in the top-right of the results panel.
-2. Choose the detailed results option.
+1. Select the sampling indicator in the top-right of your exploration.
+2. Choose "More detailed results" from the dropdown.
 
 This may increase processing time.
 
