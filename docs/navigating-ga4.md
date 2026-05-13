@@ -11,7 +11,7 @@
 
 If you don't already have access to your organisation's GA4 account, begin by requesting **Analyst** level access to the relevant **property** (the individual website or app you want to analyse). Access is usually controlled by a digital analytics or product team.
 
-Analyst access allows you to share your custom analyses ("explorations") with other users of the same property. If you only have **Viewer** access, you can create and save explorations, but not share them.
+Analyst access allows you to share your custom analysis ("explorations") with other users of the same property. If you only have **Viewer** access, you can create and save explorations, but not share them.
 
 Once you have access, go to https://analytics.google.com/analytics/web/ and sign in.
 
