@@ -176,24 +176,22 @@ These explorations can help you to:
 - identify common paths through a site or transactional service, to help prioritise effort
 - assess whether content changes influence the paths users take
 - identify drop-off points, loops, or repeated steps
-- identify users' most common tasks on a site
+- identify the most common user tasks on a site
 
 ### Understand the data
 
 A path exploration creates an interactive Sankey diagram showing the most common next steps users take from a selected page (or the most common previous steps if you build the path backwards from an ending point).
 
-Paths are shown up to 10 steps ("nodes"). For large or branching journeys, use path exploration to examine a specific section or decision point.
-
-Path explorations are designed for a single path view at a time. You can apply a segment, but you cannot view multiple segments side-by-side in the same Sankey chart (for example, mobile vs desktop).
+Path explorations have a 10 step ("node") limit, so are best suited to examining specific sections or decision-points of longer or branching journeys.
 
 When you first create a path exploration, GA4 defaults to an "Event name" starting point. To build a page-based path exploration:
 
-1. Select "Start again" (top right of the exploration output)
-2. Choose whether you want a "Starting point" or an "Ending point" by selecting the corresponding "Drop or select node" option
-3. Select "Page path and screen class" and choose a page for your start or end point
-4. In the Sankey chart, click a page (a "node" on the chart) to expand the path step by step, up to 10 total steps
+1. Select "Start again" (top right of the exploration output).
+2. Choose whether you want a "Starting point" or an "Ending point" by selecting the corresponding "Drop or select node" option.
+3. Select "Page path and screen class" and choose a page for your start or end point.
+4. In the Sankey diagram, click a page (a "node" on the chart) to expand the path step by step, up to 10 total steps.
 
-Setting "View unique nodes only" to "Yes" prevents the same page appearing multiple times across different steps in the chart. This gives a cleaner view of the overall journey and avoids inflating the apparent complexity of paths where users revisit pages.
+Setting "View unique nodes only" to "Yes" prevents the same page appearing multiple times across different steps in the diagram. This gives a cleaner view of the overall journey and avoids inflating the apparent complexity of paths where users revisit pages.
 
 
 ### Variables
@@ -219,42 +217,39 @@ Setting "View unique nodes only" to "Yes" prevents the same page appearing multi
 
 These explorations can help you to:
 
-- identify circular or repeated navigation patterns
-- detect backwards steps within a multi-step service
-- identify reference or guidance pages that users revisit frequently (for example, to evaluate whether the information should be integrated at the point of need instead)
+- identify potential pain points in a user journey
+- identify reference or guidance pages that users revisit frequently (which may help to evaluate whether the information should be integrated at the point of need instead)
 - highlight potential drop-off points where users exit after repeated views
 
 ### Understand the data
 
-The "Views per active user" metric divides the total number of views for a page by the number of active users who viewed it.
+The "Views per active user" metric divides the total number of views for a page by the number of active users.
 
 For example, if a page received 100 views from 70 active users, the result would be 1.43 views per active user.
 
-Higher values may indicate that users are revisiting the page — either multiple times within a single session, or returning to it across different sessions over the selected date range. This can reflect:
+Higher values indicate that users are revisiting the page — either multiple times within a single session, or returning to it across different sessions over the selected date range. This can reflect:
 
 - difficulty progressing
 - repeated backwards steps
 - users returning to reference material
 - refreshes or repeated interactions
 
-This exploration uses "Active users" instead of "Total users" because the "Views per active user" metric is calculated using active users. In GA4, "Active users" counts users who had an "engaged" session (one that lasted longer than 10 seconds, included a conversion event, or included at least 2 page views).
+This exploration uses "Views" and "Active users" instead of "Total users" to align with the "Views per active user" metric. In GA4, "Active users" counts users who had an "engaged" session (one that lasted longer than 10 seconds, included a conversion event, or included at least 2 page views).
 
-Interpret this metric in context. Compare pages against others within the same site or service rather than relying on a fixed threshold.
+Adding the "Exits" metric allows you to correlate any pages that are frequently revisited with common exit points.
 
-Adding the "Exits" metric allows you to identify pages that are both frequently revisited and common exit points.
-
-The absolute number of exits is less informative than the proportion of views that result in an exit (exit rate). GA4 does not display exit rate directly, but you can calculate it by exporting the data:
+For each page, the total number of exits is less informative than the proportion of views that resulted in an exit (exit rate). GA4 does not display exit rate directly, but you can calculate it by exporting the data:
 
 1. Create the exploration using the variables and settings below.
 2. Export the data as CSV.
 3. Open the CSV in a spreadsheet.
 4. Remove any rows above the column headers so that the first visible row contains the column headers.
 5. Insert a new column titled "Exit rate".
-6. In the "Exit rate" column, divide the "Exits" value by the "Views" value.
+6. In the "Exit rate" column, divide the "Exits" values by the "Views" values.
 7. Format the result as a percentage.
-8. Sort by "Exit rate" to identify pages with relatively high proportions of exits.
+8. Sort by descending "Exit rate" to identify pages with relatively high proportions of exits.
 
-Pages with both high views per active user and high exit rates may indicate user difficulties that are worth investigating further.
+Pages with both high views per active user and high exit rates may indicate pain points to investigate.
 
 
 ### Variables
