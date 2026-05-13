@@ -9,11 +9,9 @@
 
 ## Getting started
 
-To use GA4, you need access to your organisation's GA4 account.
+If you don't already have access to your organisation's GA4 account, begin by requesting **Analyst** level access to the relevant **property** (the individual website or app you want to analyse). Access is usually controlled by a digital analytics or product team.
 
-You should request **Analyst** level access to the relevant **property** (the individual website or app you want to analyse). Analyst access is recommended as it allows you to share your explorations with other users of the same property. If you only have **Viewer** access, you can create and save explorations, but you cannot share them with others.
-
-Access is usually granted by a digital analytics or product team.
+Analyst access allows you to share your custom analyses ("explorations") with other users of the same property. If you only have **Viewer** access, you can create and save explorations, but not share them.
 
 Once you have access, go to https://analytics.google.com/analytics/web/ and sign in.
 
@@ -23,30 +21,26 @@ In GA4, a single website or app is called a **property**.
 
 Use the property selector in the top navigation (to the left of the search bar) to choose the correct property before starting any analysis.
 
-Depending on your organisation's setup, you may see a hierarchy such as:
+Properties are nested in this hierarchy:
 
 **Organisation > Account > Property**
 
-Some users may only see:
+You will only see the organisation in the property picker if there's more than one to choose. 
 
-**Account > Property**
-
-- An **organisation** (if used) groups multiple accounts.
-- An **account** groups one or more properties.
-- A **property** contains the data for one website or app.
-
-All reports and explorations use data from the currently selected property.
+Accounts are used to group properties. The grouping logic will depend on your organisation's specific setup.
 
 ## Understanding the main navigation
 After selecting a property, the left-hand menu displays the main sections of GA4:
 
 - **Home** – an overview dashboard for the selected property
 - **Reports** – pre-built standard reports
-- **Explore** – custom analysis and saved explorations
+- **Explore** – a custom sandbox-style environment for analysis
 - **Advertising** – advertising and campaign reports (if enabled)
 - **Admin** – account and property configuration settings
 
 This guide focuses on the **Explore** section, which is most useful for custom content design analysis.
+
+## Using Explore
 
 Unlike the standard Reports section, Explore gives you much more control over how the data is selected and displayed. You can:
 
@@ -55,16 +49,14 @@ Unlike the standard Reports section, Explore gives you much more control over ho
 - apply more detailed filters
 - choose how the data is visualised, such as in tables or charts
 
-## Using Explore
-
-Select **Explore** from the left-hand menu.
+Each custom analysis you create in the Explore section is called an "exploration".
 
 The Explore landing page displays:
 
 - existing explorations you've created
-- explorations shared with you by other users
+- explorations shared by other users
 
-Explorations are private by default unless you choose to share them. You cannot break anything by creating or editing an exploration. Creating or editing one does not change your GA4 data, and it does not affect the standard reports used by others.
+Explorations are private by default unless you choose to share them. You cannot break anything by creating or editing an exploration. Creating or editing one does not change your GA4 data, nor affect the standard reports used by others.
 
 ### Creating a new exploration
 
