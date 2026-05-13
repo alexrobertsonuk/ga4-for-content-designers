@@ -46,7 +46,7 @@ Unlike the standard Reports section, Explore gives you much more control over ho
 
 In Explore, you can:
 
-- choose your exact combination of metrics
+- choose an exact combination of metrics
 - focus on a specific page or group of pages
 - apply more detailed filters
 - choose how the data is visualised, such as in tables or charts
