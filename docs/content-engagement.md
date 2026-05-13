@@ -4,7 +4,7 @@
 
 - [Using these explorations](content-engagement?id=using-these-explorations)
 - [How many users access this content?](content-engagement?id=how-many-users-access-this-content)
-- [How does device usage differ across sections or services?](content-engagement?id=how-does-device-usage-differ-across-sections-or-services)
+- [How do device types differ across sections or services?](content-engagement?id=how-do-device-types-differ-across-sections-or-services)
 - [How does engagement differ across pages, sources, or devices?](content-engagement?id=how-does-engagement-differ-across-pages-sources-or-devices)
 - [How many users scroll to the bottom of a page?](content-engagement?id=how-many-users-scroll-to-the-bottom-of-a-page)
 - [How many users are downloading linked files?](content-engagement?id=how-many-users-are-downloading-linked-files)
@@ -12,18 +12,16 @@
 
 ## Using these explorations
 
-Engagement metrics do not, by themselves, indicate content quality or success.
+For content designers, engagement metrics alone do not indicate content quality or success.
 
-Users may spend longer on a page because they are carefully reading and completing a task, or because they are struggling to find the information they need. Similarly, repeated views of a page may reflect users returning to reference material intentionally, or experiencing uncertainty and difficulty progressing.
+Users may spend longer on a page because they're carefully reading and completing a task, or because they're struggling to find information. Repeated views of a page may reflect users returning to useful reference material, or experiencing uncertainty and difficulty progressing.
 
-When interpreted alongside user volumes and journey data, engagement analysis can help:
+However, when interpreted alongside user volumes and journey data, engagement analysis can help:
 
 - identify high impact pages
 - prioritise content reviews
 - assess potential user impact of design changes
 - highlight patterns that may be useful to explore further
-
-These measures should be interpreted in context rather than treated as standalone indicators of performance.
 
 Add dimensions and metrics into the Settings column in the order specified. Unless otherwise stated, leave all other settings at their default values.
 
@@ -32,36 +30,33 @@ Add dimensions and metrics into the Settings column in the order specified. Unle
 
 ### Potential insights
 
-These explorations could help you to:
+These explorations can help you to:
 
-- prioritise content for review or improvement
-- identify low-traffic pages that may be difficult to discover
+- prioritise content for review, improvement, or clearer signposting
 - assess potential impact before moving or restructuring content
-- identify changes in demand over time
-- compare usage patterns across device categories
+- identify changes in demand over time, and across device types
 
 
 ### Understand the data
 
-There are several simple ways to measure how many users for a page or group of pages. The same variables can be used with different visualisations and filters.
+There are several simple ways to measure user volumes for a page or group of pages. The same variables can be used for each, with different visualisations and filters.
 
-The recommended metric is "Total users". "Total users" represents the number of unique users who triggered any event on your site during the selected date range (including users whose sessions were brief or unengaged).
+"Total users" represents the number of unique users who triggered any event on your site during the selected date range (including users whose sessions were brief or unengaged).
 
-When analysing content usage, consistency of metrics is more important than absolute precision. Relative differences between pages or over time are often more informative than exact counts.
-
-Interpret page usage in context. High volumes may indicate:
+High user volumes may indicate:
 
 - high demand
 - strong discoverability
-- required navigation pathways
+- mandatory navigation pathways
 
 Lower volumes may indicate:
 
 - niche content
-- seasonal demand
+- seasonal dips
 - limited discoverability
+- duplicated content
 
-"Anomaly detection" in charts highlights statistically unusual data points on the chart. It is turned off here to keep the view clean, but can be enabled if you want GA4 to flag unexpected spikes or drops automatically.
+"Anomaly detection" in GA4 graphs will highlight statistically unusual data points. It's turned off here to keep the view simple, but can be enabled if you want GA4 to automatically flag unexpected spikes or drops.
 
 
 ### Variables
@@ -123,35 +118,30 @@ Lower volumes may indicate:
 | Filters | Dimension: Page path and screen class<br>Condition: exactly matches (=)<br>Expression: enter the page path (everything after your domain, excluding query strings) |
 
 
-## How does device usage differ across sections or services?
+## How do device types differ across sections or services?
 
 ### Potential insights
 
-These explorations could help you to:
+These explorations can help you to:
 
 - compare the breakdown of device types (desktop, mobile, tablet) across different sections of your site or service
 - assess whether device distribution changes after a redesign
 - ensure testing effort reflects the device categories most commonly used
-- identify whether certain types of content are more frequently accessed on specific devices
 
 ### Understand the data
 
-Device breakdown provides useful context, but comparisons are often more informative than standalone views.
-
-You can compare:
+"Device category" breaks down desktop, mobile and tablet users. It can be helpful to compare devices used across:
 
 - different sections of the same site
 - different services within the same property
 - different time periods (for example, before and after a change)
 
-Device distribution may vary depending on:
+Devices used may vary depending on:
 
 - task complexity
 - referral sources
-- user environment
+- user environment (such as office, home, public transport)
 - content type
-
-Interpret differences cautiously. Device mix does not directly indicate user characteristics and may reflect contextual factors such as referral source or time of use.
 
 ### Variables
 
@@ -177,11 +167,11 @@ Interpret differences cautiously. Device mix does not directly indicate user cha
 
 ### Potential insights
 
-These explorations could help you to:
+These explorations can help you to:
 
 - compare engagement rate across device categories, referral sources, or landing pages
-- assess whether different entry points are associated with higher or lower engagement
-- evaluate whether changes to page titles or navigation labels that may affect user expectations are associated with changes in engagement
+- evaluate whether different entry points are associated with higher or lower engagement
+- evaluate whether changes to expectation-setting (such as page titles or signposting) affect engagement
 
 ### Understand the data
 
@@ -193,25 +183,11 @@ Engagement rate shows the percentage of sessions that met at least one of these 
 - the user viewed 2 or more pages
 - the user completed a key event (a specific action marked as significant in your property settings, such as completing a form — not all properties will have these configured)
 
-In simple terms, engagement rate estimates how many visits involved some meaningful interaction.
+Engagement rate is calculated across a user's whole session, not per page, so it's best analysed at the property level rather than for individual pages.
 
-When you break this down by a dimension (for example, Landing page or Device category), the engagement rate shows the percentage of visits in that group that were engaged.
+One exception to this is the "Landing page" dimension, which tracks the page where users started their session. Since each session can only have one landing page, analysing the engagement rate by landing page can help assess how different entry points influence overall engagement.
 
-Engagement rate does not measure how engaging a single page is on its own. A session may include several pages, and engagement is based on the whole session.
-
-Sort by Total users (highest to lowest) to focus on the most significant sources. Smaller volumes may show extreme engagement rates that are not representative.
-
-Interpret engagement rate in context. Lower values may reflect:
-
-- short informational visits
-- users finding what they need quickly
-- misaligned expectations
-
-Higher values may reflect:
-
-- longer or more complex tasks
-- deeper exploration
-- repeated navigation
+Lower engagement rates may reflect users efficiently finding what they need, but could also indicate that users didn't see what they expected and bounced. Higher rates may reflect longer or more complex tasks, but could also indicate difficult and circular navigation.
 
 Engagement rate should be considered alongside user volumes and journey analysis rather than used as a standalone indicator of quality.
 
@@ -281,19 +257,18 @@ Engagement rate should be considered alongside user volumes and journey analysis
 
 ### Potential insights
 
-These explorations could help you to:
+These explorations can help you to:
 
-- estimate the proportion of users who reach the bottom of a page
-- compare scroll behaviour between device types
-- assess whether longer pages are likely to be fully viewed
+- identify if a significant proportion of users are not reaching the bottom of a guidance page, indicating the need to review the length (and options for breaking up content), formatting, relevance, and placement of calls to action
 - monitor whether content restructuring changes scroll behaviour
+- measure whether mobile or desktop users scroll further, and review content to ensure it’s effective on both device types
 
 
 ### Understand the data
 
 When automatic scroll tracking is enabled, GA4 records a scroll event when a user reaches approximately 90% of the page depth.
 
-The "Per cent scrolled" dimension typically shows:
+The "Per cent scrolled" dimension shows either:
 
 - 90 (user reached at least 90% of the page)
 - blank (all users, regardless of scroll depth)
@@ -303,24 +278,23 @@ GA4 records the 90% scroll event once per page view. It does not record multiple
 To estimate the proportion of users who reached near the bottom of a page:
 
 1. Create the exploration using the variables and settings below.
-2. Identify the number of Total users where "Per cent scrolled" equals 90.
-3. Divide this by the Total users value where "Per cent scrolled" is blank (the total number of users who viewed the page).
+2. Identify the number of "Total users" where "Per cent scrolled" equals 90.
+3. Divide this by the "Total users" value where "Per cent scrolled" is blank (the total number of users who viewed the page).
 
-This produces the proportion of users who reached at least 90% of the page.
+This produces the proportion of users who reached at least 90% of the page depth.
 
-Interpret scroll depth cautiously. Not reaching 90% may reflect:
+Consider whether users not reaching 90% may reflect:
 
-- users finding the information they needed earlier on the page
-- users leaving intentionally
-- users navigating via in-page links
+- finding the information they needed earlier on the page
+- navigating via in-page links
 
 Also consider very short pages where 90% scroll depth is reached almost immediately by most users, making high rates less informative.
 
 If no scroll data appears:
 
-1. Go to Admin.
-2. Select Data collection and modification.
-3. Select Data streams.
+1. Go to "Admin".
+2. Select "Data collection and modification".
+3. Select "Data streams".
 4. Select your website stream.
 5. Check that "Enhanced measurement" contains "Scrolls".
 
@@ -355,10 +329,9 @@ If scroll tracking is not enabled, contact the property administrator.
 
 ### Potential insights
 
-These explorations could help you to:
+These explorations can help you to:
 
 - include downloadable files in content reviews or audits
-- identify which files receive the most interaction
 - assess whether downloadable content is heavily relied upon
 - prioritise files for review, consolidation, or conversion to HTML where appropriate
 
@@ -383,13 +356,13 @@ The metric "Total users" represents the number of unique users who clicked a lin
 
 This method records link clicks, not confirmed successful downloads. It also does not capture downloads triggered without a standard link click.
 
-The "Link text" dimension captures the visible text of the download link. Links that use icons, images, or non-visible accessible labels may return blank or unexpected values here.
+The "Link text" dimension captures the visible text of the download link. Links that use icons, images, or non-visible accessible labels may return blank or unexpected values.
 
 If no download data appears:
 
-1. Go to Admin.
-2. Select Data collection and modification.
-3. Select Data streams.
+1. Go to "Admin".
+2. Select "Data collection and modification".
+3. Select "Data streams".
 4. Select your website stream.
 5. Check that "Enhanced measurement" contains "File downloads".
 
