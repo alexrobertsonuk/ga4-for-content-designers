@@ -155,7 +155,7 @@ These explorations can help you to:
 
 GA4 does not directly associate the search term with the page selected from search results.
 
-You can approximate this by analysing "Page referrer" values that contain search query parameters.
+Custom events or dedicated search analytics can provide more precise insights. But even with the default GA4 setup, you can still approximate which internal searches may have preceded visits to a page by analysing "Page referrer" values that contain search query parameters.
 
 When a user conducts a search, the search term is often included in the URL of the search results page (such as www.example.com/?q=search+term). If the user then clicks a result, the destination page will record the search results URL as its referrer.
 
