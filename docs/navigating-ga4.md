@@ -34,7 +34,7 @@ After selecting a property, the left-hand menu displays the main sections of GA4
 
 - **Home** – an overview dashboard for the selected property
 - **Reports** – pre-built standard reports
-- **Explore** – a custom sandbox-style environment for analysis
+- **Explore** – a sandbox-style environment for custom analysis
 - **Advertising** – advertising and campaign reports (if enabled)
 - **Admin** – account and property configuration settings
 
