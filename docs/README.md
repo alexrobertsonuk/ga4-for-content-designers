@@ -1,7 +1,11 @@
 # GA4 for content designers: a practical guide
 
 ## About this guide
-This guide explains how content designers can use GA4 (Google Analytics 4) to explore user behaviour and inform content design decisions.
+This guide is written for content designers:
+
+- at any level
+- with or without existing GA4 (Google Analytics 4) experience
+- who want a practical starting point to use GA4 to explore user behaviour and inform content design decisions
 
 It covers:
 
@@ -9,11 +13,9 @@ It covers:
 - performing custom analysis using GA4's "Explore" tool (a flexible, sandbox-style environment in which you create "explorations")
 - answering common content questions
 
-The examples focus on GA4's default setup, without requiring custom events or specialist configuration. This provides a baseline that works across different analytics setups, including both free accounts and paid GA4 360 implementations.
+The examples focus on GA4's default setup, without requiring specialist configuration. This provides a baseline that works across different analytics setups, including both free accounts and paid GA4 360 implementations.
 
 Always follow your organisation's data protection and analytics policies.
-
-No prior GA4 experience is required.
 
 ## Author
 
