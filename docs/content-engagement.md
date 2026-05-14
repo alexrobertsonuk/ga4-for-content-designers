@@ -179,7 +179,7 @@ GA4's "Engagement rate" metric shows the percentage of sessions that met at leas
 
 - the session lasted longer than 10 seconds
 - the user viewed 2 or more pages
-- the user completed a key event (a specific action marked as significant in your property settings, such as completing a form — not all properties will have these configured)
+- the user completed a key event (a specific action marked as significant in your property settings, such as completing a form - not all properties will have these configured)
 
 Engagement rate is calculated across a user's whole session, not per page, so it's best analysed at the property level rather than for individual pages.
 
