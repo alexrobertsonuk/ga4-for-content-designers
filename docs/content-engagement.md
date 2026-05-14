@@ -175,9 +175,7 @@ These explorations can help you to:
 
 ### Understand the data
 
-GA4 reports "Engagement rate" instead of the traditional "bounce rate".
-
-Engagement rate shows the percentage of sessions that met at least one of these conditions:
+GA4's "Engagement rate" metric shows the percentage of sessions that met at least one of these conditions:
 
 - the session lasted longer than 10 seconds
 - the user viewed 2 or more pages
