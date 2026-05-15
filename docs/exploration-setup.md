@@ -66,7 +66,7 @@ Metrics are numerical measurements.
 Common metrics include:
 
 - "Views" – total number of times a page or screen was loaded 
-- "Total users" – number of unique users during the selected date range  
+- "Total users" – number of unique users
 - "New users" – number of unique users who interacted for the first time  
 - "Event count" – number of times a tracked event occurred
 
