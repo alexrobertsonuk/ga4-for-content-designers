@@ -31,7 +31,7 @@ These explorations can help you to:
 - identify top external referrers, and prioritise ensuring their information is consistent and up-to-date
 - detect underperforming referrers where navigation or signposting may need improvement
 - explore the needs of users being referred from external sources, by tracing and evaluating the call to action that they respond to
-- identify internal pages that are a disproportionate source of referrals to technical support or contact us pages
+- identify internal pages that are a disproportionate source of referrals to technical support or contact pages
 
 ### Understand the data
 
