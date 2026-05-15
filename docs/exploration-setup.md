@@ -15,12 +15,12 @@
 
 The exploration editor has two configuration columns on the left:
 
-1. **Variables** – where you:
+1. **Variables** - where you:
   - name your exploration
   - set your date range
   - load the segments, dimensions and metrics you want to use
 
-2. **Settings** – where you:
+2. **Settings** - where you:
   -  select from the segments, dimensions and metrics you've loaded in Variables
   -  choose how the data is displayed in the current tab (on the right of the editor)
 
