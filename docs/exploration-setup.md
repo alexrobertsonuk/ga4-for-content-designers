@@ -133,7 +133,7 @@ To share an exploration with other users who have access to the same property, u
 
 Once shared, the exploration becomes visible to all users of that property. They can find it on the Explore landing page by filtering the **Owner** column to **Not owned by me** or **Owned by anyone**.
 
-To customise an exploration someone else has shared:
+To copy and customise an exploration someone else has shared:
 
 - open the **Explore** page
 - find the shared exploration
