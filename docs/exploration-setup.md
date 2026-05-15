@@ -76,7 +76,7 @@ Common metrics include:
 
 Google defines "Total users" as the number of unique users who triggered any event during the selected date range.
 
-This guide is about design insights rather than management reporting - it focuses on identifying patterns and differences in behaviour rather than exact audience numbers. So while "Total users" is not a perfectly precise measure in every context, using a consistent metric supports understanding relative differences between pages, journeys or user groups.
+This guide is about design insights rather than management reporting - it focuses on identifying patterns and differences in behaviour rather than exact usage numbers. So while "Total users" is not a perfectly precise measure in every context, using a consistent metric supports understanding relative differences between pages, journeys or user groups.
 
 ## Filters and segments
 
