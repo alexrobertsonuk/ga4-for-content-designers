@@ -148,7 +148,7 @@ As your dataset gets larger (such as when using a long date range), GA4 may appl
 
 If sampling is applied, a warning indicator appears in the top-right of the exploration panel. Selecting the indicator shows the percentage of data used in the results. If data is unsampled, a green tick indicator is shown.
 
-In paid-for GA4 360 properties, sampling thresholds are higher and a detailed results option may be available.
+In paid GA4 accounts, sampling thresholds are higher and a detailed results option may be available.
 
 To view more detailed results (if available):
 
