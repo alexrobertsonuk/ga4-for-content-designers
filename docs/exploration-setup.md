@@ -43,8 +43,8 @@ Explorations are built using **dimensions** and **metrics**.
 
 A simple distinction:
 
-- **Dimensions** describe and group data.
-- **Metrics** measure data and are numerical.
+- **Dimensions** describe and group data
+- **Metrics** measure data and are numerical
 
 For example, the dimension "Device category" paired with the metric "Total users" will show you the number of unique users who used each device type (desktop, mobile or tablet) within your date range.
 
