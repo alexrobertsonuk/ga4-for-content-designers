@@ -135,10 +135,10 @@ Once shared, the exploration becomes visible to all users of that property. They
 
 To copy and customise an exploration someone else has shared:
 
-- open the **Explore** page
-- find the shared exploration
-- select the **More actions** (three dot) menu to the right of the exploration name
-- choose **Duplicate**
+1. Open the **Explore** page.
+2. Find the shared exploration.
+3. Select the **More actions** (three dot) menu to the right of the exploration name.
+4. Choose **Duplicate**.
 
 This creates a private, editable copy in your own account.
 
