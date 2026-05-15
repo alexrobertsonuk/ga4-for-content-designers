@@ -21,7 +21,7 @@ In GA4, a single website or app is called a **property**.
 
 Use the property selector in the top navigation (to the left of the search bar) to choose the correct property before starting any analysis.
 
-Properties are organised within accounts, and accounts may be grouped under an organisation:
+Properties are grouped within accounts, and accounts may sit under an organisation:
 
 **Organisation > Account > Property**
 
