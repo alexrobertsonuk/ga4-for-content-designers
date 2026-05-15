@@ -50,7 +50,7 @@ For example, the dimension "Device category" paired with the metric "Total users
 
 ### Dimensions
 
-Dimensions describe attributes of data — for example, the page viewed or device used.
+Dimensions describe attributes of data - for example, the page viewed or device used.
 
 Common dimensions include:
 
