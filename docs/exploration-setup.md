@@ -41,10 +41,10 @@ Give each exploration a clear, descriptive name, using your organisation's namin
 
 Explorations are built using **dimensions** and **metrics**.
 
-A simple distinction:
+In simple terms:
 
-- **Dimensions** describe and group data
-- **Metrics** measure data and are numerical
+- **dimensions** describe and group data
+- **metrics** measure data and are numerical
 
 For example, the dimension "Device category" paired with the metric "Total users" will show you the number of unique users who used each device type (desktop, mobile or tablet) within your date range.
 
