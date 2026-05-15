@@ -106,7 +106,7 @@ Segments are particularly useful for side-by-side comparisons (for example, mobi
 4. Enter a name.
 5. Add one or more conditions.
 
-The explorations throughout this guide describe the exact dimensions, conditions and values to use.
+The explorations throughout this guide describe the exact dimensions, conditions and values to use when creating filters or segments.
 
 ## Date ranges
 
