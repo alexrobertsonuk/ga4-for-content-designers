@@ -53,7 +53,7 @@ An empty "Page referrer" value may indicate:
 - referrer information blocked by browser or site policy
 - the user reopening a page in an inactive browser tab
 
-To more accurately analyse external referrals, pair "Page referrer" with "Landing page + query string". "Landing page + query string" identifies the entry point for a user's session.
+To more accurately analyse external referrals, pair "Page referrer" with "Landing page + query string" instead of "Page path and screen class". "Landing page + query string" identifies the entry point for a user's session.
 
 For less in-depth analysis, the "Session source" dimension groups external referrers using values such as "google", "bing", or "reddit.com". You may also see "(direct)" for users with no recorded source, and "(not set)" where the source could not be determined.
 
