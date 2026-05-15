@@ -21,13 +21,11 @@ In GA4, a single website or app is called a **property**.
 
 Use the property selector in the top navigation (to the left of the search bar) to choose the correct property before starting any analysis.
 
-Properties are nested in this hierarchy:
+Properties are organised within accounts, and accounts may be grouped under an organisation:
 
 **Organisation > Account > Property**
 
-You will only see the organisation in the property picker if there's more than one to choose. 
-
-Accounts are used to group properties. The grouping logic will depend on your organisation's specific setup.
+Not all setups include the organisation level — you mayonly see Account > Property.
 
 ## Understanding the main navigation
 After selecting a property, the left-hand menu displays the main sections of GA4:
