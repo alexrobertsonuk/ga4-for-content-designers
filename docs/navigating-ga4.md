@@ -25,7 +25,7 @@ Properties are organised within accounts, and accounts may be grouped under an o
 
 **Organisation > Account > Property**
 
-Not all setups include the organisation level — you mayonly see Account > Property.
+Not all setups include the organisation level — you may only see Account > Property.
 
 ## Understanding the main navigation
 After selecting a property, the left-hand menu displays the main sections of GA4:
