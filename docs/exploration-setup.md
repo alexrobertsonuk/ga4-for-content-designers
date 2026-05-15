@@ -46,7 +46,7 @@ In simple terms:
 - **dimensions** describe and group data
 - **metrics** measure data and are numerical
 
-For example, the dimension "Device category" paired with the metric "Total users" will show you the number of unique users who used each device type (desktop, mobile or tablet) within your date range.
+For example, the dimension "Device category" paired with the metric "Total users" will show you the total number of unique users who used each device type (desktop, mobile or tablet) within your date range.
 
 ### Dimensions
 
