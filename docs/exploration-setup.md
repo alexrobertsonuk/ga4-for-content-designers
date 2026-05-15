@@ -155,7 +155,7 @@ To view more detailed results (if available):
 1. Select the sampling indicator in the top-right of your exploration.
 2. Choose "More detailed results" from the dropdown.
 
-This may increase processing time.
+Note that this will increase processing time.
 
 ---
 
