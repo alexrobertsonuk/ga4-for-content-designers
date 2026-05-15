@@ -113,7 +113,7 @@ The explorations throughout this guide describe the exact dimensions, conditions
 When selecting a date range, consider:
 
 1. Property start date – data is only available from when GA4 tracking began for the property.
-2. Data retention settings – in free tier GA4 properties, data retention is 2 months by default and can be extended to 14 months. Check under:
+2. Data retention settings – properties in free GA4 accounts retain data for 2 months by default, but this can be extended to 14 months. Check under:
    Admin > Data collection and modification > Data retention
 3. Processing time – longer date ranges will take more time to process.
 4. Sampling – longer date ranges increase the likelihood of sampled results. See "Handling sampled results" below.
