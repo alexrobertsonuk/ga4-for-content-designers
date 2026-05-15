@@ -144,7 +144,7 @@ This creates a private, editable copy in your own account.
 
 ## Handling sampled results
 
-As your dataset gets larger (for example, when using a long date range), GA4 may apply data sampling. Sampling means GA4 uses a subset of data rather than the full dataset, so results are scaled up estimates rather than exact figures.
+As your dataset gets larger (such as when using a long date range), GA4 may apply data sampling. Sampling means GA4 uses a subset of data rather than the full dataset, so results are scaled up estimates rather than exact figures.
 
 If sampling is applied, a warning indicator appears in the top-right of the exploration panel. Selecting the indicator shows the percentage of data used in the results. If data is unsampled, a green tick indicator is shown.
 
