@@ -86,7 +86,7 @@ To analyse a subset of data, use filters or segments.
 
 **Filters** are created and applied in the Settings column. Filters include or exclude data based on specific criteria (for example, include only a specific page or exclude internal traffic). Filters apply only to the current exploration tab.
 
-**Segments** are created in the Variables column, applied in the Settings column. Segments define a subset of users, sessions or events, and can be applied to one or more tabs within an exploration.
+**Segments** are created in the Variables column, but applied in the Settings column. Segments define a subset of users, sessions or events, and can be applied to one or more tabs within an exploration.
 
 Segments are particularly useful for side-by-side comparisons (for example, mobile vs desktop users, or new vs returning users).
 
