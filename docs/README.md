@@ -15,8 +15,6 @@ It covers:
 
 The examples are based on GA4's default setup, with no specialist configuration required - providing a starting point that works across both free and paid GA4 accounts.
 
-Always follow your organisation's data protection and analytics policies.
-
 ## Author
 
 Written by [Alex Robertson](https://www.linkedin.com/in/alexrobertsonuk).
