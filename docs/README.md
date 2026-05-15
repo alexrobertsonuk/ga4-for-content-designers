@@ -13,7 +13,7 @@ It covers:
 - performing custom analysis using GA4's "Explore" tool (a flexible, sandbox-style environment in which you create "explorations")
 - answering common content questions
 
-The examples focus on GA4's default setup, without requiring specialist configuration. This provides a baseline that works across different analytics setups, including both free accounts and paid GA4 360 implementations.
+The examples are based on GA4's default setup, with no specialist configuration required — providing a starting point that works across both free and paid GA4 accounts.
 
 Always follow your organisation's data protection and analytics policies.
 
